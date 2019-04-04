@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Laboratorios</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body>
+		<h1>Laboratorios de informatica-sistemas UMSS</h1>
+
+		<br />	
+		<table> 
+			<tr>
+				<td>
+					<a href = "Indice.html">Inicio</td></a>
+				</td>
+				<td>
+					<a href = "Registro-materias.html">Materias</td></a>
+				</td>
+				<td>
+					<a href = "Registro-docentes.html">Docentes</td></a>
+				</td>
+				<td>
+					<a href = "Registro-Auxiliares.html">Auxiliares</td></a>
+				</td>
+				<td>
+					<a href = "Registro-estudiantes.html">Estudiantes</td></a>
+				</td>
+				<td>
+					<a href = "work-in-progress.html">Sesiones</td></a>
+				</td>
+			</tr>
+		</table>
+		<br />	
+			
+		<p>		
+		Bienvenidos al sitio web de los laboratorios de las carreras de sistemas e informatica
+		</p>
+
+		<img src= "logo-fcyt-1.png"/>
+	</body>
+</html>
