@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/labo.JPG) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;  
+}
+
+.contenedor-inputs{
+    width: 420px;
+    height: 470px;
+    background: rgb(4, 4, 44);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+
+.contenedor-inputs h1,
+.contenedor-inputs h2{
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 22px;
+
+}
+
+
+.contenedor-inputs label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.contenedor-inputs input[type= "text"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contenedor-inputs input[type= "submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.contenedor-inputs p {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.contenedor-inputs p:hover {
+    color: #fff;
+}

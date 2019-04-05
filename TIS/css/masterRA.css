@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/labo.JPG) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;  
+}
+
+.contenedor{
+    width: 720px;
+    height: 630px;
+    background: rgb(4, 4, 44);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px 20px;
+}
+
+.contenedor h1,
+.contenedor h2{
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
+.contenedor label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.contenedor input{
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.contenedor input[type= "text"],
+.contenedor input[type= "password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contenedor input[type= "submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.contenedor p {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.contenedor p:hover {
+    color: #fff;
+}
