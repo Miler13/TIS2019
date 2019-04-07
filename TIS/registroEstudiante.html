@@ -6,34 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de Estudiantes</title>
     <link rel="stylesheet" href="../TIS/css/masterRE.css">
+	<script LANGUAGE="JavaScript">
+    function validar_clave() {
+        alert('Debes introducir tu clave en los dos campos.');
+        var caract_invalido = " ";
+        var caract_longitud = 6;
+        var cla1 = document.mi.clave1.value; 
+        var cla2 = document.mi.clave2.value;
+        
+        if (cla1 == '' || cla2 == '')
+        {
+            alert('Debes introducir tu clave en los dos campos.');
+            return false;
+         }
+        if (document.mi.clave1.value.length < caract_longitud) 
+        {
+        alert('Tu clave debe constar de ' + caract_longitud + ' caracteres.');
+        return false;
+        }
+        if (document.mi.clave1.value.indexOf(caract_invalido) > -1) {
+        alert("Las claves no pueden contener espacios");
+        return false;
+        }            else {
+           if (cla1 != cla2) {
+            alert ("Las claves introducidas no son iguales");
+            return false;
+                }
+                    else {
+            alert('Contraeña correcta');
+            return true;
+                 }
+             }
+        }
+</script>
 </head>
 <body>
-        
-        <div class="contenedor">
+       <form name="mi" onSubmit="return validar_clave()">
+       <div class="contenedor">
             <h1>Registro de Estudiantes</h1>
             <h2 class="form_titulo">Ingrese Datos</h2>
 
-            <label for="nombre auxiliar">Nombre Estudiante</label>
+            <label for="nombreauxiliar">Nombre Estudiante</label>
             <input type="text" placeholder="Ingrese nombres">
 
-            <label for="apellido auxiliar">Apellido Estudiante</label>
+            <label for="apellidoauxiliar">Apellido Estudiante</label>
             <input type="text" placeholder="Ingrese apellidos">
 
-            <label for="nombre usuario">Nombre Usuario</label>
+            <label for="nombreusuario">Nombre Usuario</label>
             <input type="text" placeholder="Ingrese nombre de usuario">
 
-            <label for="correo electronico">Correo Electronico</label>
+            <label for="correoelectronico">Correo Electronico</label>
             <input type="text" placeholder="Ingrese correo electronico">
 
             <label for="contraseña">Contraseña</label>
-            <input type="password" placeholder="Ingrese contraseña">
+            <input type="password" name="clave1" maxlength=12 placeholder="Ingrese contraseña" >
 
-            <label for="verificacion de contraseña">Verificacion de Contraseña</label>
-            <input type="password" placeholder="Ingrese nuevamente la contraseña">
+            <label for="verificaciondecontraseña">Verificacion de Contraseña</label>
+            <input type="password"  name="clave2" maxlength=12 placeholder="Ingrese nuevamente la contraseña">
 
-            <input type="submit" value="Registrar" class="btn-enviar">
+            <input type="submit" value="Registrar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
-            
-        </div>
+       </div>
+       
+	</form>	
 </body>
 </html>
