@@ -1,44 +1,46 @@
 
 
 <!DOCTYPE html>
+ 
 <html lang="en">
+
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de docentes</title>
-    <link rel="stylesheet" href="../TIS/css/masterRD.css">
+    <link rel="stylesheet" href="../css/masterRD.css">
 </head>
-
 
 
 <body>
     <form action="registrar-usuario.php" method="post"> 
+            
+
         <div class="contenedor">
             <h1>Registro de Docentes</h1>
             <h2 class="form_titulo">Ingrese Datos</h2>
 
             <label for="nombre_docente">Nombre Docente</label>
-            <input type="text" placeholder="Ingrese nombres" name="password">
+            <input type="text" placeholder="Ingrese nombres" name="nombre">
 
             <label for="apellido_docente">Apellido Docente</label>
-            <input type="text" placeholder="Ingrese apellidos">
-
-            <label for="materia">Materia</label>
-            <input type="text" placeholder="Ingrese la materia">
-
-            <label for="correo_electronico">Correo Electronico</label>
-            <input type="text" placeholder="Ingrese correo electronico" name = "username">
-
-           
+            <input type="text" placeholder="Ingrese apellidos" name="apellido">
 
             
+            <label for="correo_electronico">Correo Electronico</label>
+            <input type="text" placeholder="Ingrese correo electronico" name = "correo">
+
+        
 
             <input type="submit" value="Registrar" class="btn-enviar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
             
         </div>
-    
+    <script src="assets/jquery-1.12.4-jquery.min.js"></script> 
 </form>
 </body>
 </html>
+
+

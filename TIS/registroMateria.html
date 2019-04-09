@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de Materias</title>
-    <link rel="stylesheet" href="../TIS/css/masterRM.css">
+    <link rel="stylesheet" href="../css/masterRM.css">
 </head>
 <body>
+      <form action="registrar-materia.php" method="post"> 
             
         <div class="contenedor-inputs">
             <h1>Registro de Materias</h1>
             <h2 class="form_titulo">Ingrese Datos</h2>
-            <label for="nombre materia">Nombre Materia</label>
-            <input type="text" placeholder="Ingrese Materia">
+            <label for="nombre_materia">Nombre Materia</label>
+            <input type="text" placeholder="Ingrese Materia" name="nombre">
 
-            <label for="gestion">Gestion</label>
-            <input type="text" placeholder="Ingrese gestion">
-
-            <label for="numero de grupo">Numero de grupo</label>
-            <input type="text" placeholder="Ingrese el numero de grupo">
+            <label for="numero_de_grupo">Numero de grupo</label>
+            <input type="text" placeholder="Ingrese el numero de grupo" name="codigo">
 
             <input type="submit" value="Registrar" class="btn-enviar">
             <p class="form_Link">No esta la materia?</p>
-            
+            <a href='inicio.html'>volver</a>
         </div>
     </form>
 </body>

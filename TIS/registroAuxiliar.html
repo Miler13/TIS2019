@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,35 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de Auxiliares</title>
-    <link rel="stylesheet" href="../TIS/css/masterRA.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/masterRA.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+ 	<script LANGUAGE="JavaScript">
+    function validar_clave() {
         
+        var caract_invalido = " ";
+        var caract_longitud = 6;
+        var cla1 = document.mi.clave1.value; 
+        var cla2 = document.mi.clave2.value;
+        
+        if (cla1 == '' || cla2 == '')
+        {
+            alert('Debes introducir tu clave en los dos campos.');
+            return false;
+         }
+        if (document.mi.clave1.value.length < caract_longitud) 
+        {
+        alert('Tu clave debe constar de ' + caract_longitud + ' caracteres.');
+        return false;
+        }
+        if (document.mi.clave1.value.indexOf(caract_invalido) > -1) {
+        alert("Las claves no pueden contener espacios");
+        return false;
+        }            else {
+           if (cla1 != cla2) {
+            alert ("Las claves introducidas no son iguales");
+            return false;
+                }
+                    else {
+            
+            return true;
+                 }
+             }
+        }
+</script>
+</head>
+
+<body>
+        <form name="mi" onSubmit="return validar_clave()" action="registrar-auxiliar.php" method="post">
         <div class="contenedor">
             <h1>Registro de Auxiliares</h1>
             <h2 class="form_titulo">Ingrese Datos</h2>
 
-            <label for="nombre auxiliar">Nombre Auxiliar</label>
-            <input type="text" placeholder="Ingrese nombres">
+            <label for="nombre_auxiliar">Nombre Auxiliar</label>
+            <input type="text" placeholder="Ingrese nombres" name="nombre">
 
-            <label for="apellido auxiliar">Apellido Auxiliar</label>
-            <input type="text" placeholder="Ingrese apellidos">
+            <label for="apellido_auxiliar">Apellido Auxiliar</label>
+            <input type="text" placeholder="Ingrese apellidos" name="apellido">
 
-            <label for="materia">Materia</label>
-            <input type="text" placeholder="Ingrese la materia">
+            <label for="Codigo_SIS">Codigo SIS</label>
+            <input type="text" placeholder="Ingrese el Codigo SIS" name="sis">
+                 
 
-            <label for="correo electronico">Correo Electronico</label>
-            <input type="text" placeholder="Ingrese correo electronico">
+            <label for="correo_electronico">Correo Electronico</label>
+            <input type="text" placeholder="Ingrese correo electronico" name="correo">
 
             <label for="contraseña">Contraseña</label>
-            <input type="password" placeholder="Ingrese contraseña">
+            <input type="password" placeholder="Ingrese contraseña" name="clave1">
 
-            <label for="verificacion de contraseña">Verificacion de Contraseña</label>
-            <input type="password" placeholder="Ingrese nuevamente la contraseña">
+            <label for="verificacion_de_contraseña">Verificacion de Contraseña</label>
+            <input type="password" placeholder="Ingrese nuevamente la contraseña" name="clave2">
 
             <input type="submit" value="Registrar" class="btn-enviar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
             
         </div>
+        </form>
 </body>
 </html>

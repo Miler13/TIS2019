@@ -12,26 +12,26 @@
  die("La conexion falló: " . $conexion->connect_error);
 }
 
- $buscarUsuario = "SELECT * FROM $tbl_name  WHERE user_Doc= '$_POST[username]' ";
+ $buscarUsuario = "SELECT * FROM $tbl_name  WHERE correol= '$_POST[correo]' ";
 
  $result = $conexion->query($buscarUsuario);
 
  $count = mysqli_num_rows($result);
 
  if ($count == 1) {
- echo "<br />". "El Nombre de Usuario ya a sido tomado." . "<br />";
+ echo "<br />". "El Correo de Usuario ya a sido tomado." . "<br />";
 
  echo "<a href='index.html'>Por favor escoga otro Nombre</a>";
  }
  else{
 
- $form_pass = $_POST['password'];
+ $form_pass = "123456";
  
  $hash = password_hash($form_pass, PASSWORD_BCRYPT);
 
- $query = "INSERT INTO docente (user_Doc, passwordDoc)
-           VALUES ('$_POST[username]', '$hash')";
+ $query = "INSERT INTO docente(User_Doc, nombreDoc, apellido, correol, passwordDoc) VALUES (NULL, '$_POST[nombre]', '$_POST[apellido]', '$_POST[correo]', '$hash')";
 
+ 
  if ($conexion->query($query) === TRUE) {
  
  echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de Estudiantes</title>
-    <link rel="stylesheet" href="../TIS/css/masterRE.css">
+    <link rel="stylesheet" href="../css/masterRE.css">
 	<script LANGUAGE="JavaScript">
     function validar_clave() {
-        alert('Debes introducir tu clave en los dos campos.');
+        
         var caract_invalido = " ";
         var caract_longitud = 6;
         var cla1 = document.mi.clave1.value; 
@@ -33,7 +33,7 @@
             return false;
                 }
                     else {
-            alert('Contraeña correcta');
+            
             return true;
                  }
              }
@@ -41,22 +41,22 @@
 </script>
 </head>
 <body>
-       <form name="mi" onSubmit="return validar_clave()">
+       <form name="mi" onSubmit="return validar_clave()" action="registrar-estudiante.php" method="post">
        <div class="contenedor">
             <h1>Registro de Estudiantes</h1>
             <h2 class="form_titulo">Ingrese Datos</h2>
 
-            <label for="nombreauxiliar">Nombre Estudiante</label>
-            <input type="text" placeholder="Ingrese nombres">
+            <label for="nombre_estudiante">Nombre Estudiante</label>
+            <input type="text" placeholder="Ingrese nombres" name="nombre">
 
-            <label for="apellidoauxiliar">Apellido Estudiante</label>
-            <input type="text" placeholder="Ingrese apellidos">
+            <label for="apellido_estudiante">Apellido Estudiante</label>
+            <input type="text" placeholder="Ingrese apellidos" name="apellido">
 
-            <label for="nombreusuario">Nombre Usuario</label>
-            <input type="text" placeholder="Ingrese nombre de usuario">
+            <label for="Codigo_SIS">Codigo SIS</label>
+            <input type="text" placeholder="Ingrese el Codigo SIS" name="sis">
 
             <label for="correoelectronico">Correo Electronico</label>
-            <input type="text" placeholder="Ingrese correo electronico">
+            <input type="text" placeholder="Ingrese correo electronico" name="correo">
 
             <label for="contraseña">Contraseña</label>
             <input type="password" name="clave1" maxlength=12 placeholder="Ingrese contraseña" >
