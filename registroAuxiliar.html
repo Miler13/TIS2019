@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Auxiliares</title>
+    <link rel="stylesheet" href="../css/masterRA.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+ 	<script LANGUAGE="JavaScript">
+    function validar_clave() {
+        
+        var caract_invalido = " ";
+        var caract_longitud = 6;
+        var cla1 = document.mi.clave1.value; 
+        var cla2 = document.mi.clave2.value;
+        
+        if (cla1 == '' || cla2 == '')
+        {
+            alert('Debes introducir tu clave en los dos campos.');
+            return false;
+         }
+        if (document.mi.clave1.value.length < caract_longitud) 
+        {
+        alert('Tu clave debe constar de ' + caract_longitud + ' caracteres.');
+        return false;
+        }
+        if (document.mi.clave1.value.indexOf(caract_invalido) > -1) {
+        alert("Las claves no pueden contener espacios");
+        return false;
+        }            else {
+           if (cla1 != cla2) {
+            alert ("Las claves introducidas no son iguales");
+            return false;
+                }
+                    else {
+            
+            return true;
+                 }
+             }
+        }
+        function sololetras(e){
+                key=e.keyCode || e.which;
+                teclado=String.fromCharCode(key).toLowerCase();
+                letras=" abcdefghijklmnñopqrstuvwxyz";
+                especiales="8-37-38-46-164";
+                teclado_especial=false;
+                for(var i in especiales){
+                    if(key==especiales[i]){
+                        teclado_especial=true;
+                        break;
+                    }
+                }
+                if(letras.indexOf(teclado)==-1 && !teclado_especial){
+                    return false;
+                }
+            }
+        
+            function solonumeros(e){
+                key=e.keyCode || e.which;
+                teclado=String.fromCharCode(key);
+                numeros="0123456789";
+                especiales="8-37-38-46";
+                teclado_especial=false;
+                for(var i in especiales){
+                    if(key==especiales[i]){
+                        teclado_especial=true;
+                        break;
+                    }
+                }
+                if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+                    return false;
+                }
+            }
+</script>
+</head>
+
+<body>
+        <form name="mi" onSubmit="return validar_clave()" action="registrar-auxiliar.php" method="post">
+        <div class="contenedor">
+            <h1>Registro de Auxiliares</h1>
+            <h2 class="form_titulo">Ingrese Datos</h2>
+
+            <label for="nombre_auxiliar">Nombre Auxiliar</label>
+            <input type="text" placeholder="Ingrese nombres" name="nombre" onkeypress="return sololetras(event)" onpaste="return false">
+
+            <label for="apellido_auxiliar">Apellido Auxiliar</label>
+            <input type="text" placeholder="Ingrese apellidos" name="apellido" onkeypress="return sololetras(event)" onpaste="return false">
+
+            <label for="Codigo_SIS">Codigo SIS</label>
+            <input type="text" placeholder="Ingrese el Codigo SIS" name="sis" onkeypress="return solonumeros(event)" onpaste="return false">
+                 
+
+            <label for="correo_electronico">Correo Electronico</label>
+            <input type="text" placeholder="Ingrese correo electronico" name="correo">
+
+            <label for="contraseña">Contraseña</label>
+            <input type="password" placeholder="Ingrese contraseña" name="clave1">
+
+            <label for="verificacion_de_contraseña">Verificacion de Contraseña</label>
+            <input type="password" placeholder="Ingrese nuevamente la contraseña" name="clave2">
+
+            <input type="submit" value="Registrar" class="btn-enviar">
+            <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
+            
+        </div>
+        </form>
+</body>
+</html>
