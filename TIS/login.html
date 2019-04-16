@@ -45,19 +45,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bienvenido Administrador</title>
     <link rel="stylesheet" href="../css/master.css">
+    <script>
+            function validar(){
+                var username, password;
+                username = document.getElementById("username").value;
+                password = document.getElementById("password").value;
+                              
+                if(username === "" || password === ""){
+                    alert("Todos los campos son obligatorios");
+                    return false;
+                }
+                
+            }
+    
+    </script>
 </head>
 <body>
     <div class="login-box">
       <img class= "avatar" src="img/logoFcyt.jpg" alt="logo de laboratorio">
       <h1>Laboratorio</h1>
-       <form>
+       <form onsubmit="return validar();">
          <!---user name---->
          <label for="nombre_usuario">Nombre Usuario</label>
-         <input type="text" placeholder="Ingrese Usuario" name="username">
+         <input type="text" id="username" name="username" placeholder="Ingrese Usuario">
 
          <!---pasword---->
          <label for="contraseña">Contraseña</label>
-         <input type="password" placeholder="Ingrese Contraseña" name="password">
+         <input type="password" id="password" name="password" placeholder="Ingrese Contraseña">
          
          <input type="submit" value="Entrar">
 
