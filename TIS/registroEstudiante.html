@@ -6,63 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de Estudiantes</title>
     <link rel="stylesheet" href="../css/masterRE.css">
-	<script LANGUAGE="JavaScript">
-    function validar_clave() {
+	<script LANGUAGE="JavaScript" src="validarEstudiante.js">
+    
+
+            
+
+            function validar_clave() {
         
-        var caract_invalido = " ";
-        var caract_longitud = 6;
-        var cla1 = document.mi.clave1.value; 
-        var cla2 = document.mi.clave2.value;
+                var caract_invalido = " ";
+                var caract_longitud = 6;
+                var cla1 = document.mi.clave1.value; 
+                 var cla2 = document.mi.clave2.value;
         
-        if (cla1 == '' || cla2 == '')
-        {
-            alert('Debes introducir tu clave en los dos campos.');
-            return false;
-         }
-        if (document.mi.clave1.value.length < caract_longitud) 
-        {
-        alert('Tu clave debe constar de ' + caract_longitud + ' caracteres.');
-        return false;
-        }
-        if (document.mi.clave1.value.indexOf(caract_invalido) > -1) {
-        alert("Las claves no pueden contener espacios");
-        return false;
-        }            else {
-           if (cla1 != cla2) {
-            alert ("Las claves introducidas no son iguales");
-            return false;
+                if (cla1 == '' || cla2 == '')
+                {
+                    alert('Debes introducir tu clave en los dos campos.');
+                    return false;
                 }
+                if (document.mi.clave1.value.length < caract_longitud) 
+                {
+                    alert('Tu clave debe constar de ' + caract_longitud + ' caracteres.');
+                     return false;
+                }
+                if (document.mi.clave1.value.indexOf(caract_invalido) > -1) {
+                    alert("Las claves no pueden contener espacios");
+                return false;
+                } 
+                else {
+                    if (cla1 != cla2) {
+                        alert ("Las claves introducidas no son iguales");
+                        return false;
+                    }
                     else {
             
-            return true;
-                 }
-             }
-        }
-</script>
+                        return true;
+                    }
+                }
+            }
+        
+        </script>
 </head>
 <body>
-       <form name="mi" onSubmit="return validar_clave()" action="registrar-estudiante.php" method="post">
+       <form name="mi" action="registrar-estudiante.php" method="post" onsubmit="return validarEstudiante();">
        <div class="contenedor">
             <h1>Registro de Estudiantes</h1>
             <h2 class="form_titulo">Ingrese Datos</h2>
 
             <label for="nombre_estudiante">Nombre Estudiante</label>
-            <input type="text" placeholder="Ingrese nombres" name="nombre">
+            <input type="text" placeholder="Ingrese nombres" name="nombre" id="nombre" onkeypress="return sololetras(event)" onpaste="return false" class="imput-48" requiered>
 
             <label for="apellido_estudiante">Apellido Estudiante</label>
-            <input type="text" placeholder="Ingrese apellidos" name="apellido">
+            <input type="text" placeholder="Ingrese apellidos" name="apellido" id="apellido" onkeypress="return sololetras(event)" onpaste="return false" class="imput-48" requiered>
 
             <label for="Codigo_SIS">Codigo SIS</label>
-            <input type="text" placeholder="Ingrese el Codigo SIS" name="sis">
+            <input type="text" placeholder="Ingrese el Codigo SIS" name="sis" id="sis" onkeypress="return solonumeros(event)" onpaste="return false"class="imput-48" requiered>
 
             <label for="correoelectronico">Correo Electronico</label>
-            <input type="text" placeholder="Ingrese correo electronico" name="correo">
+            <input type="text" placeholder="Ingrese correo electronico" name="correo" id="correo" requiered>
 
             <label for="contraseña">Contraseña</label>
-            <input type="password" name="clave1" maxlength=12 placeholder="Ingrese contraseña" >
+            <input type="password" id= "clave1" name="clave1" maxlength=12 placeholder="Ingrese contraseña" required>
 
             <label for="verificaciondecontraseña">Verificacion de Contraseña</label>
-            <input type="password"  name="clave2" maxlength=12 placeholder="Ingrese nuevamente la contraseña">
+            <input type="password" id="clave2" name="clave2" maxlength=12 placeholder="Ingrese nuevamente la contraseña" required>
 
             <input type="submit" value="Registrar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>

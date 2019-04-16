@@ -11,11 +11,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de docentes</title>
     <link rel="stylesheet" href="../css/masterRD.css">
+    <script src="validarDocente.js">
+    </script>
 </head>
 
 
 <body>
-    <form action="registrar-usuario.php" method="post"> 
+    <form action="registrar-usuario.php" method="post" onsubmit="return validarDocente();"> 
             
 
         <div class="contenedor">
@@ -23,14 +25,14 @@
             <h2 class="form_titulo">Ingrese Datos</h2>
 
             <label for="nombre_docente">Nombre Docente</label>
-            <input type="text" placeholder="Ingrese nombres" name="nombre">
+            <input type="text" placeholder="Ingrese nombres" name="nombre"  id="nombre" onkeypress="return sololetras(event)" onpaste="return false" class="imput-48" requiered>
 
             <label for="apellido_docente">Apellido Docente</label>
-            <input type="text" placeholder="Ingrese apellidos" name="apellido">
+            <input type="text" placeholder="Ingrese apellidos" name="apellido" id="apellido" onkeypress="return sololetras(event)" onpaste="return false" class="imput-48" requiered>
 
             
             <label for="correo_electronico">Correo Electronico</label>
-            <input type="text" placeholder="Ingrese correo electronico" name = "correo">
+            <input type="text" placeholder="Ingrese correo electronico" name = "correo" id = "correo" required>
 
         
 
