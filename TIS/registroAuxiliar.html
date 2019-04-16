@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/masterRA.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
- 	<script LANGUAGE="JavaScript" src="validarAuxiliar.js">
+ 	<script LANGUAGE="JavaScript">
     function validar_clave() {
         
         var caract_invalido = " ";
@@ -45,29 +45,29 @@
 </head>
 
 <body>
-        <form name="mi"  action="registrar-auxiliar.php" method="post" onsubmit="return validarAuxiliar();" >
+        <form name="mi" onSubmit="return validar_clave()" action="registrar-auxiliar.php" method="post">
         <div class="contenedor">
             <h1>Registro de Auxiliares</h1>
             <h2 class="form_titulo">Ingrese Datos</h2>
 
             <label for="nombre_auxiliar">Nombre Auxiliar</label>
-            <input type="text" placeholder="Ingrese nombres" name="nombre" id="nombre" onkeypress="return sololetras(event)" onpaste="return false" class="imput-48" requiered>
+            <input type="text" placeholder="Ingrese nombres" name="nombre">
 
             <label for="apellido_auxiliar">Apellido Auxiliar</label>
-            <input type="text" placeholder="Ingrese apellidos" name="apellido" id="apellido" onkeypress="return sololetras(event)" onpaste="return false" class="imput-48" requiered>
+            <input type="text" placeholder="Ingrese apellidos" name="apellido">
 
             <label for="Codigo_SIS">Codigo SIS</label>
-            <input type="text" placeholder="Ingrese el Codigo SIS" name="sis" id="sis" onkeypress="return solonumeros(event)" onpaste="return false"class="imput-48" requiered>
+            <input type="text" placeholder="Ingrese el Codigo SIS" name="sis">
                  
 
             <label for="correo_electronico">Correo Electronico</label>
-            <input type="text" placeholder="Ingrese correo electronico" name="correo" id="correo" required>
+            <input type="text" placeholder="Ingrese correo electronico" name="correo">
 
             <label for="contraseña">Contraseña</label>
-            <input type="password" placeholder="Ingrese contraseña" name="clave1" id="clave1" required>
+            <input type="password" placeholder="Ingrese contraseña" name="clave1">
 
             <label for="verificacion_de_contraseña">Verificacion de Contraseña</label>
-            <input type="password" placeholder="Ingrese nuevamente la contraseña" name="clave2" id="clave2" required>
+            <input type="password" placeholder="Ingrese nuevamente la contraseña" name="clave2">
 
             <input type="submit" value="Registrar" class="btn-enviar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
