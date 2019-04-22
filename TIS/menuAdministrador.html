@@ -1,8 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Administracion</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="../TIS/menus/menuUsuarios.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenido Administrativo</title>
+    <link rel="stylesheet" href="../menus/menuAdministrador.css">    
 </head>
 <body>
         <table class="tabla">
@@ -10,41 +13,23 @@
                   <td>Administrador</td>                   
                   <td>Bienvenido</td>              
                   <td>
-                     <div class="wrap">
-                         <div class="widget">
-                           <div class="fecha">
-                             <p id="diaSemana" class="diaSemana"></p>
-                             <p id="dia" class="dia"></p>
-                             <p>de </p>
-                             <p id="mes" class="mes"></p>
-                             <p>del </p>
-                             <p id="year" class="year"></p>
-                            </div>                                          
-                            <div class="reloj">                                                    
-                              <p id="horas" class="horas"></p>
-                              <p>:</p>
-                              <p id="minutos" class="minutos"></p>
-                              <p>:</p>
-                              <div class="caja-segundos">
-                               <p id="ampm" class="ampm"></p>
-                               <p id="segundos" class="segundos"></p>
-                              </div>
-                            </div>
-                        </div>
-                     </div>       
-                     <script src="../TIS/js/reloj.js"></script>                         
+                        <div style="text-align:center;padding:0em 0;">
+                                <a style="text-decoration:none;" 
+                                href="https://www.zeitverschiebung.net/es/timezone/america--la_paz">                              </a> 
+                                <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FLa_Paz" 
+                                width="100%" height="85" frameborder="0" seamless></iframe> </div>
                   <td>
               
                 </tr>
               
         </table>
         
-        <img src= "../TIS/img/logo.png"/>
+        <img src= "../img/logo.png"/>
 
     <!---<h1>Administrador</h1>
     <h2>Que desea hacer?</h2>--->
 
-    <!----<div id="menu">
+    <div id="menu">
         <ul>
             <li><a href="registroMateria.html">Registrar Materias</a></li>
             <li><a href="registroDocente.html">Registrar Docentes</a></li>
@@ -52,40 +37,27 @@
             <li><a href="registroAuxiliar.html">Registrar Auxiliares</a></li>
             <li><a href="registroSesiones.html">Registrar Sesiones</a></li>
         </ul>
-    </div>--->
-    <header>
-      <nav class="navegacion">
-        <ul class="menu">
-          <li><a href="#">Perfil</a></li>
-          <li><a href="#">Que desea hacer?</a>
-            <ul class="submenu">
-              <li><a href="registroMateria.html">Registrar Materias</a></li>
-              <li><a href="registroDocente.html">Registrar Docentes</a></li>
-              <li><a href="registroEstudiante.html">Registrar Estudiantes</a></li>
-              <li><a href="registroAuxiliar.html">Registrar Auxiliares</a></li>
-              <li><a href="registroSesiones.html">Registrar Sesiones</a></li>
+    </div>
+    <div id="menuA">
+            <ul>
+                    <li><a href="#">Perfil</a></li>                    
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Enlaces</a></li>
+                    <li><a href="#">Ajustes</a></li>
+                    <li><a href="#">Cerrar sesion</a></li>
             </ul>
-          </li>
-
-          <li><a href="#">ajustes</a></li>
-          <li><a href="#">Salir</a></li>
-        </ul>						
-      </nav>
-    </header>		
-  
+    </div>
     <table class="tablaH">
             <tr>              
-              <td><a href="javascript:history.go(-1)">Atrás </a></td>               
+              <td><a href="javascript:history.go(-1)">Atrás </a></td>                
               <td><a href="javascript:history.go(1)">Adelante</a></td>              
               <td><a href="inicio.html">Home</a></td>
           
             </tr>
           
     </table>
-    <h1>Interfaz especifica para el uso de administradores del laboratorio de informatica y sistemas</h1>
-    <h2>Estimado usuario, le recordamos NO usar acentos, ñ's o caracteres especiales del LENGUAJE ESPAÑOL,
-        en los nombres de sus archivos y/o documentos que suba a la plataforma.</h2>
-        <h3>TODOS LOS USUARIOS DE ESTA PLATAFORMA DEBEN USAR UNA UNICA CUENTA DE CORREO ELECTRONICO VALIDA, 
-          EXISTENTE y FUNCIONANDO, CASO CONTRARIO ESA CUENTA SERA ELIMINADA.</h3>
+    <p>Interfaz especifica para el uso de administradores del laboratorio de informatica y sistemas</p>
+    <p1>Estimado usuario, le recordamos NO usar acentos, ñ's o caracteres especiales del LENGUAJE ESPAÑOL,
+        en los nombres de sus archivos y/o documentos que suba a la plataforma.</p1>
 </body>
 </html>
