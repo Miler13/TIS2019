@@ -1,3 +1,3 @@
 <?php
-$conn = new mysqli('localhost', 'root', '', 'mydb') or die(mysqli_error());	
+$conn = new mysqli('localhost', 'root', '0123', 'mydb') or die(mysqli_error());	
 ?>
