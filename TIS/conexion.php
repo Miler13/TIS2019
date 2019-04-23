@@ -1,3 +1,3 @@
 <?php
-$conn = new mysqli('localhost', 'root', '0123', 'mydb') or die(mysqli_error());	
+$conn = new mysqli('localhost', 'stardust', 'N3^B<gv9(=~WLv;', 'stadust_db') or die(mysqli_error());
 ?>
