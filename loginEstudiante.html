@@ -10,9 +10,9 @@
       // username and password sent from form
 
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']);
+      $mypassword = mysqli_real_escape_string($db,$c_POST['password']);
 
-      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
+      $sql = "SELECT id FROM estudiante WHERE user_CodSIS = '$myusername' and passwordES = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
@@ -25,7 +25,7 @@
          session_register("myusername");
          $_SESSION['login_user'] = $myusername;
 
-         header("location: welcome.php");
+         header("location: menuEstudiante.html");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
@@ -67,7 +67,7 @@
        <form onsubmit="return validar();">
          <!---user name---->
          <label for="nombre_usuario">Nombre Usuario</label>
-         <input type="text" id="username" name="username" placeholder="Ingrese Usuario">
+         <input type="text" id="username" name="username" placeholder="Ingrese Codigo SIS">
 
          <!---pasword---->
          <label for="contraseña">Contraseña</label>
@@ -76,7 +76,7 @@
          <input type="submit" value="Entrar">
 
          <a href="#">He olvidado mi contraseña</a><br>
-         <a href="#">No tengo cuenta</a>
+         <a href="registroEstudiante.html">No tengo cuenta </a>
 
        </form>
     </div>

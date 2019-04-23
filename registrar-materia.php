@@ -1,9 +1,9 @@
 <?php
 
  $host_db = "localhost";
- $user_db = "root";
- $pass_db = '';
- $db_name = 'mydb';
+ $user_db = "stadust";
+ $pass_db = 'N3^B<gv9(=~WLv;';
+ $db_name = 'stadust_db';
  $tbl_name = "materia";
  
  $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);

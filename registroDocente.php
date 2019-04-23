@@ -25,7 +25,7 @@
             <input type="text" placeholder="Ingrese apellidos">
 
            <?php
-  $mysqli = new mysqli('localhost', 'root', '', 'mydb');
+  $mysqli = new mysqli('localhost', 'stadust', 'N3^B<gv9(=~WLv;', 'stadust_db');
 ?>
      
         
