@@ -6,7 +6,8 @@
 	<head>
 		<title>Laboratorios</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-		<link rel="stylesheet" href="../TIS/css/masterInicio.css">
+		<link rel="stylesheet" href="../css/masterInicio.css">
+		<script src= "../js/all.js"></script>
 
 	</head>
 
@@ -14,27 +15,35 @@
 
 	<body>
 		<h1>Laboratorios de informatica-sistemas UMSS</h1>
+        <h6> 
+			<ul class="menuU">
+				<li><a href="#"><span class="icono fas fa-sign-in-alt"></span><br>Iniciar Sesion</a>
+					<ul class="submenuU">
+						<li><a href="loginAdministrador.html">Administrador</a></li>
+						<li><a href="loginDocente.html">Docentes</a></li>
+						<li><a href="loginEstudiante.html">Estudiantes</a></li>
+						<li><a href="loginAuxiliar.html">Auxiliares</a></li>
+					</ul>
+				</li>
+			</h6>
 
 				<header>
 					<nav class="navegacion">
 						<ul class="menu">
-							<li><a href="inicio.html">Inicio</a></li>
-							<li><a href="#">Ingresar al Sistema</a>
+							<li><a href="index.html"><span class="icon fas fa-home"></span>Inicio</a></li>
+							<li><a href="#"><span class="fas fa-user-plus"></span>Registrate</a>
 								<ul class="submenu">
-									<li><a href="loginAdministrador.html">Administrador</a></li>
-									<li><a href="loginDocente.html">Docentes</a></li>
-									<li><a href="loginEstudiante.html">Estudiantes</a></li>
-									<li><a href="loginAuxiliar.html">Auxiliares</a></li>
+									<li><a href="registroEstudiante.html">Estudiantes</a></li>
 								</ul>
 							</li>
 
-							<li><a href="#">Servicios</a>
+							<li><a href="#"><span class="icon fas fa-globe-americas"></span>Servicios</a>
 								<ul class="submenu">
-									<li><a href="#">ayuda</a></li>
+									<li><a href="#">Ayuda</a></li>
 									<li><a href="#">Sobre el Sistema</a></li>
 								</ul>
 							</li>
-							<li><a href="#">Contacto</a></li>
+							<li><a href="#"><span class="icon far fa-envelope"></span>Contacto</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -45,15 +54,39 @@
 				<h3>
 					El material de apoyo provisto por los instructores de los cursos se encuentran en este portal,
 					con el objetivo que el estudiante tenga acceso a ellos en cualquier momento y lugar sirviendo
-					también como ayuda para el seguimiento al desarrollo de aprendizaje del estudiante durante el desarrollo de los cursos.
+					tambien como ayuda para el seguimiento al desarrollo de aprendizaje del estudiante durante el desarrollo de los cursos.
 				</h3>
 				<h4>
-						La mayoría de los cursos están sujetos a restricciones de los docentes y normalmente piden que se registren mediante el administrador para poder acceder al material del curso.
+						La mayoria de los cursos estan sujetos a restricciones de los docentes y normalmente piden que se registren mediante el administrador para poder acceder al material del curso.
 				</h4>
 
-		<img src= "../TIS/img/logoFcyt.jpg"/>
+		
 		<h5>
-
+            <div class="wrap">
+				<div class="widget">
+				  <div class="fecha">
+					<p id="diaSemana" class="diaSemana"></p>
+					<p id="dia" class="dia"></p>
+					<p>de </p>
+					<p id="mes" class="mes"></p>
+					<p>del </p>
+					<p id="year" class="year"></p>
+				   </div>                                          
+				   <div class="reloj">                                                    
+					 <p id="horas" class="horas"></p>
+					 <p>:</p>
+					 <p id="minutos" class="minutos"></p>
+					 <p>:</p>
+					 <div class="caja-segundos">
+					  <p id="ampm" class="ampm"></p>
+					  <p id="segundos" class="segundos"></p>
+					 </div>
+				   </div>
+			   </div>
+			</div>       
+			<script src="../js/reloj.js"></script>
 		</h5>
+		<img src= "../img/logoFcyt.jpg"/>
+		
 	</body>
 <html>
