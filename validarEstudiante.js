@@ -37,7 +37,7 @@ function validarEstudiante() {
         alert("El codigo sis ingresado no es un numero");
         return false;
     }
-    
+
 
 }
 

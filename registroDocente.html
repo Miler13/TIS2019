@@ -1,10 +1,10 @@
 
 
 <!DOCTYPE html>
- 
+
 <html lang="en">
 
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,8 @@
 
 
 <body>
-    <form action="registrar-usuario.php" method="post" onsubmit="return validarDocente();"> 
-            
+    <form action="registrar-usuario.php" method="post" onsubmit="return validarDocente();">
+
 
         <div class="contenedor">
             <h1>Registro de Docentes</h1>
@@ -30,21 +30,19 @@
             <label for="apellido_docente">Apellido Docente</label>
             <input type="text" placeholder="Ingrese apellidos" name="apellido" id="apellido" onkeypress="return sololetras(event)" onpaste="return false" class="imput-48" requiered>
 
-            
+
             <label for="correo_electronico">Correo Electronico</label>
             <input type="text" placeholder="Ingrese correo electronico" name = "correo" id = "correo" required>
 
-        
+
 
             <input type="submit" value="Registrar" class="btn-enviar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
 
             <a href="javascript:history.go(-1)">Volver </a>
-            
+
         </div>
-    <script src="assets/jquery-1.12.4-jquery.min.js"></script> 
+    <script src="assets/jquery-1.12.4-jquery.min.js"></script>
 </form>
 </body>
 </html>
-
-

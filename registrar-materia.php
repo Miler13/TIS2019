@@ -5,7 +5,7 @@
  $pass_db = 'N3^B<gv9(=~WLv;';
  $db_name = 'stadust_db';
  $tbl_name = "materia";
- 
+
  $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
 
  if ($conexion->connect_error) {
@@ -14,7 +14,7 @@
 
 
  $buscarMateria = "SELECT * FROM $tbl_name  WHERE IdMateria = '$_POST[codigo]' ";
- 
+
  $result = $conexion->query($buscarMateria);
 
  $count = mysqli_num_rows($result);
@@ -26,20 +26,20 @@
  }
  else{
 
- 
+
 
  $query = "INSERT INTO materia (IdMateria, nombre)
            VALUES ('$_POST[codigo]', '$_POST[nombre]')";
 
  if ($conexion->query($query) === TRUE) {
- 
+
  echo "<br />" . "<h2>" . "Materia Creado Exitosamente!" . "</h2>";
 
- echo "<h5>" . "Hacer Login: " . "<a href='registroMateria.html'>volver</a>" . "</h5>"; 
+ echo "<h5>" . "Hacer Login: " . "<a href='registroMateria.html'>volver</a>" . "</h5>";
  }
 
  else {
- echo "Error al crear la Materia." . $query . "<br>" . $conexion->error; 
+ echo "Error al crear la Materia." . $query . "<br>" . $conexion->error;
    }
  }
  mysqli_close($conexion);

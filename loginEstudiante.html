@@ -1,7 +1,4 @@
 
-
-
-
 <?php
    include("config.php");
    session_start();
@@ -32,10 +29,6 @@
    }
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -63,7 +56,7 @@
 <body>
     <div class="login-box">
       <img class= "avatar" src="img/logoFcyt.jpg" alt="logo de laboratorio">
-      <h1>Laboratorio</h1>
+      <h1>Estudiante</h1>
        <form onsubmit="return validar();">
          <!---user name---->
          <label for="nombre_usuario">Nombre Usuario</label>
@@ -76,7 +69,8 @@
          <input type="submit" value="Entrar">
 
          <a href="#">He olvidado mi contraseña</a><br>
-         <a href="registroEstudiante.html">No tengo cuenta </a>
+         <a href="registroEstudiante.html">No tengo cuenta </a><br>
+         <a href="index.html">Volver</a>
 
        </form>
     </div>

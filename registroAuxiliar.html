@@ -11,18 +11,18 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
  	<script LANGUAGE="JavaScript" src="validarAuxiliar.js">
     function validar_clave() {
-        
+
         var caract_invalido = " ";
         var caract_longitud = 6;
-        var cla1 = document.mi.clave1.value; 
+        var cla1 = document.mi.clave1.value;
         var cla2 = document.mi.clave2.value;
-        
+
         if (cla1 == '' || cla2 == '')
         {
             alert('Debes introducir tu clave en los dos campos.');
             return false;
          }
-        if (document.mi.clave1.value.length < caract_longitud) 
+        if (document.mi.clave1.value.length < caract_longitud)
         {
         alert('Tu clave debe constar de ' + caract_longitud + ' caracteres.');
         return false;
@@ -36,7 +36,7 @@
             return false;
                 }
                     else {
-            
+
             return true;
                  }
              }
@@ -58,7 +58,7 @@
 
             <label for="Codigo_SIS">Codigo SIS</label>
             <input type="text" placeholder="Ingrese el Codigo SIS" name="sis" id="sis" onkeypress="return solonumeros(event)" onpaste="return false"class="imput-48" requiered>
-                 
+
 
             <label for="correo_electronico">Correo Electronico</label>
             <input type="text" placeholder="Ingrese correo electronico" name="correo" id="correo" required>
@@ -71,7 +71,7 @@
 
             <input type="submit" value="Registrar" class="btn-enviar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
-            
+
         </div>
         </form>
 </body>

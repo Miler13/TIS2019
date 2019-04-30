@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +9,8 @@
     <link rel="stylesheet" href="../css/masterRD.css">
 </head>
 
-
-
 <body>
-    <form action="registrar-usuario.php" method="post"> 
+    <form action="registrar-usuario.php" method="post">
         <div class="contenedor">
             <h1>Registro de Docentes</h1>
             <h2 class="form_titulo">Ingrese Datos</h2>
@@ -27,8 +24,8 @@
            <?php
   $mysqli = new mysqli('localhost', 'stadust', 'N3^B<gv9(=~WLv;', 'stadust_db');
 ?>
-     
-        
+
+
             <label for="paises" class="sr-only">Materia:
             <select class="form-control" >
               <option value="">Seleccione:</option>
@@ -45,24 +42,21 @@
             <label for="correo_electronico">Correo Electronico</label>
             <input type="text" placeholder="Ingrese correo electronico" name = "username">
 
-           
-  
-    
-            
+
 
             <input type="submit" value="Registrar" class="btn-enviar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
-            
+
         </div>
-    
+
 </form>
-    
-    
-    <script src="assets/jquery-1.12.4-jquery.min.js"></script> 
+
+
+    <script src="assets/jquery-1.12.4-jquery.min.js"></script>
 
 <!-- Bootstrap core JavaScript
-    ================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
 
 <script src="dist/js/bootstrap.min.js"></script>
 </body>

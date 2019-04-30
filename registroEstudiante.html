@@ -7,23 +7,21 @@
     <title>Registro de Estudiantes</title>
     <link rel="stylesheet" href="../css/masterRE.css">
 	<script LANGUAGE="JavaScript" src="validarEstudiante.js">
-    
 
-            
 
             function validar_clave() {
-        
+
                 var caract_invalido = " ";
                 var caract_longitud = 6;
-                var cla1 = document.mi.clave1.value; 
+                var cla1 = document.mi.clave1.value;
                  var cla2 = document.mi.clave2.value;
-        
+
                 if (cla1 == '' || cla2 == '')
                 {
                     alert('Debes introducir tu clave en los dos campos.');
                     return false;
                 }
-                if (document.mi.clave1.value.length < caract_longitud) 
+                if (document.mi.clave1.value.length < caract_longitud)
                 {
                     alert('Tu clave debe constar de ' + caract_longitud + ' caracteres.');
                      return false;
@@ -31,19 +29,19 @@
                 if (document.mi.clave1.value.indexOf(caract_invalido) > -1) {
                     alert("Las claves no pueden contener espacios");
                 return false;
-                } 
+                }
                 else {
                     if (cla1 != cla2) {
                         alert ("Las claves introducidas no son iguales");
                         return false;
                     }
                     else {
-            
+
                         return true;
                     }
                 }
             }
-        
+
         </script>
 </head>
 <body>
@@ -73,7 +71,7 @@
             <input type="submit" value="Registrar">
             <p class="form_Link">Hay problemas con la creacion de cuenta?</p>
        </div>
-       
-	</form>	
+
+	</form>
 </body>
 </html>
