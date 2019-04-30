@@ -20,7 +20,7 @@
  $count = mysqli_num_rows($result);
 
  if ($count == 1) {
- echo "<br />". "lamateria ya a sido ya  fue registrado." . "<br />";
+ echo "<br />". "la materia ya a sido ya  fue registrado." . "<br />";
 
  echo "<a href='registroMateria.html'>Por favor escoga otro Nombre</a>";
  }
