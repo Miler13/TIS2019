@@ -4,7 +4,7 @@ body{
     background: url(../img/labo.JPG) no-repeat center top;
     background-size: cover;
     font-family: sans-serif;
-    height: 100vh;  
+    height: 100vh;
 }
 
 .login-box{
@@ -28,7 +28,7 @@ body{
     top: -50px;
     left: calc(50% - 50px);
 }
- 
+
 .login-box h1{
     margin: 0;
     padding: 0 0 20px;
@@ -71,7 +71,7 @@ body{
     font-size: 18px;
     border-radius: 20px;
 }
- 
+
 .login-box a {
     text-decoration: none;
     font-size: 12px;
