@@ -19,7 +19,7 @@ if ($conexion->connect_error) {
 $username = $_POST['username'];
 $password = $_POST['password'];
  
-$sql = "SELECT * FROM `docente` WHERE `user_Doc`='$username' and `passwordDoc` ='$password'";
+$sql = "SELECT * FROM `docente` WHERE `nombreDoc`='$username' and `passwordDoc` ='$password'";
 
 
 $result = $conexion->query($sql);

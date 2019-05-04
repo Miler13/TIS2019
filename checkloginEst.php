@@ -40,12 +40,12 @@ if ($password==$row['passwordES']) {
 
     echo "Bienvenido! " . $_SESSION['username'];
     echo "<br><br><a href=panel-control.php>Panel de Control</a>"; 
-    header('Location: menuAdministrador.html');//redirecciona a la pagina del usuario
+    header('Location: menuEstudiante.html');//redirecciona a la pagina del usuario
 
  } else { 
    echo "Username o Password estan incorrectos.";
 
-   echo "<br><a href='loginAdministrador.html'>Volver a Intentarlo</a>";
+   echo "<br><a href='loginEstudiante.html'>Volver a Intentarlo</a>";
  }
  mysqli_close($conexion); 
  ?>
