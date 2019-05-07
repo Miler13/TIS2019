@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 error_reporting(E_ALL ^ E_NOTICE);
 
 class Conexion
@@ -11,11 +11,16 @@ class Conexion
         try {
 
             $host = 'localhost';
-            $db =   'mydb';
-            $user = 'root';
-            $pwd =  '';
+            $db =   'stadust_db';
+            $user = 'stadust';
+            $pwd =  'N3^B<gv9(=~WLv;';
             $this->dbh = new PDO('mysql:host='.$host.';dbname='.$db, $user, $pwd);
             $this->dbh->exec("SET CHARACTER SET utf8");
+
+
+
+
+
 
         } catch (PDOException $e) {
 
