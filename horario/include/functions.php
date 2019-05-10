@@ -52,8 +52,8 @@ function horariostable($page){
 
             echo '
               <tr id="trhorario'.$key['id'].'">
-                <td>'.$key['nombre'].'</td>
-                <td>'.$key['descripcion'].'</td>
+                <td>'.$key['NombreHorario'].'</td>
+                <td>'.$key['Descripcion'].'</td>
                 <td>'.$fecha.'</td>
                 <td>
                   <button data-id="'.$key['id'].'" class="verhorario btn btn-sm btn-success"><i class="fa fa-pencil-square-o"></i> Ver Horario</button>
