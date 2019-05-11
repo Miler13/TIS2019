@@ -20,7 +20,7 @@ class PDF extends FPDF
             $this->SetFont('Arial','B',12);
 		    $this->Cell(20,20,'Mis Asignaciones:',0,0,'L');
 		    $codigo = $_SESSION["Codigo"];
-		        $docente = mysqli_query($conexion,"SELECT concat(NombresDocente, ' ',ApellidosDocente) as Docente from docentes where idDocente = '$codigo'");
+		        $docente = mysqli_query("SELECT concat(NombresDocente, ' ',ApellidosDocente) as Docente from docentes where idDocente = '$codigo'");
 		            while($row = mysqli_fetch_row($docente)){
 		            $NombreDocente = $row[0];
 

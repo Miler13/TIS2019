@@ -18,7 +18,7 @@ if($result){
     foreach($tables as $table){
         $result=SGBD::sql('SELECT * FROM '.$table);
         if($result){
-            $numFields=mysql_num_fields($result);
+            $numFields=mysqli_num_fields($result);
             $sql.='DROP TABLE IF EXISTS '.$table.';';
             $row2=mysqli_fetch_row(SGBD::sql('SHOW CREATE TABLE '.$table));
             $sql.="\n\n".$row2[1].";\n\n";
@@ -63,4 +63,4 @@ if($result){
 }else{
     echo '<script> alert("Ocurrio un error.");</script>';
 }
-mysql_free_result($result);
+mysqli_free_result($result);

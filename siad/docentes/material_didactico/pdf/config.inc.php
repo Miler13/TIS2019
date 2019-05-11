@@ -1,8 +1,8 @@
 <?php 
 class Conect_MySql {   
-     var $obj = array ( "dbname"	=>	"siad3",
-                       "dbuser"		=>	"root"		,
-                       "dbpwd"		=>	"elier123"		,
+     var $obj = array ( "dbname"	=>	"stadust_db",
+                       "dbuser"		=>	"stadust"		,
+                       "dbpwd"		=>	"N3^B<gv9(=~WLv;"		,
                        "dbhost"		=>	"localhost"	);
 
                          var $q_id	="";

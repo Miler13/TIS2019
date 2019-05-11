@@ -12,7 +12,7 @@ move_uploaded_file($rutatemporal, $rutadestino);
  if (($tipo == "image/jpeg") || ($tipo == "image/png") || ($tipo == "image/jpg")) 
      {  
 		$sql="UPDATE docentes SET Foto = '$rutadestino' where idDocente = '$codigo'";
-		$res=mysqli_query($conexion,$sql,$conexion);
+		$res=mysqli_query($conexion,$sql);
 		if($res){ 
 		 echo '<script> alert("Se ha actualizado su Foto.");</script>';
 		 echo '<script> window.location="docentes.php"; </script>';			

@@ -42,7 +42,7 @@
                         <form class="form-horizontal" role="form" method="post" action="login/validar.php">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <input type="text" style="text-align: center;" class="form-control" name="usuario" placeholder="Introduce tu Email" required="true">
+                                    <input type="text" style="text-align: center;" class="form-control" name="usuario" placeholder="Introduce tu nombre de usuario" required="true">
                                     <i class="fa fa-envelope"></i>
                                 </div>
                             </div>

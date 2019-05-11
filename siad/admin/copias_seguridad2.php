@@ -81,10 +81,10 @@ if(isset($_SESSION['NombreUsuario'])) {
         
          
            <?php
-        include 'backup_Sistema de Laboratorios de informatica-sistemas UMSS/Connet.php';
+        include 'backup_Sistema/Connet.php';
     ?>
  <div class="row">
-         <form action="backup_Sistema de Laboratorios de informatica-sistemas UMSS/Backup.php" method="post">
+         <form action="backup_Sistema/Backup.php" method="post">
                   <!--Fin del Segundo Row !-->
                     <div class="col-md-4">
                        <center>

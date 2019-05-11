@@ -39,7 +39,7 @@ FROM asignaciones INNER JOIN asignaturas ON  asignaciones.idAsignatura =  asigna
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SIAD</title>
+    <title>Laboratorios de informatica-sistemas UMSS</title>
      <link rel="shortcut icon" href="../imagenes/favicon.ico" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
