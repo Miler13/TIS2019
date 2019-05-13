@@ -12,6 +12,8 @@
     <link href="css/modern-business.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
       <link rel="shortcut icon" href="imagenes/logoUNI.ico" type="image/x-icon">
+      <link rel="stylesheet" href="css/reloj.css">
+      <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -28,16 +30,56 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                Laboratorios de informatica-sistemas UMSS
+                Laboratorios de informatica - sistemas UMSS
                 </h1>
             </div>
             <div class="col-lg-12">
                 <p>
                      Bienvenidos al Sistema de Laboratorios de informatica-sistemas UMSS
-                <p>
+                </p>
                 <br>
             </div>
              <div class="row">
+             <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                         <div class="wrap">
+				          <div class="widget">
+                             <div class="fecha"> 
+                                <p>Hora Actual</p><br>
+					            <p id="diaSemana" class="diaSemana"></p>
+					            <p id="dia" class="dia"></p>
+					            <p>de </p>
+					            <p id="mes" class="mes"></p>
+					            <p>del </p>
+					            <p id="year" class="year"></p>
+				              </div>
+                            </div>
+                          </div>    
+                          <script src="js/reloj.js"></script>             
+                    </div>
+                    <div class="panel-body">
+                    <h4>
+                        <div class="wrap">
+				          <div class="widget">
+				              
+				              <div class="reloj">
+					            <p id="horas" class="horas"></p>
+					            <p>:</p>
+					            <p id="minutos" class="minutos"></p>
+					            <p>:</p>
+					            <div class="caja-segundos">
+					               <p id="ampm" class="ampm"></p>
+					               <p id="segundos" class="segundos"></p>
+					            </div>
+				              </div>
+			              </div>                          
+			             </div>
+			           <script src="js/reloj.js"></script>
+                     </h4>                  
+                    </div>
+                </div>
+            </div>
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -45,7 +87,7 @@
                     </div>
                     <div class="panel-body">
                         <h4>Docentes</h4>
-                        <p>Esta seccion es solo para los docentes</p>
+                        <p>Esta seccion es solo para los docentes registrados</p>
                         <a href="docentes/docentes.php" class="btn btn-primary"><i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
                     </div>
                 </div>
@@ -73,7 +115,9 @@
                         <a href="admin/admin.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
                     </div>
                 </div>
-            </div>          
+            </div>    
+
+                       
         </div>
 
         </div>
@@ -81,7 +125,8 @@
         <!-- Features Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Laboratorios de informatica-sistemas UMSS</h2>
+                 <h2 class="page-header">Estimado usuario, le recordamos NO usar acentos, ñ's o caracteres especiales del LENGUAJE ESPAÑOL,
+                      en los nombres de sus archivos y/o documentos que suba a la plataforma.</h2> 
             </div>
           
           
