@@ -2,7 +2,7 @@
 include('../conexion.php');
 	$paginaActual = $_POST['partida'];
 
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM cuatrimestres"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM Cuatrimestres"));
     $nroLotes = 10;
     $nroPaginas = ceil($numeroRegistros/$nroLotes);
     $lista = '';
@@ -28,7 +28,7 @@ include('../conexion.php');
   	}else{
   		$limit = $nroLotes*($paginaActual-1);
   	}
-  	$registro = mysqli_query($conexion,"SELECT * FROM cuatrimestres LIMIT $limit, $nroLotes ");
+  	$registro = mysqli_query($conexion,"SELECT * FROM Cuatrimestres LIMIT $limit, $nroLotes ");
   	$tabla = $tabla.'<table class="table table-striped table-condensed table-hover table-responsive">
 			                <tr>
                         <th width="80%">Nombre de Cuatrimestre</th>           

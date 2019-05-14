@@ -7,12 +7,12 @@ $proceso = $_POST['pro'];
 $nombre = $_POST['nombre'];
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO cuatrimestres (NombreCuatrimestre) VALUES('$nombre')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO Cuatrimestres (NombreCuatrimestre) VALUES('$nombre')");
 	break;
-	case 'Edicion': mysqli_query($conexion,"UPDATE cuatrimestres SET NombreCuatrimestre = '$nombre' where idCuatrimestre = '$id'");
+	case 'Edicion': mysqli_query($conexion,"UPDATE Cuatrimestres SET NombreCuatrimestre = '$nombre' where idCuatrimestre = '$id'");
 	break;
    }
-    $registro = mysqli_query($conexion,"SELECT * FROM cuatrimestres ORDER BY idCuatrimestre ASC");
+    $registro = mysqli_query($conexion,"SELECT * FROM Cuatrimestres ORDER BY idCuatrimestre ASC");
 
     echo '<table class="table table-striped table-condensed table-hover">
         	 <tr>

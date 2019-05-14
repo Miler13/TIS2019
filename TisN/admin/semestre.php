@@ -20,7 +20,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Sistema de Laboratorios de informatica-sistemas UMSS UNI</title>
+    <title>Sistema de Laboratorios de informatica-sistemas UMSS </title>
     <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
@@ -30,7 +30,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="../js/jquery.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="cuatrimestres/myjava.js"></script>
+    <script src="Semestre/myjava.js"></script>
 
     <link href="css/sweetalert.css" rel="stylesheet">
     <script src="js/functions.js"></script>
@@ -99,7 +99,7 @@ if(isset($_SESSION['NombreUsuario'])) {
 		   <h4 style="font-weight: bold;"> 
     <?php
 include('conexion.php');
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM asignaturas"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM cuatrimestres"));
     echo "Registros Totales: $numeroRegistros";
         ?>
         </h4>

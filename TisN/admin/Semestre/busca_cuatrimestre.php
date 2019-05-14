@@ -2,7 +2,7 @@
 include('../conexion.php');
 $dato = $_POST['dato'];
 
-$registro = mysqli_query($conexion,"SELECT * FROM cuatrimestres WHERE NombreCuatrimestre LIKE '%$dato%' ORDER BY idCuatrimestre ASC");
+$registro = mysqli_query($conexion,"SELECT * FROM Cuatrimestres WHERE NombreCuatrimestre LIKE '%$dato%' ORDER BY idCuatrimestre ASC");
        echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	<tr>
                        <th width="80%">Nombre de Cuatrimestre</th>           

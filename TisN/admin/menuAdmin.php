@@ -12,10 +12,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-file"></i>&nbsp;&nbsp;Catalogos <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-file"></i>&nbsp;&nbsp;Catalogo de Administracion <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="cuatrimestre.php">Cuatrimestres</a>
+                                <a href="semestre.php">Semestre</a>
                             </li>
                             <li>
                                 <a href="grupos.php">Grupos</a>
@@ -24,7 +24,7 @@
                                 <a href="turnos.php">Turnos</a>
                             </li>
                             <li>
-                                <a href="asignaturas.php">Asignaturas</a>
+                                <a href="asignaturas.php">Materias</a>
                             </li>
                         </ul>
                     </li>
@@ -51,9 +51,7 @@
                             <li>
                                 <a href="usuarios.php">Permisos</a>
                             </li>
-                            <li>
-                                <a href="copias_seguridad.php">Backup BD</a>
-                            </li>
+                          
                             <li>
                                 <a href="numero_asignaciones.php">Numeros Asignaciones</a>
                             </li>

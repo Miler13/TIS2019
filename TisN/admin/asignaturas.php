@@ -17,7 +17,7 @@ if(isset($_SESSION['NombreUsuario'])) {
           $carrera=mysqli_query($conexion,$consulta1);
            $consulta2="select idGrupo, NumeroGrupo from grupos";
           $grupos=mysqli_query($conexion,$consulta2);
-           $consulta3="select idCuatrimestre, NombreCuatrimestre from cuatrimestres";
+           $consulta3="select idCuatrimestre, NombreCuatrimestre from cuatrimestres ";
           $cuatrimestre=mysqli_query($conexion,$consulta3);
         ?>
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
                     <li><a href="admin.php">Administrador</a></li>
-                    <li class="active">Asignaturas</li>
+                    <li class="active">Materias</li>
                 </ol>
             </div>
         </div> 
@@ -80,7 +80,7 @@ if(isset($_SESSION['NombreUsuario'])) {
         <div class="panel-heading">
             <div class="btn-group pull-right">
             </div>
-            <center><h4><b>Administracion de Asignaturas</b></h4></center>
+            <center><h4><b>Administracion de Materias</b></h4></center>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -89,7 +89,7 @@ if(isset($_SESSION['NombreUsuario'])) {
 		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre de la Asignatura">
 		               </div>
 		               	<div class="col-md-6">
-		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nueva Asignatura</button> 
+		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nueva Materia</button> 
 		               </div>
 	              <br>
  <br>

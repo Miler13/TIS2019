@@ -49,7 +49,7 @@ CREATE TABLE `asignaturas` (
   KEY `Idcuatrimestre` (`Idcuatrimestre`),
   CONSTRAINT `asignaturas_ibfk_1` FOREIGN KEY (`Idcarrera`) REFERENCES `carreras` (`idCarrera`),
   CONSTRAINT `asignaturas_ibfk_2` FOREIGN KEY (`Idyear`) REFERENCES `years_academicos` (`idYearAcademico`),
-  CONSTRAINT `asignaturas_ibfk_3` FOREIGN KEY (`Idcuatrimestre`) REFERENCES `cuatrimestres` (`idCuatrimestre`)
+  CONSTRAINT `asignaturas_ibfk_3` FOREIGN KEY (`Idcuatrimestre`) REFERENCES `Semestre` (`idCuatrimestre`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 INSERT INTO asignaturas VALUES("1","Ingeniera de Software II","2","3","1");
@@ -73,17 +73,17 @@ INSERT INTO carreras VALUES("4","Ingenieria Civil");
 
 
 
-DROP TABLE IF EXISTS cuatrimestres;
+DROP TABLE IF EXISTS Semestre;
 
-CREATE TABLE `cuatrimestres` (
+CREATE TABLE `Semestre` (
   `idCuatrimestre` int(11) NOT NULL AUTO_INCREMENT,
   `NombreCuatrimestre` varchar(50) NOT NULL,
   PRIMARY KEY (`idCuatrimestre`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
-INSERT INTO cuatrimestres VALUES("1","Cuatrimestre I");
-INSERT INTO cuatrimestres VALUES("2","Cuatrimestre II");
-INSERT INTO cuatrimestres VALUES("3","Cuatrimestre III");
+INSERT INTO Semestre VALUES("1","Cuatrimestre I");
+INSERT INTO Semestre VALUES("2","Cuatrimestre II");
+INSERT INTO Semestre VALUES("3","Cuatrimestre III");
 
 
 
@@ -356,7 +356,7 @@ CREATE TABLE `plan_estudio` (
   KEY `idAsignatura` (`idAsignatura`),
   CONSTRAINT `plan_estudio_ibfk_1` FOREIGN KEY (`idCarrera`) REFERENCES `carreras` (`idCarrera`),
   CONSTRAINT `plan_estudio_ibfk_2` FOREIGN KEY (`idYear`) REFERENCES `years_academicos` (`idYearAcademico`),
-  CONSTRAINT `plan_estudio_ibfk_3` FOREIGN KEY (`idCuatrimestre`) REFERENCES `cuatrimestres` (`idCuatrimestre`),
+  CONSTRAINT `plan_estudio_ibfk_3` FOREIGN KEY (`idCuatrimestre`) REFERENCES `Semestre` (`idCuatrimestre`),
   CONSTRAINT `plan_estudio_ibfk_4` FOREIGN KEY (`idAsignatura`) REFERENCES `asignaturas` (`idAsignatura`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 

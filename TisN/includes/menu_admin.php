@@ -24,7 +24,7 @@
                     <a href="portfolio-4-col.html" class="list-group-item">Carreras
                         <span class="label label-danger pull-right">300</span>
                     </a>
-                    <a href="portfolio-item.html" class="list-group-item">Cuatrimestres
+                    <a href="portfolio-item.html" class="list-group-item">Semestre
                         <span class="label label-danger pull-right">300</span>
                     </a>
                     <a href="blog-home-1.html" class="list-group-item">Grupos

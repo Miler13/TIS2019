@@ -12,7 +12,7 @@ if(isset($_SESSION['NombreUsuario'])) {
           $carrera=mysqli_query($conexion,$consulta1);
           $consulta2="select idGrupo, NumeroGrupo from grupos";
           $grupos=mysqli_query($conexion,$consulta2);
-          $consulta3="select idCuatrimestre, NombreCuatrimestre from cuatrimestres";
+          $consulta3="select idCuatrimestre, NombreCuatrimestre from Semestre";
           $cuatrimestre=mysqli_query($conexion,$consulta3);
 
              $consulta=mysqli_query($conexion,"select Foto from estudiantes where idEstudiante = $codigo");                  

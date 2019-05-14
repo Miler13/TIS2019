@@ -131,7 +131,9 @@ include('conexion.php');
 			   <div class="form-group"> <label for="apellido" class="col-md-2 control-label">Apellidos:</label>
 				<div class="col-md-10"><input type="text" class="form-control" id="apellido" name="apellido" required maxlength="50"></div>
 			   </div><br>
-			   
+         <div class="form-group"> <label for="cedula" class="col-md-2 control-label">contraseña:</label>
+				<div class="col-md-10"><input type="text" class="form-control" id="cedula" name="cedula" required maxlength="16"></div>
+			   </div><br>
 			   <div class="form-group"> <label for="correo" class="col-md-2 control-label">Correo:</label>
 				<div class="col-md-10"><input type="email" class="form-control" id="correo" name="correo" required maxlength="50"></div>
 			   </div><br>

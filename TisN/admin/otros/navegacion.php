@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="admin.php">< SIAD ></a>
+                <a class="navbar-brand" href="admin.php">< Sistema de Laboratorios de informatica-sistemas UMSS ></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">

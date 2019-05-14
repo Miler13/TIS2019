@@ -30,11 +30,11 @@ $codigo = $_SESSION["Codigo"];
   	}else{
   		$limit = $nroLotes*($paginaActual-1);
   	}
-  	$registro = mysqli_query($conexion,"SELECT inscripciones_Asignaturas.idInscripcion as id, inscripciones_Asignaturas.fechaInscripcion as fecha, inscripciones_Asignaturas.observaciones as observaciones, asignaturas.NombreAsignatura as Asignatura, carreras.NombreCarrera as Carrera, years_academicos.NombreYear as Year,  cuatrimestres.NombreCuatrimestre as Cuatrimestre
+  	$registro = mysqli_query($conexion,"SELECT inscripciones_Asignaturas.idInscripcion as id, inscripciones_Asignaturas.fechaInscripcion as fecha, inscripciones_Asignaturas.observaciones as observaciones, asignaturas.NombreAsignatura as Asignatura, carreras.NombreCarrera as Carrera, years_academicos.NombreYear as Year,  Semestre.NombreCuatrimestre as Cuatrimestre
 FROM             asignaturas INNER JOIN inscripciones_Asignaturas ON  asignaturas.idAsignatura =  inscripciones_Asignaturas.idAsignatura
                              INNER JOIN estudiantes ON  inscripciones_Asignaturas.idEstudiante =  estudiantes.idEstudiante 
                INNER JOIN carreras ON  asignaturas.Idcarrera =  carreras.idCarrera 
-               INNER JOIN cuatrimestres ON  asignaturas.Idcuatrimestre =  cuatrimestres.idCuatrimestre 
+               INNER JOIN Semestre ON  asignaturas.Idcuatrimestre =  Semestre.idCuatrimestre 
                INNER JOIN years_academicos ON  asignaturas.Idyear =  years_academicos.idYearAcademico
 WHERE estudiantes.idEstudiante = '$codigo' LIMIT $limit, $nroLotes ");
 

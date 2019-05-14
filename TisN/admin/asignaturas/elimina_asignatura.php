@@ -8,10 +8,10 @@ if (!mysqli_query($conexion,"DELETE FROM asignaturas WHERE idAsignatura = '$id'"
 }
 
 $registro = mysqli_query($conexion,"SELECT asignaturas.idAsignatura as id, asignaturas.NombreAsignatura as Asignatura, carreras.NombreCarrera as Carrera, grupos.NumeroGrupo as grupo, 
-cuatrimestres.NombreCuatrimestre as Cuatrimestre FROM asignaturas 
+Semestre.NombreCuatrimestre as Cuatrimestre FROM asignaturas 
                                  INNER JOIN carreras ON  asignaturas.Idcarrera =  carreras.idCarrera 
 
-                                 INNER JOIN cuatrimestres ON  asignaturas.Idcuatrimestre =  cuatrimestres.idCuatrimestre 
+                                 INNER JOIN Semestre ON  asignaturas.Idcuatrimestre =  Semestre.idCuatrimestre 
                                  
                                  INNER JOIN grupos ON  asignaturas.IdGrupo =  grupos.idGrupo
   ORDER BY asignaturas.idAsignatura ASC");
