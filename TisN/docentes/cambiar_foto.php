@@ -7,26 +7,14 @@ if(isset($_SESSION['NombreUsuario'])) {
      if ($_SESSION["NivelUsuario"] == 2) {
             $user = $_SESSION['NombreUsuario'];
             $codigo = $_SESSION["Codigo"];
-        ?>
-             <?php
+            $codigo = $_SESSION["Codigo"];
 
-                        $consulta=mysqli_query($conexion,"select Foto from estudiantes where idEstudiante = $codigo");                  
-                           while($filas=mysqli_fetch_array($consulta)){
-                                 $foto=$filas['Foto'];                           
-                 }
-
-
-               $consultaD=mysqli_query($conexion,"select Foto from docentes where idDocente = $codigo");                  
-                while($filas=mysqli_fetch_array($consultaD)){
+               $consulta=mysqli_query($conexion,"select Foto from usuarios where Codigo = $codigo");                  
+                while($filas=mysqli_fetch_array($consulta)){
                          $foto=$filas['Foto'];                           
                  }
-
-                 $consultaD2 = mysqli_query($conexion,"select concat (NombresDocente, ' ', ApellidosDocente) as Docente from docentes where idDocente = $codigo"); 
-                 while($filas2=mysqli_fetch_array($consultaD2)){
-                         $docente=$filas2['Docente'];                           
-                 }
-
-                 ?>
+               
+        ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +53,7 @@ include ('menu_inicio_docente.php');
              </div>
                <div class="col-md-3">
                <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
-              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $docente ?>    
+              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $user ?>    
               </h5>
                </div> 
 
