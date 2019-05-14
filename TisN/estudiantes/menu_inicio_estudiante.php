@@ -7,23 +7,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">< Sistema de Laboratorios de informatica-sistemas UMSS ></a>
+                <a class="navbar-brand" href="#">< informatica-sistemas UMSS ></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                 
                 
                     <li>
-                        <a href="entrega_tarea.php"><i class="glyphicon glyphicon-file"></i>  Entrega Tareas</a>
+                        <a href=""><i class="glyphicon glyphicon-file"></i>  Entrega Tareas</a>
                     </li>
                     <li>
-                        <a href="material_didactico.php"><i class="glyphicon glyphicon-folder-open"></i>   &nbsp;Material Didactico</a>
+                        <a href=""><i class="glyphicon glyphicon-folder-open"></i>   &nbsp;Material Didactico</a>
                     </li>
                      <li>
-                        <a href="tareas_recibidas.php"><i class="glyphicon glyphicon-share"></i>   &nbsp;Tareas Asignadas</a>
+                        <a href=""><i class="glyphicon glyphicon-share"></i>   &nbsp;Tareas Asignadas</a>
                     </li>
                     <li>
-                        <a href="mis_calificaciones.php"><i class="glyphicon glyphicon-list-alt"></i>   Mis Notas</a>
+                        <a href=""><i class="glyphicon glyphicon-list-alt"></i>   Mis Notas</a>
                     </li>
                      <li>
                         <a href="../login/logout.php"> <i class="glyphicon glyphicon-off"></i>  Desconectarse</a>

@@ -13,16 +13,16 @@
                 <ul class="nav navbar-nav navbar-right">
                 
                     <li>
-                        <a href="material_didactico.php"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;  Material Didactico</a>
+                        <a href=""><i class="glyphicon glyphicon-folder-open"></i> &nbsp;  Material Didactico</a>
                     </li>
                     <li>
-                        <a href="planificacion_tarea.php"><i class="glyphicon glyphicon-file"></i> &nbsp; Planificacion de Tareas</a>
+                        <a href=""><i class="glyphicon glyphicon-file"></i> &nbsp; Planificacion de Tareas</a>
                     </li>
                     <li>
-                        <a href="evaluacion_estudiantes.php"><i class="glyphicon glyphicon-pencil"></i> &nbsp; Pantalla de Evaluaciones</a>
+                        <a href=""><i class="glyphicon glyphicon-pencil"></i> &nbsp; Pantalla de Evaluaciones</a>
                     </li>
                     <li>
-                        <a href="pantalla_reportes.php"><i class="glyphicon glyphicon-list-alt"></i> &nbsp; Pantalla de Reportes</a>
+                        <a href=""><i class="glyphicon glyphicon-list-alt"></i> &nbsp; Pantalla de Reportes</a>
                     </li>
                      <li>
                         <a href="../login/logout.php"> <i class="glyphicon glyphicon-off"></i> &nbsp; Desconectarse</a>

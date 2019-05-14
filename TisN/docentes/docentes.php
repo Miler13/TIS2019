@@ -74,83 +74,14 @@ include ('menu_inicio_docente.php');
     
             <!-- Sidebar Column -->
             <?php
-include ('menu_docente.php');
+
  ?>
             <!-- Content Column -->
             <div class="col-md-9">
                 <h3>Docente conectado : <b style="color:green;"><?php echo $user; ?></b></h3>
                 <p>En esta seccion del sistema usted podra administrar los alumnos que le fueron asignados en la direccion o por el administrador. Usted podra enviar tareas a sus alumnos asi como talbien evaluar dichas tareas, ver reportes, entregar material de estudio, entre otras cosas.</p>
 
-                  <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">                 
-                              <img src="../imagenes/docente1.png" class="img-responsive">
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Material Didactico para estudiantes</h4>
-                        <a href="material_didactico.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download"></i>   Entrar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                            <img src="../imagenes/docente2.png" class="img-responsive">
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Planificacion de Tareas</h4>
-                        <a href="planificacion_tarea.php" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i>  Entrar</a>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                               <img src="images/tareas.png" class="img-responsive">
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Tareas de Estudiantes</h4>
-                        <a href="ver_tarea_estudiante.php" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i>   Entrar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                               <img src="../imagenes/docente3.png" class="img-responsive">
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Pantalla de Evaluaciones</h4>
-                        <a href="evaluacion_estudiantes.php" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i>   Entrar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                             <img src="../imagenes/docente4.png" class="img-responsive">
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Pantalla de Reportes</h4>
-                        <a href="pantalla_reportes.php" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i>   Entrar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-            </div>
+                  
         </div>
         <!-- /.row -->
 
