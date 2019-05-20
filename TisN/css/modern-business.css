@@ -10,7 +10,7 @@ html,
 body {
     height: 100%;
 }
-.footerBottomSection{background:#0a2048; padding:18px 0; color:#fff}
+.footerBottomSection{background:#0a2048; padding:10px 0; color:#fff}
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }

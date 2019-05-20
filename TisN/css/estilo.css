@@ -14,9 +14,15 @@
 
     #login-wrapper
        {
-        margin:100px auto;
+        margin: auto;
         float:none
         }
+
+        .panel-primary > .panel-heading {
+            color: #fff;
+            background-color: #0a2048;
+            border-color: #337ab7;
+          }
     #login-wrapper .logo
         {
             color:#fff;

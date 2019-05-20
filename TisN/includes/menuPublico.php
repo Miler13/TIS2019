@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Laboratorios de informatica - sistemas UMSS</a>
+                <a class="navbar-brand" href="index.php">LAB - INFSIS</a>
                 
         
 

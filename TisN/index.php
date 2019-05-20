@@ -92,6 +92,20 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <img src="imagenes/auxi.png">
+                    </div>
+                    <div class="panel-body">
+                        <h4>Auxiliares</h4>
+                        <p>Esta seccion es solo para auxiliares registrados </p>
+                        <a href="admin/admin.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
+                    </div>
+                </div>
+            </div>
+
              <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -115,7 +129,9 @@
                         <a href="admin/admin.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
                     </div>
                 </div>
-            </div>    
+            </div>  
+
+                  
 
                        
         </div>
@@ -125,13 +141,13 @@
         <!-- Features Section -->
         <div class="row">
             <div class="col-lg-12">
-                 <h2 class="page-header">Estimado usuario, le recordamos NO usar acentos, ñ's o caracteres especiales del LENGUAJE ESPAÑOL,
-                      en los nombres de sus archivos y/o documentos que suba a la plataforma.</h2> 
+                 <h2 class="page-header">Identifique su tipo de usuario y haga click en entrar</h2> 
             </div>
           
           
         </div>
-        <!-- /.row -->
+        <!-- para avisos Estimado usuario, le recordamos NO usar acentos, ñ's o caracteres especiales del LENGUAJE ESPAÑOL,
+                      en los nombres de sus archivos y/o documentos que suba a la plataforma. -->
    <hr>
     </div>
     <script src="js/jquery.js"></script>

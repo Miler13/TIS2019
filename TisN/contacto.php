@@ -56,9 +56,9 @@
                 Laboratorios de informatica-sistemas UMSS
                 </p>
                 <p><i class="fa fa-phone"></i> 
-                    <abbr title="Phone">Telefono</abbr>: 0000000</p>
+                    <abbr title="Phone">Telefono</abbr>: 79383291</p>
                 <p><i class="fa fa-envelope-o"></i> 
-                    <abbr title="Email">Email</abbr>: <a href="mailto:name@example.com">admin@gmail.com</a>
+                    <abbr title="Email">Email</abbr>: <a href="mailto:name@example.com">stardustsoft.tis@gmail.com</a>
                 </p>
                 <p><i class="fa fa-clock-o"></i> 
                     <abbr title="Hours">Horario</abbr>: Lunes a Viernes: 8:00 AM - 16:00 PM</p>

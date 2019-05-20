@@ -23,7 +23,7 @@ h1.page-header{
 
 h2.page-header {
     font-size: 15px;
-    color: red;
+    color: black;
     text-align: center;    
     margin-top: 10px;
     margin-bottom: 0px;
@@ -34,6 +34,16 @@ h2.page-header {
     padding-left: 0px;
     margin-right: 0px;
     margin-left: 0px;
+  }
+
+  .container1{
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 10px;
+
   }
 
   a {
@@ -66,11 +76,12 @@ h2.page-header {
     padding-left: 0px;
 }
 .navbar-brand {
-    float: inherit;
+   /* float: inherit;*/
     height: 50px;
     padding: 15px 15px 15px 15px;
     line-height: 20px;
     font-size: 18px;
+
 }
 
 .row {
