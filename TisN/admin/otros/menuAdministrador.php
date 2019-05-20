@@ -27,7 +27,7 @@
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-child fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
                         </span>
                     </div>
                     <div class="panel-body">
@@ -37,24 +37,20 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-sign-in fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-book fa-stack-1x fa-inverse"></i>
                         </span>
                     </div>
-
-
                     <div class="panel-body">
                          <h4 class="media-heading">Docentes</h4>
                        <p>Total de Docentes: <span class="label label-danger pull-right"><?php echo $TotalDocentes ?></span></p>
                        <a href="docentes.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
-
-
-
                     
                 </div>
             </div>
@@ -65,8 +61,7 @@
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
                               <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
                         </span>
-                    </div>
-                    
+                    </div>                    
                     <div class="panel-body">
                        <h4 class="media-heading">Materias</h4>
                        <p>Total de Materias: <span class="label label-danger pull-right"><?php echo $TotalAsignaturas ?></span></p>
@@ -81,7 +76,7 @@
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-sort-numeric-asc fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-university fa-stack-1x fa-inverse"></i>
                         </span>
                     </div>
                     <div class="panel-body">
@@ -101,7 +96,7 @@
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-clipboard fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-group fa-stack-1x fa-inverse"></i>
                         </span>
                     </div>
                     <div class="panel-body">
@@ -117,7 +112,7 @@
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
                         </span>
                     </div>
                     <div class="panel-body">
@@ -134,7 +129,7 @@
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-user fa-stack-1x fa-inverse"></i>
                         </span>
                     </div>
                     <div class="panel-body">
@@ -150,7 +145,7 @@
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-history fa-stack-1x fa-inverse"></i>
                         </span>
                     </div>
                     <div class="panel-body">
@@ -172,7 +167,7 @@
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
                         </span>
                  
 
