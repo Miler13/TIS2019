@@ -6,7 +6,7 @@ $id = $_POST['id-registro'];
 $proceso = $_POST['pro'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
-$cedula = $_POST['cedula'];
+$password = $_POST['password'];
 $correo = $_POST['correo'];
 $celular = $_POST['celular'];
 $telefono = $_POST['telefono'];
@@ -15,18 +15,18 @@ $estado = $_POST['estado'];
 $foto = "images/fotos_perfil/perfil.jpg";
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO docentes (NombresDocente, ApellidosDocente, CedulaDocente, CorreoDocente, CelularDocente, TelefonoDocente, DireccionDocente, Estado, Foto) VALUES('$nombre','$apellido','$cedula','$correo','$celular','$telefono','$direccion','$estado','$foto')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO docentes (NombresDocente, ApellidosDocente, CedulaDocente, CorreoDocente, CelularDocente, TelefonoDocente, DireccionDocente, Estado, Foto) VALUES('$nombre','$apellido','$password','$correo','$celular','$telefono','$direccion','$estado','$foto')");
 
-  $consulta=mysqli_query($conexion,"SELECT idDocente from docentes where CedulaDocente = '$cedula' and CorreoDocente = '$correo'");              
+  $consulta=mysqli_query($conexion,"SELECT idDocente from docentes where CedulaDocente = '$password' and CorreoDocente = '$correo'");              
                            while($filas=mysqli_fetch_array($consulta)){
                                  $codigo_docente=$filas['idDocente'];                           
                  }
-     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo) VALUES('$correo','$cedula','2','$codigo_docente')");
+     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo) VALUES('$correo','$password','2','$codigo_docente')");
 
 	break;
-	case 'Edicion': mysqli_query($conexion,"UPDATE docentes SET NombresDocente = '$nombre', ApellidosDocente = '$apellido', CedulaDocente = '$cedula', CorreoDocente = '$correo', CelularDocente = '$celular', TelefonoDocente = '$telefono', DireccionDocente = '$direccion', Estado = '$estado' where idDocente = '$id'");
+	case 'Edicion': mysqli_query($conexion,"UPDATE docentes SET NombresDocente = '$nombre', ApellidosDocente = '$apellido', CedulaDocente = '$password', CorreoDocente = '$correo', CelularDocente = '$celular', TelefonoDocente = '$telefono', DireccionDocente = '$direccion', Estado = '$estado' where idDocente = '$id'");
 
-    mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$correo', PassUsuario = '$cedula' where Codigo = '$id'");
+    mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$correo', PassUsuario = '$password' where Codigo = '$id'");
     
 	break;
    }
@@ -36,7 +36,7 @@ switch($proceso){
         	<tr>
                          <th width="10%">Nombres</th>
                          <th width="10%">Apellidos</th>
-                         <th width="15%">Cedula</th>
+                         <th width="15%">Password</th>
                          <th width="10%">Correo</th>
                          <th width="10%">Celular</th>
                          <th width="10%">Telefono</th>

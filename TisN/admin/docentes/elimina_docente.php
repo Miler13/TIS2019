@@ -14,7 +14,7 @@ echo '<table class="table table-striped table-condensed table-hover table-respon
         	          <tr>
                          <th width="10%">Nombres</th>
                          <th width="10%">Apellidos</th>
-                         <th width="15%">Cedula</th>
+                         <th width="15%">Password</th>
                          <th width="10%">Correo</th>
                          <th width="10%">Celular</th>
                          <th width="10%">Telefono</th>
