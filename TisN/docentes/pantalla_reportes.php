@@ -56,7 +56,7 @@ include ('menu_inicio_docente.php');
              </div>
                <div class="col-md-3">
                  <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
-              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $docente ?></h5>
+              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $user ?></h5>
                </div> 
 
             </div>
@@ -85,6 +85,8 @@ include ('menu_docente.php');
             </div>
             <center><h4><b>Reportes Disponibles</b></h4></center>
         </div>
+
+        <!--
         <div class="panel-body">
 
 
@@ -159,7 +161,7 @@ include ('menu_docente.php');
                </div>
  
             </div>
-        
+        -->
         </div>
             </div>
         </div>

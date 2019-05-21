@@ -1,7 +1,7 @@
 <?php
 
 require('../fpdf/fpdf.php');
-require('../conexion.php');
+require('../../admin/conexion.php');
 
 class PDF extends FPDF
 {

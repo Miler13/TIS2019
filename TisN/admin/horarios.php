@@ -126,9 +126,11 @@ include('conexion.php');
 			   </div> <br><br>
                <div class="form-group"> <label for="carnet" class="col-md-2 control-label">Horario:</label>
 				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" required maxlength="50"></div>
-			   </div> <br>
-                 <div id="mensaje"></div>           
-             </div>         
+         </div> <br>
+         
+            <div id="mensaje"></div>           
+             </div>  
+               
             <div class="modal-footer">
                 <input type="submit" value="Registrar" class="btn btn-success" id="reg"/>
                 <input type="submit" value="Editar" class="btn btn-warning"  id="edi"/>

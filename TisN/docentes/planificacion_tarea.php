@@ -63,7 +63,7 @@ where idDocente = $codigo and asignaciones.Estado = 1";
              </div>
                <div class="col-md-3">
                  <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
-              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $docente ?></h5>
+              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $user ?></h5>
                </div> 
 
             </div>
