@@ -10,7 +10,7 @@ class PDF extends FPDF
 function Header()
 {
 
-
+	include ('../../admin/conexion.php');
 	$this->Image('../../imagenes/logoSIAD.png' , 10 ,10, 40 , 20,'PNG');
 	$this->SetFont('Arial','B',20);
 	$this->Cell(160);
@@ -23,13 +23,13 @@ function Header()
 
 	$this->SetFont('Arial','B',12);
 		    $this->Cell(160,20,'Asignaciones del Docente:',0,0,'R');
-		    $codigo = $_SESSION["Codigo"];
-            $asignaciones = mysqli_query($conexion,"SELECT concat(NombresDocente, ' ' ,ApellidosDocente) as Docente FROM docentes where idDocente = '$codigo'");
+				$codigo = $_SESSION["Codigo"];
+				$asignaciones = mysqli_query($conexion,"SELECT concat(NombresDocente, ' ' ,ApellidosDocente) as Docente FROM docentes where idDocente = '$codigo'");
             while($row = mysqli_fetch_row($asignaciones)){
             $NombreDocente = $row[0];
 
             }
-		     $this->Cell(55,20, $NombreDocente, 0,0,'R');
+		     $this->Cell(55,20, $codigo, 0,0,'R');
 			$this->Ln(15);
 
 		 // Colores de los bordes, fondo y texto

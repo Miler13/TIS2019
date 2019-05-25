@@ -1,7 +1,7 @@
 <?php
 
 require('../fpdf/fpdf.php');
-require('../conexion.php');
+require('../../admin/conexion.php');
 
 $Asignatura = $_POST['asignatura'];
 
@@ -9,6 +9,7 @@ class PDF extends FPDF
 {
 		function Header()
 		{
+			include ('../../admin/conexion.php');
 			$this->Image('../../imagenes/logoSIAD.png' , 10 ,10, 40 , 20,'PNG');
 			$this->SetFont('Arial','B',20);
 			$this->Cell(80);
@@ -26,7 +27,7 @@ class PDF extends FPDF
 		            $NombreAsignatura = $row[0];
 
             }
-		     $this->Cell(95,20, $NombreAsignatura, 0,0,'R');
+		     $this->Cell(95,20, $Asignatura, 0,0,'R');
 			$this->Ln(15);
 		    // Colores de los bordes, fondo y texto
 		    $this->SetDrawColor(222,227,221);

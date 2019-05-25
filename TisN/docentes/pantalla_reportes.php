@@ -86,7 +86,7 @@ include ('menu_docente.php');
             <center><h4><b>Reportes Disponibles</b></h4></center>
         </div>
 
-        <!--
+        
         <div class="panel-body">
 
 
@@ -161,7 +161,7 @@ include ('menu_docente.php');
                </div>
  
             </div>
-        -->
+        
         </div>
             </div>
         </div>

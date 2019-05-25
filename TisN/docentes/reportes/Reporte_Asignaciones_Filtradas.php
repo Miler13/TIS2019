@@ -1,7 +1,6 @@
 <?php
-
 require('../fpdf/fpdf.php');
-require('../conexion.php');
+require('../../admin/conexion.php');
 
 $Asignatura = $_POST['asignatura'];
 $Docente = $_POST['docente'];

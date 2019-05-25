@@ -1,7 +1,7 @@
 <?php
 
 require('../fpdf/fpdf.php');
-require('../conexion.php');
+require('../../admin/conexion.php');
 
 $Numero = $_POST['numero'];
 
@@ -9,6 +9,7 @@ class PDF extends FPDF
 {
 		function Header()
 		{
+			include ('../../admin/conexion.php');
 			$this->Image('../../imagenes/logoSIAD.png' , 10 ,10, 40 , 20,'PNG');
 			$this->SetFont('Arial','B',20);
 			$this->Cell(80);
