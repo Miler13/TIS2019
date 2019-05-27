@@ -3,6 +3,7 @@
 
         $TotalEstudiantes = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM estudiantes"));
         $TotalDocentes = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM docentes"));
+        $TotalAuxiliares = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM auxiliares"));
         $TotalAsignaturas = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM asignaturas"));
         $TotalCarreras = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM carreras"));
         $TotalCuatrimestre = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM cuatrimestres"));
@@ -50,10 +51,28 @@
                          <h4 class="media-heading">Docentes</h4>
                        <p>Total de Docentes: <span class="label label-danger pull-right"><?php echo $TotalDocentes ?></span></p>
                        <a href="docentes.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
-                    </div>
-                    
+                    </div>                    
                 </div>
             </div>
+
+
+        <!----auxiliares ---->
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-3x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                         <h4 class="media-heading">Auxiliares</h4>
+                       <p>Total de Auxiliares: <span class="label label-danger pull-right"><?php echo $TotalAuxiliares ?></span></p>
+                       <a href="auxiliares.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
+                    </div>                    
+                </div>
+            </div>
+
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -68,7 +87,6 @@
                        <a href="asignaturas.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
 
-
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -81,17 +99,13 @@
                     </div>
                     <div class="panel-body">
                          <h4 class="media-heading">Carreras</h4>
-                     <p>Total de Estudiantes: <span class="label label-danger pull-right"><?php echo $TotalCarreras ?></span></p>
+                      <p>Total de Estudiantes: <span class="label label-danger pull-right"><?php echo $TotalCarreras ?></span></p>
                       <a href="carreras.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
                 </div>
             </div>
-        </div>
 
-         <div class="row">
-            <div class="col-lg-12">
-            </div>
-                        <div class="col-md-3 col-sm-6">
+              <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
@@ -157,11 +171,7 @@
                    
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-12">
-            </div>
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -179,4 +189,6 @@
                     </div>
                 </div>
             </div>
+
         </div>
+
