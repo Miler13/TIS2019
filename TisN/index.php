@@ -101,7 +101,7 @@
                     <div class="panel-body">
                         <h4>Auxiliares</h4>
                         <p>Esta seccion es solo para auxiliares registrados </p>
-                        <a href="admin/admin.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
+                        <a href="auxiliares/auxiliares.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
                     </div>
                 </div>
             </div>
