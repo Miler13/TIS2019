@@ -32,7 +32,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SIAD</title>
+    <title> Laboratorios informatica-sistemas UMSS</title>
      <link rel="shortcut icon" href="../imagenes/favicon.ico" type="image/x-icon">
     <link href="../admin/css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">

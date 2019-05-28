@@ -30,7 +30,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SIAD</title>
+    <title>Laboratorios informatica-sistemas UMSS</title>
     <link href="../admin/css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"

@@ -19,6 +19,6 @@ $guardar = mysqli_query($conexion,"INSERT INTO inscripciones_asignaturas (idCarr
 					else
 					{
 							  echo '<script> alert("Error al Inscribir la asignatura. Intente de Nuevo.");</script>';
-					          echo '<script> window.location="../inscripcion_asignatura.php"; </script>';
+							  echo '<script> window.location="../inscripcion_asignatura.php"; </script>';
 					}
 ?>

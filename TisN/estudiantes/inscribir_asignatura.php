@@ -34,7 +34,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SIAD</title>
+    <title>Laboratorios informatica-sistemas UMSS</title>
      <link rel="shortcut icon" href="../imagenes/favicon.ico" type="image/x-icon">
     <link href="../admin/css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
@@ -128,10 +128,10 @@ if(isset($_SESSION['NombreUsuario'])) {
                        </div>
                     </div> <br>
 
-                       <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Cuatrimestre:</label>
+                       <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Semestre:</label>
                          <div class="col-md-9">
-                       <select class="form-control" id="Cuatrimestre" name="cuatrimestre">
-                        <option>---- Seleccione un Cuatrimestre -----</option>
+                       <select class="form-control" id="cuatrimestre" name="cuatrimestre">
+                        <option>---- Seleccione un Semestre -----</option>
                       <?php 
                           while($fila=mysqli_fetch_row($cuatrimestre)){
                           echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
