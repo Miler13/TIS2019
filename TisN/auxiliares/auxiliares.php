@@ -8,14 +8,14 @@ if(isset($_SESSION['NombreUsuario'])) {
             $user = $_SESSION['NombreUsuario'];
             $codigo = $_SESSION["Codigo"];
 
-              $consulta=mysqli_query($conexion,"select Foto from auxiliares where idAuxiliar = $codigo");                  
+              $consulta=mysqli_query($conexion,"select Foto from auxiliares where idAuxiliar = $codigo");
                 while($filas=mysqli_fetch_array($consulta)){
-                         $foto=$filas['Foto'];                           
+                         $foto=$filas['Foto'];
                  }
 
-                 $consulta2 = mysqli_query($conexion,"select concat (NombresAuxiliar, ' ', ApellidosAuxiliar) as Auxiliar from auxiliares where idAuxiliar = $codigo"); 
+                 $consulta2 = mysqli_query($conexion,"select concat (NombresAuxiliar, ' ', ApellidosAuxiliar) as Auxiliar from auxiliares where idAuxiliar = $codigo");
                  while($filas2=mysqli_fetch_array($consulta2)){
-                         $Auxiliar=$filas2['Auxiliar'];                           
+                         $Auxiliar=$filas2['Auxiliar'];
                  }
         ?>
 
@@ -31,6 +31,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="author" content="">
 
     <title>Laboratorios de informatica - sistemas UMSS</title>
+    <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"
@@ -45,23 +46,23 @@ include ('menu_inicio_auxiliar.php');
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        
+
             <div class="row">
             <div class="col-lg-12">
             <div class="col-md-3"><img src="../imagenes/logoSIAD.png" width="80" height="80" class="img-responsive"></div>
-                 <div class="col-md-6">         
-               
+                 <div class="col-md-6">
+
                 <img src="../imagenes/banerDoc.png" class="img-responsive">
-                     
+
              </div>
                <div class="col-md-3">
                  <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
               <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $user ?></h5>
-               </div> 
+               </div>
 
             </div>
 
-           
+
             <div class="col-lg-12">
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
@@ -71,7 +72,7 @@ include ('menu_inicio_auxiliar.php');
         <!-- /.row -->
 
         <!-- Content Row -->
-    
+
             <!-- Sidebar Column -->
             <?php
 include ('menu_auxiliares.php');
@@ -85,7 +86,7 @@ include ('menu_auxiliares.php');
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <span class="fa-stack fa-5x">                 
+                        <span class="fa-stack fa-5x">
                               <img src="../imagenes/Auxiliar1.png" class="img-responsive">
                         </span>
                     </div>
@@ -107,14 +108,14 @@ include ('menu_auxiliares.php');
                         <h4>Pantalla de Evaluaciones</h4>
                         <a href="evaluacion_estudiantes.php" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i>   Entrar</a>
                     </div>
-                   
+
                 </div>
             </div>
 
-             
 
 
-                    
+
+
             </div>
         </div>
             </div>
@@ -124,7 +125,7 @@ include ('menu_auxiliares.php');
         <hr>
 
         <!-- Footer -->
-      
+
 
     </div>
     <!-- /.container -->

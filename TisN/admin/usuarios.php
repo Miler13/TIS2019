@@ -136,6 +136,7 @@ include('conexion.php');
          <option value="1">Administrador</option>
         <option value="2">Docente</option>
         <option value="3">Estudiante</option>
+		<option value="4">Auxiliar</option>
        </select>
         </div>
 			   </div><br>

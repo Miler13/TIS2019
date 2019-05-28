@@ -15,19 +15,19 @@ $estado = $_POST['estado'];
 $foto = "images/fotos_perfil/perfil.jpg";
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO auxiliar (NombresAuxiliar, ApellidosAuxiliar, PasswordAuxiliar, CorreoAuxiliar, CelularAuxiliar, CedulaAuxiliar, DireccionAuxiliar, Estado, Foto) VALUES('$nombre','$apellido','$password','$correo','$celular','$cedula','$direccion','$estado','$foto')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO auxiliares (NombresAuxiliar, ApellidosAuxiliar, PasswordAuxiliar, CorreoAuxiliar, CelularAuxiliar, CedulaAuxiliar, DireccionAuxiliar, Estado, Foto) VALUES('$nombre','$apellido','$password','$correo','$celular','$cedula','$direccion','$estado','$foto')");
 
-  $consulta=mysqli_query($conexion,"SELECT idAuxiliar from auxiliares where CedulaAuxiliar = '$password' and CorreoAuxiliar = '$correo'");              
+  $consulta=mysqli_query($conexion,"SELECT idAuxiliar from auxiliares where CedulaAuxiliar = '$password' and CorreoAuxiliar = '$correo'");
                            while($filas=mysqli_fetch_array($consulta)){
-                                 $codigo_auxiliar=$filas['idAuxiliar'];                           
+                                 $codigo_auxiliar=$filas['idAuxiliar'];
                  }
-     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo) VALUES('$correo','$password','2','$codigo_auxiliar')");
+     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo) VALUES('$correo','$password','4','$codigo_auxiliar')");
 
 	break;
 	case 'Edicion': mysqli_query($conexion,"UPDATE auxiliares SET NombresAuxiliar = '$nombre', ApellidosAuxiliar = '$apellido', PasswordAuxiliar = '$password', CorreoAuxiliar = '$correo', CelularDocente = '$celular', CedulaAuxiliar = '$cedula', DireccionAuxiliar = '$direccion', Estado = '$estado' where idAuxiliar = '$id'");
 
     mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$correo', PassUsuario = '$password' where Codigo = '$id'");
-    
+
 	break;
    }
     $registro = mysqli_query($conexion,"SELECT * FROM auxiliares ORDER BY idAuxiliar ASC");
@@ -41,7 +41,7 @@ switch($proceso){
                          <th width="10%">Celular</th>
                          <th width="10%">Cedula</th>
                          <th width="20%">Direccion</th>
-                         <th width="5%">Estado</th>            
+                         <th width="5%">Estado</th>
                         <th width="10%">Opciones</th>
             </tr>';
 	while($registro2 = mysqli_fetch_array($registro)){
