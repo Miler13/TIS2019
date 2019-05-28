@@ -27,6 +27,8 @@
 
          <a href="mis_calificaciones.php" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i>   &nbsp;&nbsp; Notas de Clases
                     </a>
+          <a href="#" class="list-group-item"> <i class="glyphicon glyphicon-book"></i>   &nbsp;&nbsp; Mis Estadisticas
+                    </a>
          <a href="cambiar_foto.php" class="list-group-item"><i class="glyphicon glyphicon-user"></i>   &nbsp;&nbsp; Cambiar Foto
                     </a>
                     <br>

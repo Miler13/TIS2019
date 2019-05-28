@@ -30,7 +30,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Laboratorios informatica-sistemas UMSS</title>
+    <title>SIAD</title>
     <link href="../admin/css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"
@@ -74,29 +74,28 @@ include ('menu_inicio_estudiante.php');
     
             <!-- Sidebar Column -->
             <?php
-			include ('menu_estudiante.php');
-
+include ('menu_estudiante.php');
  ?>
             <!-- Content Column -->
             <div class="col-md-9">
                 <h3>Bienvenido Estudiante : <b style="color:green;"><?php echo $estudiante; ?></b></h3>
                 <p>En esta seccion del sistema usted podra inscibir las asignaturas correspondientes a su año y carrera, ademas de ver y descargar los archivos de apoyo de las clases impartidas, entregar tareas y ver las notas asignadas a estas tareas.</p>
 
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="panel panel-default text-center">
-							<div class="panel-heading">
-								<span class="fa-stack fa-5x">                 
-									<img src="images/Signature.png" class="img-responsive">
-								</span>
-							</div>
-						<div class="panel-body">
-							<h4>Inscripciones</h4>
-							<a href="inscripcion_asignatura.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download"></i>   Entrar</a>
-						</div>
-					</div>
+                  <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">                 
+                              <img src="images/Signature.png" class="img-responsive">
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Inscripciones</h4>
+                        <a href="inscripcion_asignatura.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download"></i>   Entrar</a>
+                    </div>
+                </div>
             </div>
-			<div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-5x">
@@ -109,7 +108,8 @@ include ('menu_inicio_estudiante.php');
                     </div>
                 </div>
             </div>
-			<div class="col-md-3 col-sm-6">
+          
+            <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-5x">
@@ -122,7 +122,8 @@ include ('menu_inicio_estudiante.php');
                     </div>
                 </div>
             </div>
-			<div class="col-md-3 col-sm-6">
+
+              <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-5x">
@@ -135,7 +136,8 @@ include ('menu_inicio_estudiante.php');
                     </div>
                 </div>
             </div>
-			<div class="col-md-3 col-sm-6">
+
+              <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-5x">
@@ -148,8 +150,23 @@ include ('menu_inicio_estudiante.php');
                     </div>
                 </div>
             </div>
-		</div>
-			</div>            
+
+              <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                             <img src="images/estadistica.png" class="img-responsive">
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Mis Estadisticas</h4>
+                        <a href="tareas_recibidas.php" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i>   Entrar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            </div>
         </div>
         <!-- /.row -->
 
