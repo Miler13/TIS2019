@@ -17,17 +17,17 @@ $foto = "images/fotos_perfil/perfil.jpg";
 switch($proceso){
 	case 'Registro': mysqli_query($conexion,"INSERT INTO docentes (NombresDocente, ApellidosDocente, CedulaDocente, CorreoDocente, CelularDocente, TelefonoDocente, DireccionDocente, Estado, Foto) VALUES('$nombre','$apellido','$password','$correo','$celular','$telefono','$direccion','$estado','$foto')");
 
-  $consulta=mysqli_query($conexion,"SELECT idDocente from docentes where CedulaDocente = '$password' and CorreoDocente = '$correo'");              
+  $consulta=mysqli_query($conexion,"SELECT idDocente from docentes where CedulaDocente = '$password' and CorreoDocente = '$correo'");
                            while($filas=mysqli_fetch_array($consulta)){
-                                 $codigo_docente=$filas['idDocente'];                           
+                                 $codigo_docente=$filas['idDocente'];
                  }
-     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo) VALUES('$correo','$password','2','$codigo_docente')");
+     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$correo','$password','2','$codigo_docente', '$foto')");
 
 	break;
 	case 'Edicion': mysqli_query($conexion,"UPDATE docentes SET NombresDocente = '$nombre', ApellidosDocente = '$apellido', CedulaDocente = '$password', CorreoDocente = '$correo', CelularDocente = '$celular', TelefonoDocente = '$telefono', DireccionDocente = '$direccion', Estado = '$estado' where idDocente = '$id'");
 
     mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$correo', PassUsuario = '$password' where Codigo = '$id'");
-    
+
 	break;
    }
     $registro = mysqli_query($conexion,"SELECT * FROM docentes ORDER BY idDocente ASC");
@@ -41,7 +41,7 @@ switch($proceso){
                          <th width="10%">Celular</th>
                          <th width="10%">Telefono</th>
                          <th width="20%">Direccion</th>
-                         <th width="5%">Estado</th>            
+                         <th width="5%">Estado</th>
                         <th width="10%">Opciones</th>
             </tr>';
 	while($registro2 = mysqli_fetch_array($registro)){

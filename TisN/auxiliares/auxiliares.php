@@ -52,7 +52,7 @@ include ('menu_inicio_auxiliar.php');
             <div class="col-md-3"><img src="../imagenes/logoSIAD.png" width="80" height="80" class="img-responsive"></div>
                  <div class="col-md-6">
 
-                <img src="../imagenes/banerDoc.png" class="img-responsive">
+                <img src="../imagenes/banerAux.png" class="img-responsive">
 
              </div>
                <div class="col-md-3">

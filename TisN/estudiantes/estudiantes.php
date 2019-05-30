@@ -5,17 +5,17 @@ include '../admin/conexion.php';
 
 if(isset($_SESSION['NombreUsuario'])) {
      if ($_SESSION["NivelUsuario"] == 3) {
-            $user = $_SESSION['NombreUsuario'];
+            $estudiante = $_SESSION['NombreUsuario'];
             $codigo = $_SESSION["Codigo"];
 
-                $consulta=mysqli_query($conexion,"select Foto from estudiantes where idEstudiante = $codigo");                  
+                $consulta=mysqli_query($conexion,"select Foto from estudiantes where idEstudiante = $codigo");
                 while($filas=mysqli_fetch_array($consulta)){
-                         $foto=$filas['Foto'];                           
+                         $foto=$filas['Foto'];
                  }
 
-                 $consulta2 = mysqli_query($conexion,"select concat (NombresEstudiante, ' ', ApellidosEstudiante) as Estudiante from estudiantes where idEstudiante = $codigo"); 
+                 $consulta2 = mysqli_query($conexion,"select concat (NombresEstudiante, ' ', ApellidosEstudiante) as Estudiante from estudiantes where idEstudiante = $codigo");
                  while($filas2=mysqli_fetch_array($consulta2)){
-                         $estudiante=$filas2['Estudiante'];                           
+                         $estudiante=$filas2['Estudiante'];
                  }
                  ?>
 
@@ -33,7 +33,10 @@ if(isset($_SESSION['NombreUsuario'])) {
     <title>Laboratorios informatica-sistemas UMSS</title>
     <link href="../admin/css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/reloj.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -45,20 +48,20 @@ include ('menu_inicio_estudiante.php');
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        
+
             <div class="row">
             <div class="col-lg-12">
             <div class="col-md-3"><img src="../imagenes/logoSIAD.png" width="80" height="80" class="img-responsive"></div>
-                 <div class="col-md-6">                      
-                <img src="../imagenes/banerEst.png" class="img-responsive">                    
+                 <div class="col-md-6">
+                <img src="../imagenes/banerEst.png" class="img-responsive">
              </div>
                <div class="col-md-3">
                <br>
                <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
               <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $estudiante ?>
-             
+
               </h5>
-               </div> 
+               </div>
 
             </div>
 
@@ -71,7 +74,7 @@ include ('menu_inicio_estudiante.php');
         <!-- /.row -->
 
         <!-- Content Row -->
-    
+
             <!-- Sidebar Column -->
             <?php
 include ('menu_estudiante.php');
@@ -85,7 +88,7 @@ include ('menu_estudiante.php');
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <span class="fa-stack fa-5x">                 
+                        <span class="fa-stack fa-5x">
                               <img src="images/Signature.png" class="img-responsive">
                         </span>
                     </div>
@@ -108,7 +111,7 @@ include ('menu_estudiante.php');
                     </div>
                 </div>
             </div>
-          
+
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -173,7 +176,7 @@ include ('menu_estudiante.php');
         <hr>
 
         <!-- Footer -->
-      
+
 
     </div>
     <!-- /.container -->

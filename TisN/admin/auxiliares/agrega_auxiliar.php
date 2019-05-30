@@ -21,7 +21,7 @@ switch($proceso){
                            while($filas=mysqli_fetch_array($consulta)){
                                  $codigo_auxiliar=$filas['idAuxiliar'];
                  }
-     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo) VALUES('$correo','$password','4','$codigo_auxiliar')");
+     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$correo','$password','4','$codigo_auxiliar', '$foto')");
 
 	break;
 	case 'Edicion': mysqli_query($conexion,"UPDATE auxiliares SET NombresAuxiliar = '$nombre', ApellidosAuxiliar = '$apellido', PasswordAuxiliar = '$password', CorreoAuxiliar = '$correo', CelularDocente = '$celular', CedulaAuxiliar = '$cedula', DireccionAuxiliar = '$direccion', Estado = '$estado' where idAuxiliar = '$id'");

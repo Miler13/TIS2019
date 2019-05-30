@@ -23,7 +23,7 @@ switch($proceso){
                            while($filas=mysqli_fetch_array($consulta)){
                                  $codigo_estudiante=$filas['idEstudiante'];                           
                  }
-     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo) VALUES('$correo','$cedula','3','$codigo_estudiante')");
+     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$correo','$cedula','3','$codigo_estudiante', '$foto')");
 	
   break;
 
