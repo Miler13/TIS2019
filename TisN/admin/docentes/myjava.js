@@ -78,7 +78,7 @@ function editarRegistro(id){
 				$('#id-registro').val(id);
 				$('#nombre').val(datos[0]);
 				$('#apellido').val(datos[1]);
-				$('#password').val(datos[2]);
+				$('#cedula').val(datos[2]);
 				$('#correo').val(datos[3]);
 				$('#celular').val(datos[4]);
 				$('#telefono').val(datos[5]);

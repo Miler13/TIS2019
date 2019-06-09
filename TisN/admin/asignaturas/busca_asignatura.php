@@ -13,7 +13,7 @@ Semestre.NombreCuatrimestre as Cuatrimestre FROM asignaturas
   WHERE asignaturas.NombreAsignatura LIKE '%$dato%' ORDER BY asignaturas.idAsignatura ASC");
        echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	<tr>
-                      <th width="40%">Asignatura</th>  
+                        <th width="40%">Asignatura</th>  
                         <th width="20%">Carrera</th> 
                         <th width="20%">Semestre</th>       
                         <th width="20%">Opciones</th>
