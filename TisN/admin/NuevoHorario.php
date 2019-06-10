@@ -1,17 +1,3 @@
-<?php
-session_start();
-include 'conexion.php';
-
-if(isset($_SESSION['NombreUsuario'])) {
-     if ($_SESSION["NivelUsuario"] == 1) {
-            $user = $_SESSION['NombreUsuario'];
-              $codigo = $_SESSION["Codigo"];
-
-              $consulta=mysqli_query($conexion,"select Foto from usuarios where Codigo = $codigo");                  
-                while($filas=mysqli_fetch_array($consulta)){
-                         $foto=$filas['Foto'];                           
-                 }
-        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +8,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="author" content="">
     <title>Sistema de Laboratorios de informatica-sistemas UMSS UNI</title>
     <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
-    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../css/estilo.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
@@ -32,69 +18,32 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="../js/bootstrap.min.js"></script>
     <script src="horarios/myjava.js"></script>
 
-    <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
-    
-
-
     <link href="css/sweetalert.css" rel="stylesheet">
     <script src="js/functions.js"></script>
     <script src="js/sweetalert.min.js"></script>
-</head>
-<body>
-    <?php
-      include ('menuAdmin.php');
-    ?>
-    <br>
-    <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-            <div class="col-md-3"><img src="../imagenes/logoSiad.png" width="80" height="80" class="img-responsive">
-            </div>
-            <div class="col-md-6">         
-              <img src="../imagenes/baner.png" class="img-responsive">
-                     
-            </div>
-            <div class="col-md-3">
-              <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
-              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $user ?></h5>
-            </div> 
 
-          </div>
-          <div class="col-lg-12">
-            <ol class="breadcrumb">
-              <li><a href="../index.php">Inicio</a></li>
-              <li><a href="admin.php">Administrador</a></li>
-              <li class="active">Horarios</li>
-            </ol>
-          </div>
-        </div> 
-        <!-- /.row -->
-        <!-- Content Row -->
-        
-        <div class="row">
-            <!-- Content Column -->
-          <div class="col-md-9">
-            <div class="container">
-              <div class="panel panel-success">
-                <div class="panel-heading">
-                  <div class="btn-group pull-right">
-                  </div>
-                  <center><h4><b>Administracion de Horarios de Clases</b></h4></center>
-                </div>
-                <div class="panel-body">
-                  <div class="row">
-                   
-                  
+    
+    <!-- Bootstrap -->
+    <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet">
 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-                      <!-- menu -->
-                    <div id="menu" class="col-md-12 ">
-                      <div class="container">
-                        <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</button>
-                      </div>
-                    </div>
-                      <!-- menu -->
+    <!-- menu -->
+    <div id="menu" class="col-md-12 text-right">
+      <div class="container">
+          <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
+          <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</button>
+      </div>
+    </div>
+    <!-- menu -->
 
 
     <!-- container -->
@@ -121,7 +70,7 @@ if(isset($_SESSION['NombreUsuario'])) {
       <div class="modal-body">
         
          <form id="horariofrm">
-            <label>Nombre Horario:</label>
+            <label>Nombre de la materia:</label>
             <input class="form-control" type="text" name="nombre" >
             <label>Descripción:</label>
             <textarea class="form-control" name="descripcion" rows="3"></textarea>
@@ -133,7 +82,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                <a data-day="4" class="day-option">Jueves</a>
                <a data-day="5" class="day-option">Viernes</a>
                <a data-day="6" class="day-option">Sabado</a>
-               
+               <a data-day="7" class="day-option">Domingo</a>
             </div>
             <input id="days-chose" class="form-control" type="text" name="days" >
             <label>Inicio:</label>
@@ -143,10 +92,9 @@ if(isset($_SESSION['NombreUsuario'])) {
             <label>Dividir Entre:</label>
             <select class="form-control" name="minutos">
                 <option></option>
-                
+                <option value="45">45 minutos</option>
                 <option value="90">1 Hora y Media</option>
             </select>
-            
          </form>
 
       </div>
@@ -195,25 +143,25 @@ if(isset($_SESSION['NombreUsuario'])) {
 <!-- append modal set data -->
 
 
-    
-      </div>
-    </div>
-</div>
-</div>
-        <hr>
-    </div>
-    <?php
-    include('../includes/footer.php');
- ?>
-</body>
+
+
+<!-- alert danger -->
+<div id="alert-error"><i class="fa fa-times fa-2x"></i></div>
+<!-- alert danger -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- datetimepicker -->
+    <script src="js/moment-with-locales.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <!-- validate -->
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <!-- script -->
+    <script src="js/script.js"></script>
+
+  </body>
 </html>
-<?php
-     }
-     else{
-        echo '<script> alert("No Tienes los permisos para acceder a esta pagina.");</script>';
-         echo '<script> window.location="../login.php"; </script>';
-     }
-}else{
- echo '<script> window.location="../login.php"; </script>';
-}
-?>
