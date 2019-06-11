@@ -15,7 +15,7 @@
         <p>NO tiene archivos</p>
                 <?php }else{ ?>
                 <div align="center">
-        <iframe src="archivos/<?php echo $datos['Archivo']; ?>" width="100%" height="800"></iframe>
+        <iframe src="archivos/<?php echo $datos['Archivo']; ?>" width="100%" height="650"></iframe>
                 </div>
                 <?php } } ?>
 

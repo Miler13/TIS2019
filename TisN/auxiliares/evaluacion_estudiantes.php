@@ -175,9 +175,9 @@ include('../admin/conexion.php');
                        </div>
                     </div> <br>
                     
-                <div class="form-group"> <label for="carnet" class="col-md-4 control-label">Practica:</label>
+                <div class="form-group"> <label for="carnet" class="col-md-4 control-label">Unidad:</label>
                      <div class="col-md-8">
-                     <input type="text" class="form-control" id="Practica" name="Practica" required maxlength="50">
+                     <input type="text" class="form-control" id="unidad" name="unidad" required maxlength="50">
                      </div>
                </div> <br>
 
