@@ -163,16 +163,16 @@ if(isset($_SESSION['NombreUsuario'])) {
 include('conexion.php');
 
 
-$registro = mysqli_query($conexion,"SELECT inscripciones_asignaturas.idInscripcion as Codigo, carreras.NombreCarrera as Carrera, asignaturas.NombreAsignatura as Asignatura, concat(estudiantes.NombresEstudiante, ' ' ,estudiantes.ApellidosEstudiante) as Estudiantes,
+$registro = mysqli_query($conexion,"SELECT inscripciones_asignaturas.idInscripcion as Codigo, asignaturas.NombreAsignatura as Asignatura, concat(estudiantes.NombresEstudiante, ' ' ,estudiantes.ApellidosEstudiante) as Estudiantes,
 inscripciones_asignaturas.fechaInscripcion as fecha, inscripciones_asignaturas.observaciones as observaciones 
-FROM inscripciones_asignaturas INNER JOIN carreras ON inscripciones_asignaturas.idCarrera=carreras.idCarrera 
+FROM inscripciones_asignaturas 
 INNER JOIN asignaturas ON inscripciones_asignaturas.idAsignatura=asignaturas.idasignatura 
 INNER JOIN estudiantes ON inscripciones_asignaturas.idEstudiante=estudiantes.idestudiante");
 
 if (isset($_POST['txtbuscar'])){
-      $registro=mysqli_query($conexion,"SELECT inscripciones_asignaturas.idInscripcion as Codigo, carreras.NombreCarrera as Carrera, asignaturas.NombreAsignatura as Asignatura, concat(estudiantes.NombresEstudiante, ' ' ,estudiantes.ApellidosEstudiante) as Estudiantes,
+      $registro=mysqli_query($conexion,"SELECT inscripciones_asignaturas.idInscripcion as Codigo, asignaturas.NombreAsignatura as Asignatura, concat(estudiantes.NombresEstudiante, ' ' ,estudiantes.ApellidosEstudiante) as Estudiantes,
 inscripciones_asignaturas.fechaInscripcion as fecha, inscripciones_asignaturas.observaciones as observaciones 
-FROM inscripciones_asignaturas INNER JOIN carreras ON inscripciones_asignaturas.idCarrera=carreras.idCarrera 
+FROM inscripciones_asignaturas 
 INNER JOIN asignaturas ON inscripciones_asignaturas.idAsignatura=asignaturas.idasignatura 
 INNER JOIN estudiantes ON inscripciones_asignaturas.idEstudiante=estudiantes.idestudiante
 where estudiantes.NombresEstudiante like '%".$_POST['txtbuscar']."%'"); 
@@ -191,7 +191,7 @@ where estudiantes.NombresEstudiante like '%".$_POST['txtbuscar']."%'");
        while($registro2 = mysqli_fetch_array($registro)){
           echo '<tr>
                               <td>'.$registro2['Codigo'].'</td>
-                              <td>'.$registro2['Carrera'].'</td>
+                             
                               <td>'.$registro2['Asignatura'].'</td>
                               <td>'.$registro2['Estudiantes'].'</td>
                               <td>'.$registro2['fecha'].'</td>

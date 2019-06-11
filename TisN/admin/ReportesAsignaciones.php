@@ -108,7 +108,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                  
             <div class="modal-body">
    
-                      <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Docente.php" ">
+                      <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Docente.php" >
                      <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Busqueda por Docente:</label>
                          <div class="col-md-4">
                        <select class="form-control" id="docente" name="docente">
@@ -123,7 +123,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     </div>
                     </form>
 
-                    <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Asignatura.php" ">
+                    <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Asignatura.php" >
                     <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Busqueda por Asignatura:</label>
                          <div class="col-md-4">
                        <select class="form-control" id="asignatura" name="asignatura">
@@ -138,7 +138,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     </div>
                     </form>
 
-                    <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Grupo.php" ">
+                    <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Grupo.php" >
                     <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Busqueda por Grupo:</label>
                          <div class="col-md-4">
                        <select class="form-control" id="grupo" name="grupo">
@@ -153,7 +153,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     </div>
                     </form>
 
-                           <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Turno.php" ">
+                           <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Turno.php" >
                          <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Busqueda por Turno:</label>
                          <div class="col-md-4">
                        <select class="form-control" id="turno" name="turno">
@@ -168,7 +168,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     </div>
                     </form>
                     
-                      <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Horario.php" ">
+                      <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_Horario.php" >
                     <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Busqueda por Horario:</label>
                          <div class="col-md-4">
                        <select class="form-control" id="horario" name="horario">
@@ -183,7 +183,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     </div>
                     </form>
 
-                    <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_NumeroAsignacion.php" ">
+                    <form class="form-group" method="post" action="reportes/Reporte_Asignaciones_Por_NumeroAsignacion.php" >
                     <div class="form-group"> <label for="carnet" class="col-md-3 control-label">Busqueda por Numero:</label>
                      <div class="col-md-4">
                      <input type="number" class="form-control" name="numero" placeholder="Escriba el Numero de Asignacion">
