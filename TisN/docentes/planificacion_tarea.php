@@ -163,15 +163,15 @@ include('../admin/conexion.php');
                        </div>
                     </div> <br>
 
-                      <div class="form-group"> <label for="cuatrimestre" class="col-md-4 control-label">Pactica:</label>
+                      <div class="form-group"> <label for="cuatrimestre" class="col-md-4 control-label">Unidad:</label>
                          <div class="col-md-8">
                        <select class="form-control" id="unidad" name="unidad">
-                               <option>Pactica I</option>
-                               <option>Pactica II</option>
-                               <option>Pactica III</option>
-                               <option>Pactica IV</option>
-                               <option>Pactica V</option>
-                               <option>Pactica VI</option>
+                               <option>Unidad I</option>
+                               <option>Unidad II</option>
+                               <option>Unidad III</option>
+                               <option>Unidad IV</option>
+                               <option>Unidad V</option>
+                               <option>Unidad VI</option>
                       </select>
                        </div>
                     </div> <br>

@@ -181,7 +181,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                       <td>
                       <?php
                       echo'
-                      <a href="inscripcion_asignaturas/recibir_inscripcion.php?id='.$filas['idAsignatura'].' "><button title="Inscribir esta Asignatura" class="btn btn-success"> <i class="glyphicon glyphicon-pencil"></i> &nbsp;  Inscribir Asignatura</button></a>
+                      <a href="inscripcion_asignaturas/recibir_inscripcion.php?id='.$filas['idAsignatura'].'"><button title="Inscribir esta Asignatura" class="btn btn-success"> <i class="glyphicon glyphicon-pencil"></i> &nbsp;  Inscribir Asignatura</button></a>
                          ' ?>
                       <?php  } }?>
                       </td>
