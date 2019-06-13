@@ -31,7 +31,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Laboratorios de informatica-sistemas UMSS</title>
-     <link rel="shortcut icon" href="../imagenes/favicon.ico" type="image/x-icon">
+     <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../css/estilo.css" rel="stylesheet">

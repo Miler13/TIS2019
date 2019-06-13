@@ -6,8 +6,11 @@
                     </a>
     <a href="ver_tarea_estudiante.php" class="list-group-item"> <i class="glyphicon glyphicon-edit"></i>   &nbsp;&nbsp; Tarea de Estudiantes
                     </a>
-         <a href="cambiar_foto.php" class="list-group-item"> <i class="glyphicon glyphicon-user"></i>   &nbsp;&nbsp; Cambiar Foto
+         <a href="tomar_asistencia.php" class="list-group-item"> <i class="glyphicon glyphicon-edit"></i>   &nbsp;&nbsp; TomarAsistencia
+                    </a>		 
+		 <a href="cambiar_foto.php" class="list-group-item"> <i class="glyphicon glyphicon-user"></i>   &nbsp;&nbsp; Cambiar Foto
                     </a>
+		 
          
                     <br>
 

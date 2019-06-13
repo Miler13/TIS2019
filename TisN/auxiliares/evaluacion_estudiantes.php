@@ -40,7 +40,7 @@ FROM asignaciones INNER JOIN asignaturas ON  asignaciones.idAsignatura =  asigna
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Laboratorios de informatica-sistemas UMSS</title>
-     <link rel="shortcut icon" href="../imagenes/favicon.ico" type="image/x-icon">
+     <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../css/estilo.css" rel="stylesheet">
@@ -63,7 +63,7 @@ FROM asignaciones INNER JOIN asignaturas ON  asignaciones.idAsignatura =  asigna
             <div class="col-md-3"><img src="../imagenes/logoSIAD.png" width="80" height="80" class="img-responsive"></div>
              <div class="col-md-6">         
                
-                <img src="../imagenes/banerDoc.png" class="img-responsive">
+                <img src="../imagenes/banerAux.png" class="img-responsive">
                      
              </div>
                <div class="col-md-3">
