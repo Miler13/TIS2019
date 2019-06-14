@@ -3,10 +3,10 @@ include('../conexion.php');
 $dato = $_POST['dato'];
 
 $registro = mysqli_query($conexion,"SELECT asignaturas.idAsignatura as id, asignaturas.NombreAsignatura as Asignatura, carreras.NombreCarrera as Carrera, grupos.NumeroGrupo as grupo, 
-Semestre.NombreCuatrimestre as Cuatrimestre FROM asignaturas 
+Semestre.NombreSemestre as Semestre FROM asignaturas 
                                  INNER JOIN carreras ON  asignaturas.Idcarrera =  carreras.idCarrera 
 
-                                 INNER JOIN Semestre ON  asignaturas.Idcuatrimestre =  Semestre.idCuatrimestre 
+                                 INNER JOIN Semestre ON  asignaturas.Idsemestre =  Semestre.idSemestre
                                  
                                  INNER JOIN grupos ON  asignaturas.IdGrupo =  grupos.idGrupo
  
@@ -24,7 +24,7 @@ Semestre.NombreCuatrimestre as Cuatrimestre FROM asignaturas
                                <td>'.$registro2['Asignatura'].'</td>
                           <td>'.$registro2['Carrera'].'</td>
                           <td>'.$registro2['grupo'].'</td>
-                          <td>'.$registro2['Cuatrimestre'].'</td>
+                          <td>'.$registro2['Semestre'].'</td>
                            <td> <a href="javascript:editarRegistro('.$registro2['id'].');">
                               <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
                               <a href="javascript:eliminarRegistro('.$registro2['id'].');">

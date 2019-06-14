@@ -6,11 +6,11 @@ $id = $_POST['id'];
 
 mysqli_query($conexion,"DELETE FROM inscripciones_asignaturas WHERE idInscripcion = '$id'");
 
-$registro = mysqli_query($conexion,"SELECT inscripciones_asignaturas.idInscripcion as id, inscripciones_asignaturas.fechaInscripcion as fecha, inscripciones_asignaturas.observaciones as observaciones, asignaturas.NombreAsignatura as Asignatura, carreras.NombreCarrera as Carrera, years_academicos.NombreYear as Year,  cuatrimestres.NombreCuatrimestre as Cuatrimestre
+$registro = mysqli_query($conexion,"SELECT inscripciones_asignaturas.idInscripcion as id, inscripciones_asignaturas.fechaInscripcion as fecha, inscripciones_asignaturas.observaciones as observaciones, asignaturas.NombreAsignatura as Asignatura, carreras.NombreCarrera as Carrera, years_academicos.NombreYear as Year,  semestres.NombreSemestre as Semestre
 FROM             asignaturas INNER JOIN inscripciones_asignaturas ON  asignaturas.idAsignatura =  inscripciones_asignaturas.idAsignatura
                              INNER JOIN estudiantes ON  inscripciones_asignaturas.idEstudiante =  estudiantes.idEstudiante 
                INNER JOIN carreras ON  asignaturas.Idcarrera =  carreras.idCarrera 
-               INNER JOIN cuatrimestres ON  asignaturas.Idcuatrimestre =  cuatrimestres.idCuatrimestre 
+               INNER JOIN semestres ON  asignaturas.Idsemestre =  semestres.idSemestre 
                INNER JOIN years_academicos ON  asignaturas.Idyear =  years_academicos.idYearAcademico
 WHERE estudiantes.idEstudiante = '$codigo' and asignaturas.NombreAsignatura ORDER BY inscripciones_asignaturas.idInscripcion ASC");
 
@@ -19,7 +19,7 @@ echo '<table class="table table-striped table-condensed table-hover table-respon
                         <th width="15%">Asignatura</th> 
                         <th width="10%">Carrera</th>
                         <th width="15%">Año</th>
-                        <th width="15%">Cuatrimestre</th>  
+                        <th width="15%">Semestre</th>  
                         <th width="15%">Fecha</th> 
                         <th width="20%">Observaciones</th>                 
                         <th width="10%">Opciones</th>
@@ -30,7 +30,7 @@ echo '<table class="table table-striped table-condensed table-hover table-respon
                       <td>'.$registro2['Asignatura'].'</td>
                           <td>'.$registro2['Carrera'].'</td>
                           <td>'.$registro2['Year'].'</td>
-                          <td>'.$registro2['Cuatrimestre'].'</td>
+                          <td>'.$registro2['Semestre'].'</td>
                           <td>'.$registro2['fecha'].'</td> 
                           <td>'.$registro2['observaciones'].'</td>              
                            <td>

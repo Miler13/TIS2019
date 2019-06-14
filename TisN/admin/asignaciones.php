@@ -156,7 +156,7 @@ include('conexion.php');
                       </select>
                        </div>
                     </div> <br>
-                    <div class="form-group"> <label for="cuatrimestre" class="col-md-2 control-label">Asignatura:</label>
+                    <div class="form-group"> <label for="semestre" class="col-md-2 control-label">Asignatura:</label>
                          <div class="col-md-10">
                        <select class="form-control" id="asignatura" name="asignatura">
                      <?php 

@@ -12,8 +12,8 @@ if(isset($_SESSION['NombreUsuario'])) {
           $carrera=mysqli_query($conexion,$consulta1);
           $consulta2="select idGrupo, NumeroGrupo from grupos";
           $grupos=mysqli_query($conexion,$consulta2);
-          $consulta3="select idCuatrimestre, NombreCuatrimestre from cuatrimestres";
-          $cuatrimestre=mysqli_query($conexion,$consulta3);
+          $consulta3="select idSemestre, NombreSemestre from semestres";
+          $semestre=mysqli_query($conexion,$consulta3);
 
              $consulta=mysqli_query($conexion,"select Foto from estudiantes where idEstudiante = $codigo");                  
                 while($filas=mysqli_fetch_array($consulta)){
@@ -130,10 +130,10 @@ if(isset($_SESSION['NombreUsuario'])) {
 
                        <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Semestre:</label>
                          <div class="col-md-9">
-                       <select class="form-control" id="cuatrimestre" name="cuatrimestre">
+                       <select class="form-control" id="semestre" name="semestre">
                         <option>---- Seleccione un Semestre -----</option>
                       <?php 
-                          while($fila=mysqli_fetch_row($cuatrimestre)){
+                          while($fila=mysqli_fetch_row($semestre)){
                           echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
                           }
                           ?>
@@ -168,7 +168,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                        echo "<td colspan='2'>No existen Datos que Mostrar</td>";
                       }
                       else {
-                      	$consulta=mysqli_query($conexion,"select idAsignatura, NombreAsignatura from asignaturas where Idcarrera = '".$_POST['carrera']."' and IdGrupo = '".$_POST['grupo']."' and idcuatrimestre = '".$_POST['cuatrimestre']."'ORDER BY idAsignatura desc"); 
+                      	$consulta=mysqli_query($conexion,"select idAsignatura, NombreAsignatura from asignaturas where Idcarrera = '".$_POST['carrera']."' and IdGrupo = '".$_POST['grupo']."' and idsemestre = '".$_POST['semestre']."'ORDER BY idAsignatura desc"); 
                      
                      
                            while($filas=mysqli_fetch_array($consulta)){

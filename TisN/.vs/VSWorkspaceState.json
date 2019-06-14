@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\admin"
+    "\\admin",
+    "\\auxiliares",
+    "\\auxiliares\\estudiantes"
   ],
-  "SelectedNode": "\\admin\\admin.php",
+  "SelectedNode": "\\auxiliares\\estudiantes\\paginar_estudiante0.php",
   "PreviewInSolutionExplorer": false
 }

@@ -3,14 +3,16 @@ session_start();
 include 'conexion.php';
 
 if(isset($_SESSION['NombreUsuario'])) {
-     if ($_SESSION["NivelUsuario"] == 1) {
+     if ($_SESSION["NivelUsuario"] == 4) {
             $user = $_SESSION['NombreUsuario'];
               $codigo = $_SESSION["Codigo"];
 
-              $consulta=mysqli_query($conexion,"select Foto from usuarios where Codigo = $codigo");                  
-                while($filas=mysqli_fetch_array($consulta)){
+              $consulta1=mysqli_query($conexion,"select Foto from usuarios where Codigo = $codigo");                  
+                while($filas=mysqli_fetch_array($consulta1)){
                          $foto=$filas['Foto'];                           
                  }
+			$consulta2="select NombresEstudiante from estudiantes";
+			$grupo=mysqli_query($conexion,$consulta2);
         ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +22,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Sistema de Laboratorios de informatica-sistemas UMSS </title>
+    <title>Sistema de Laboratorios de informatica-sistemas UMSS UNI</title>
     <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
@@ -30,7 +32,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="../js/jquery.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="Semestre/myjava.js"></script>
+    <script src="estudiantes/myjava.js"></script>
 
     <link href="css/sweetalert.css" rel="stylesheet">
     <script src="js/functions.js"></script>
@@ -38,7 +40,7 @@ if(isset($_SESSION['NombreUsuario'])) {
 </head>
 <body>
            <?php
-        include ('menuAdmin.php');
+				include ('menu_inicio_Auxiliar.php');
             ?>
        <br>
         <div class="container">
@@ -47,20 +49,20 @@ if(isset($_SESSION['NombreUsuario'])) {
             <div class="col-md-3"><img src="../imagenes/logoSiad.png" width="80" height="80" class="img-responsive"></div>
              <div class="col-md-6">         
                
-                <img src="../imagenes/baner.png" class="img-responsive">
+                <img src="../imagenes/banerAux.png" class="img-responsive">
                      
              </div>
                <div class="col-md-3">
-             <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
+              <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
               <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $user ?></h5>
                </div> 
 
             </div>
-            <div class="col-lg-12">
+           <div class="col-lg-12">
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
-                    <li><a href="admin.php">Administrador</a></li>
-                    <li class="active">Semestres</li>
+                    <li><a href="auxiliares.php">Auxiliares</a></li>
+                    <li class="active">Tomar Asistencia</li>
                 </ol>
             </div>
         </div> 
@@ -69,81 +71,53 @@ if(isset($_SESSION['NombreUsuario'])) {
 <?php //include('otros/menuAdministrador.php') ?>
         <div class="row">
             <!-- Content Column -->
+			<?php
+				include('../auxiliares/menu_auxiliares.php');
+			?>
             <div class="col-md-9">
-                <div class="container">
+                <div class="containe">
       <div class="panel panel-success">
         <div class="panel-heading">
             <div class="btn-group pull-right">
             </div>
-            <center><h4><b>Administracion de Semestres</b></h4></center>
+            <center><h4><b>Tomar Asistencia</b></h4></center>
         </div>
         <div class="panel-body">
             <div class="row">
 		               <div class="col-md-1"><h4>Buscar:</h4></div>
 		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre del semestre">
+		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir???">
 		               </div>
-		               	<div class="col-md-6">
-		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nuevo Semestre</button> 
+		               <div class="col-md-6">
+		                  <a href="Reporte_PDF_Estudiantes2.php"> <button class="btn btn-primary"><i class="fa fa-file-pdf-o"></i>  Exportar Listado a PDF</button> </a>
 		               </div>
 	              <br>
  <br>
     <div class="registros" style="width:100%;" id="agrega-registros"></div>
       <div class="col-md-6" style="text-align: left;">
-		    <center>
+
+
+		    <!-- <center>
 		        <ul class="pagination" id="pagination"></ul>
-		    </center>
+		    </center> -->
+
+
       </div>
       <div class="col-md-6">
 		   <center>
 		   <h4 style="font-weight: bold;"> 
     <?php
 include('conexion.php');
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM semestres"));
-    echo "Registros Totales: $numeroRegistros";
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT NombresEstudiante FROM estudiantes"));
+    echo "Cantidad de estudiantes: $numeroRegistros";
         ?>
+		<br>
+		<div class="col-md-6">
+		     <button id="nuevo-producto2" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> registrar???</button>
+		</div>
         </h4>
           </center>
       </div>
-   
-  
-    <!-- MODAL PARA EL REGISTRO-->
-    <div class="modal fade" id="registra-datos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header" style="background:#337ab7; text-align: center;">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" style="color:white;" id="myModalLabel"><b>
-              <i class='glyphicon glyphicon-th'></i>&nbsp;&nbsp;Semestre</b></h4>
-            </div>
-            <form id="formulario" class="form-group" onsubmit="return agregarRegistro();">
-            <div class="modal-body">
-
-            <input type="text" class="form-control" required readonly id="id-registro" name="id-registro" readonly="readonly" style="visibility:hidden; height:5px;"/>
-
-                 <div class="form-group"> <label for="codigo" class="col-md-2 control-label">Proceso:</label>
-				<div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
-			   </div> <br><br>
-               <div class="form-group"> <label for="carnet" class="col-md-2 control-label">Semestre:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" required maxlength="50"></div>
-			   </div> <br>
-                 <div id="mensaje"></div>           
-             </div>         
-            <div class="modal-footer">
-                <input type="submit" value="Registrar" class="btn btn-success" id="reg"/>
-                <input type="submit" value="Editar" class="btn btn-warning"  id="edi"/>
-            </div>
-            </form>
-          </div>
-        </div>
-      </div>
-            </div>
-        </div>
-    </div>
-
-            </div>
-                    
-        </div>
         <!-- Fin del Panel -->
       </div>
     </div>

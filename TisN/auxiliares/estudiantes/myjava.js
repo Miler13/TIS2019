@@ -12,7 +12,7 @@ $(function(){
 	});	
 	$('#bs-prod').on('keyup',function(){
 		var dato = $('#bs-prod').val();
-		var url = 'asignaturas/busca_asignatura.php';
+		var url = 'estudiantes/busca_estudiante.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -25,7 +25,7 @@ $(function(){
 	});	
 });
 function agregarRegistro(){
-	var url = 'asignaturas/agrega_asignatura.php';
+	var url = 'estudiantes/agrega_estudiante.php';
 	$.ajax({
 		type:'POST',
 		url:url,
@@ -46,7 +46,7 @@ function agregarRegistro(){
 	return false;
 }
 function eliminarRegistro(id){
-	var url = 'asignaturas/elimina_asignatura.php';
+	var url = 'estudiantes/elimina_estudiante.php';
 	var pregunta = confirm('¿Esta seguro de eliminar este Registro?');
 	if(pregunta==true){
 		$.ajax({
@@ -65,7 +65,7 @@ function eliminarRegistro(id){
 }
 function editarRegistro(id){
 	$('#formulario')[0].reset();
-	var url = 'asignaturas/edita_asignatura.php';
+	var url = 'estudiantes/edita_estudiante.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -76,10 +76,16 @@ function editarRegistro(id){
 				$('#edi').show();
 				$('#pro').val('Edicion');
 				$('#id-registro').val(id);
-				$('#nombre').val(datos[0]);
-				$('#carrera').val(datos[1]);
-				$('#year').val(datos[2]);
-				$('#semestre').val(datos[3]);
+				$('#carnet').val(datos[0]);
+				$('#nombre').val(datos[1]);
+				$('#apellido').val(datos[2]);
+				$('#cedula').val(datos[3]);
+				$('#correo').val(datos[4]);
+				$('#celular').val(datos[5]);
+				$('#telefono').val(datos[6]);
+				$('#direccion').val(datos[7]);
+				$('#estado').val(datos[8]);
+				$('#grupo').val(datos[9]);
 				$('#registra-datos').modal({
 					show:true,
 					backdrop:'static'
@@ -91,7 +97,7 @@ function editarRegistro(id){
 }
 
 function pagination(partida){
-	var url = 'asignaturas/paginar_asignatura.php';
+	var url = 'estudiantes/paginar_estudiante.php';
 	$.ajax({
 		type:'POST',
 		url:url,

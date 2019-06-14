@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include '../admin/conexion.php';
@@ -87,7 +86,7 @@ include ('menu_auxiliares.php');
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-5x">
-                              <img src="../imagenes/Auxiliar1.png" class="img-responsive">
+                              <img src="images/tareas2.png" class="img-responsive">
                         </span>
                     </div>
                     <div class="panel-body">
@@ -100,7 +99,7 @@ include ('menu_auxiliares.php');
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-5x">
-                            <img src="../imagenes/Auxiliar2.png" class="img-responsive">
+                            <img src="images/evaluacion.png" class="img-responsive">
                         </span>
                     </div>
 
@@ -111,7 +110,21 @@ include ('menu_auxiliares.php');
 
                 </div>
             </div>
+			<div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                            <img src="images/lista.png" class="img-responsive">
+                        </span>
+                    </div>
 
+                    <div class="panel-body">
+                        <h4>Tomar Asistencia</h4>
+                        <a href="tomar_asistencia3.php" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i>   Entrar</a>
+                    </div>
+
+                </div>
+            </div>
 
 
 

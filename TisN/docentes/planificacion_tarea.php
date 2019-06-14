@@ -151,7 +151,7 @@ include('../admin/conexion.php');
                       </select>
                        </div>
                     </div> <br>
-                    <div class="form-group"> <label for="cuatrimestre" class="col-md-4 control-label">Asignatura:</label>
+                    <div class="form-group"> <label for="semestre" class="col-md-4 control-label">Asignatura:</label>
                          <div class="col-md-8">
                        <select class="form-control" id="asignatura" name="asignatura">
                      <?php 
@@ -163,7 +163,7 @@ include('../admin/conexion.php');
                        </div>
                     </div> <br>
 
-                      <div class="form-group"> <label for="cuatrimestre" class="col-md-4 control-label">Unidad:</label>
+                      <div class="form-group"> <label for="semestre" class="col-md-4 control-label">Unidad:</label>
                          <div class="col-md-8">
                        <select class="form-control" id="unidad" name="unidad">
                                <option>Unidad I</option>

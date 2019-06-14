@@ -2,7 +2,7 @@
 include('../conexion.php');
 	$paginaActual = $_POST['partida'];
 
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM Cuatrimestres"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM estudiantes"));
     $nroLotes = 10;
     $nroPaginas = ceil($numeroRegistros/$nroLotes);
     $lista = '';
@@ -28,21 +28,19 @@ include('../conexion.php');
   	}else{
   		$limit = $nroLotes*($paginaActual-1);
   	}
-  	$registro = mysqli_query($conexion,"SELECT * FROM Cuatrimestres LIMIT $limit, $nroLotes ");
+  	$registro = mysqli_query($conexion,"SELECT * FROM estudiantes LIMIT $limit, $nroLotes ");
   	$tabla = $tabla.'<table class="table table-striped table-condensed table-hover table-responsive">
 			                <tr>
-                        <th width="80%">Nombre de Cuatrimestre</th>           
-                        <th width="20%">Opciones</th>
-                   </tr>';		
+                          <th width="10%">Nombres</th>
+                         <th width="10%">Apellidos</th>
+						 <th width="10%">Asistencia</th>
+                     </tr>';		
           	while($registro2 = mysqli_fetch_array($registro)){
       $tabla = $tabla.'<tr>
-                      <td>'.$registro2['NombreCuatrimestre'].'</td>
-                       <td> <a href="javascript:editarRegistro('.$registro2['idACuatrimestre'].');">
-                          <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
-                          <a href="javascript:eliminarRegistro('.$registro2['idACuatrimestre'].');">
-                          <img src="images/borrar.png" width="25" height="25" alt="delete" title="Eliminar" /></a>
-                          </td>
-                </tr>';	
+                        <td>'.$registro2['NombresEstudiante'].'</td>
+						<td>'.$registro2['ApellidosEstudiante'].'</td>
+						<td><input type="checkbox" name="valor1"></td>
+                      </tr>';		
 	}
         
     $tabla = $tabla.'</table>';
