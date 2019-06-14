@@ -12,7 +12,7 @@ $(function(){
 	});	
 	$('#bs-prod').on('keyup',function(){
 		var dato = $('#bs-prod').val();
-		var url = 'Semestre/busca_cuatrimestre.php';
+		var url = 'Semestre/busca_semestre.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -25,7 +25,7 @@ $(function(){
 	});	
 });
 function agregarRegistro(){
-	var url = 'Semestre/agrega_cuatrimestre.php';
+	var url = 'Semestre/agrega_semestre.php';
 	$.ajax({
 		type:'POST',
 		url:url,
@@ -46,7 +46,7 @@ function agregarRegistro(){
 	return false;
 }
 function eliminarRegistro(id){
-	var url = 'Semestre/elimina_cuatrimestre.php';
+	var url = 'Semestre/elimina_semestre.php';
 	var pregunta = confirm('¿Esta seguro de eliminar este Registro?');
 	if(pregunta==true){
 		$.ajax({
@@ -65,7 +65,7 @@ function eliminarRegistro(id){
 }
 function editarRegistro(id){
 	$('#formulario')[0].reset();
-	var url = 'Semestre/edita_cuatrimestre.php';
+	var url = 'Semestre/edita_semestre.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -88,7 +88,7 @@ function editarRegistro(id){
 }
 
 function pagination(partida){
-	var url = 'Semestre/paginar_cuatrimestre.php';
+	var url = 'Semestre/paginar_semestre.php';
 	$.ajax({
 		type:'POST',
 		url:url,

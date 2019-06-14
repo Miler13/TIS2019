@@ -79,7 +79,7 @@ function editarRegistro(id){
 				$('#nombre').val(datos[0]);
 				$('#carrera').val(datos[1]);
 				$('#year').val(datos[2]);
-				$('#cuatrimestre').val(datos[3]);
+				$('#semestre').val(datos[3]);
 				$('#registra-datos').modal({
 					show:true,
 					backdrop:'static'

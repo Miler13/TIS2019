@@ -25,7 +25,7 @@ $(function(){
 	});	
 });
 function agregarRegistro(){
-	var url = 'mensajes/agrega_cuatrimestre.php';
+	var url = 'mensajes/agrega_semestre.php';
 	$.ajax({
 		type:'POST',
 		url:url,
@@ -65,7 +65,7 @@ function eliminarRegistro(id){
 }
 function editarRegistro(id){
 	$('#formulario')[0].reset();
-	var url = 'mensajes/edita_cuatrimestre.php';
+	var url = 'mensajes/edita_semestre.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -88,7 +88,7 @@ function editarRegistro(id){
 }
 
 function pagination(partida){
-	var url = 'mensajes/paginar_cuatrimestre.php';
+	var url = 'mensajes/paginar_semestre.php';
 	$.ajax({
 		type:'POST',
 		url:url,

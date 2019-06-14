@@ -12,8 +12,8 @@ if(isset($_SESSION['NombreUsuario'])) {
           $carrera=mysqli_query($conexion,$consulta1);
           $consulta2="select idYearAcademico, NombreYear from years_academicos";
           $year=mysqli_query($conexion,$consulta2);
-          $consulta3="select idCuatrimestre, NombreCuatrimestre from cuatrimestres";
-          $cuatrimestre=mysqli_query($conexion,$consulta3);
+          $consulta3="select idSemestre, NombreSemestre from semestres";
+          $semestre=mysqli_query($conexion,$consulta3);
          
         ?>
 <!DOCTYPE html>
@@ -116,9 +116,9 @@ if(isset($_SESSION['NombreUsuario'])) {
 
                        <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Semestre:</label>
                          <div class="col-md-9">
-                       <select class="form-control" id="Cuatrimestre" name="cuatrimestre">
+                       <select class="form-control" id="Semestre" name="semestre">
                       <?php 
-                          while($fila=mysqli_fetch_row($cuatrimestre)){
+                          while($fila=mysqli_fetch_row($semestre)){
                           echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
                           }
                           ?>
@@ -132,7 +132,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                         </div> 
                          <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Asignaturas:</label>
                          <div class="col-md-9">
-                       <select class="form-control" id="Cuatrimestre" name="cuatrimestre">
+                       <select class="form-control" id="Semestre" name="semestre">
                      <option>Asignatura 1</option>
                        <option>Asignatura 2</option>
                       </select>
@@ -162,7 +162,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                         <?php
                       $consulta=mysqli_query($conexion,"select idAsignatura, NombreAsignatura from asignaturas ORDER BY idAsignatura desc");
                        if (isset($_POST['carrera'])){
-                       $consulta=mysqli_query($conexion,"select idAsignatura, NombreAsignatura from asignaturas where Idcarrera = '".$_POST['carrera']."' and Idyear = '".$_POST['year']."' and idcuatrimestre = '".$_POST['cuatrimestre']."' ORDER BY idAsignatura desc"); 
+                       $consulta=mysqli_query($conexion,"select idAsignatura, NombreAsignatura from asignaturas where Idcarrera = '".$_POST['carrera']."' and Idyear = '".$_POST['year']."' and idsemestre = '".$_POST['semestre']."' ORDER BY idAsignatura desc"); 
                     }
                      
                            while($filas=mysqli_fetch_array($consulta)){

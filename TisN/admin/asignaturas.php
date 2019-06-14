@@ -17,8 +17,8 @@ if(isset($_SESSION['NombreUsuario'])) {
           $carrera=mysqli_query($conexion,$consulta1);
            $consulta2="select idGrupo, NumeroGrupo from grupos";
           $grupos=mysqli_query($conexion,$consulta2);
-           $consulta3="select idCuatrimestre, NombreCuatrimestre from cuatrimestres ";
-          $cuatrimestre=mysqli_query($conexion,$consulta3);
+           $consulta3="select idSemestre, NombreSemestre from semestres ";
+          $semestre=mysqli_query($conexion,$consulta3);
         ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -144,11 +144,11 @@ include('conexion.php');
                       </select>
                        </div>
                     </div> <br>
-                    <div class="form-group"> <label for="cuatrimestre" class="col-md-2 control-label">Semestre:</label>
+                    <div class="form-group"> <label for="semestre" class="col-md-2 control-label">Semestre:</label>
                          <div class="col-md-10">
-                       <select class="form-control" id="cuatrimestre" name="cuatrimestre">
+                       <select class="form-control" id="semestre" name="semestre">
                      <?php 
-                          while($fila=mysqli_fetch_row($cuatrimestre)){
+                          while($fila=mysqli_fetch_row($semestre)){
                           echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
                           }
                           ?>

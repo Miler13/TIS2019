@@ -16,7 +16,7 @@ switch($proceso){
 
     echo '<table class="table table-striped table-condensed table-hover">
         	 <tr>
-                        <th width="80%">Nombre de Cuatrimestre</th>           
+                        <th width="80%">Nombre de Semestre</th>           
                         <th width="20%">Opciones</th>
                    </tr>';
 	while($registro2 = mysqli_fetch_array($registro)){

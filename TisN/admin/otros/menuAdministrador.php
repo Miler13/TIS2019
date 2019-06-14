@@ -6,7 +6,7 @@
         $TotalAuxiliares = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM auxiliares"));
         $TotalAsignaturas = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM asignaturas"));
         $TotalCarreras = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM carreras"));
-        $TotalCuatrimestre = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM cuatrimestres"));
+        $TotalSemestre= mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM semestres"));
         $TotalGrupos = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM grupos"));
         $TotalHorarios = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM horarios"));
         $TotalTurnos = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM turnos"));
@@ -180,7 +180,7 @@
                     </div>
                     <div class="panel-body">
                           <h4 class="media-heading">Semestre</h4>
-                      <p>Total de Semestres: <span class="label label-danger pull-right"><?php echo $TotalCuatrimestre ?></span></p>
+                      <p>Total de Semestres: <span class="label label-danger pull-right"><?php echo $TotalSemestre?></span></p>
                       <a href="semestre.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
 

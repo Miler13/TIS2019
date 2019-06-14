@@ -99,7 +99,7 @@ if(isset($_SESSION['NombreUsuario'])) {
 		   <h4 style="font-weight: bold;"> 
     <?php
 include('conexion.php');
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM cuatrimestres"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM semestres"));
     echo "Registros Totales: $numeroRegistros";
         ?>
         </h4>
