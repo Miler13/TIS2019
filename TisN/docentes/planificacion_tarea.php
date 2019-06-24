@@ -163,20 +163,20 @@ include('../admin/conexion.php');
                        </div>
                     </div> <br>
 
-                      <div class="form-group"> <label for="semestre" class="col-md-4 control-label">Unidad:</label>
+                      <div class="form-group"> <label for="semestre" class="col-md-4 control-label">Practica:</label>
                          <div class="col-md-8">
                        <select class="form-control" id="unidad" name="unidad">
-                               <option>Unidad I</option>
-                               <option>Unidad II</option>
-                               <option>Unidad III</option>
-                               <option>Unidad IV</option>
-                               <option>Unidad V</option>
-                               <option>Unidad VI</option>
+                               <option>Practica I</option>
+                               <option>Practica II</option>
+                               <option>Practica III</option>
+                               <option>Practica IV</option>
+                               <option>Practica V</option>
+                               <option>Practica VI</option>
                       </select>
                        </div>
                     </div> <br>
                     
-                <div class="form-group"> <label for="carnet" class="col-md-4 control-label">Descripcion Unidad:</label>
+                <div class="form-group"> <label for="carnet" class="col-md-4 control-label">Descripcion Practica:</label>
                      <div class="col-md-8">
                      <textarea name="descripcionU" id="descripcionU" required="true" class="form-control" rows="2"></textarea>
                      </div>

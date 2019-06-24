@@ -197,6 +197,36 @@
                               <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
                         </span>
                  
+                        </div>
+                    <div class="panel-body">
+                        <h4 class="media-heading">Asignaciones</h4>
+                       <p>Total de Asignaciones: <span class="label label-danger pull-right"><?php echo $TotalAsignaciones ?></span></p>
+                      <a href="asignaciones.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
+                    </div>
+                </div>
+			</div>   
+				<div class="col-md-3 col-sm-6">
+					<div class="panel panel-default text-center">
+						<div class="panel-heading">
+							<span class="fa-stack fa-3x">
+								  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+								  <i class="fa fa-clipboard fa-stack-1x fa-inverse"></i>
+							</span>
+						</div>
+						<div class="panel-body">
+						  <h4 class="media-heading">Incripciones Asignaturas</h4>
+							<p>Total de Inscripciones: <span class="label label-danger pull-right"><?php echo $TotalInscripciones ?></span></p>
+							<a href="inscripcion_Asignaturas.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
+						</div>
+					</div>
+				</div>			
+				<div class="col-md-3 col-sm-6">
+					<div class="panel panel-default text-center">
+						<div class="panel-heading">
+							<span class="fa-stack fa-3x">
+								  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+								  <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
+							</span>
 
                     </div>
                     <div class="panel-body">

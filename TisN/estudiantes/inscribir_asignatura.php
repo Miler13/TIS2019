@@ -156,6 +156,7 @@ if(isset($_SESSION['NombreUsuario'])) {
         <div class="panel-body">
             <div class="row">        
                    <div style="margin-left: : 10px; margin-right: 10px;">
+                   <form action="inscripcion_asignaturas/recibir_inscripcion.php" method="POST">
                   <table class="table table-striped table-condensed table-hover table-responsive">
                     <tr>
                       <th>Asignatura (as) a Inscribir</th>
@@ -164,7 +165,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                         <?php
 
                        if (!isset($_POST['carrera'])){
-                       	$consulta = " ";
+                       	
                        echo "<td colspan='2'>No existen Datos que Mostrar</td>";
                       }
                       else {
@@ -181,7 +182,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                       <td>
                       <?php
                       echo'
-                      <a href="inscripcion_asignaturas/recibir_inscripcion.php?id='.$filas['idAsignatura'].'"><button title="Inscribir esta Asignatura" class="btn btn-success"> <i class="glyphicon glyphicon-pencil"></i> &nbsp;  Inscribir Asignatura</button></a>
+                      <a href="inscripcion_asignaturas/recibir_inscripcion.php?id='.$filas['idAsignatura'].'"><button title="Inscribir esta Asignatura"   type="submit" class="btn btn-success"> <i class="glyphicon glyphicon-pencil"></i> &nbsp;  Inscribir Asignatura</button></a>
                          ' ?>
                       <?php  } }?>
                       </td>
@@ -189,7 +190,7 @@ if(isset($_SESSION['NombreUsuario'])) {
 
                   </table>
        
-
+</from>
                             </div>
                         </div>
 

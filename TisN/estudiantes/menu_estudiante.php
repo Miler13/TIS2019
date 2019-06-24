@@ -2,6 +2,7 @@
        // session_start();
         $codigo = $_SESSION["Codigo"];
         include '../admin/conexion.php';
+       // include '../../admin/conexion.php';
 
         $inscripciones = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM inscripciones_asignaturas where idEstudiante = $codigo"));
         $tareas = mysqli_num_rows(mysqli_query($conexion,"SELECT entrega_tareas.idEntregaTareas as id, entrega_tareas.CodigoTareaDocente CodigoDocente, asignaturas.NombreAsignatura as Asignatura, entrega_tareas.Descripcion as Descripcion,  entrega_tareas.CodigoEnvioTarea as CodigoTarea, entrega_tareas.Archivo as Archivo

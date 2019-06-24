@@ -12,8 +12,8 @@ if(isset($_SESSION['NombreUsuario'])) {
           $carrera=mysqli_query($conexion,$consulta1);
           $consulta2="select idYearAcademico, NombreYear from years_academicos";
           $year=mysqli_query($conexion,$consulta2);
-          $consulta3="select idSemestre, NombreSemestre from semestres";
-          $semestre=mysqli_query($conexion,$consulta3);
+          $consulta3="select idCuatrimestre, NombreCuatrimestre from cuatrimestres";
+          $cuatrimestre=mysqli_query($conexion,$consulta3);
          
         ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Laboratorios de informatica - sistemas UMSS</title>
+    <title>SIAD</title>
      <link rel="shortcut icon" href="../imagenes/favicon.ico" type="image/x-icon">
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/modern-business.css" rel="stylesheet">
@@ -114,11 +114,11 @@ if(isset($_SESSION['NombreUsuario'])) {
                        </div>
                     </div> <br>
 
-                       <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Semestre:</label>
+                       <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Cuatrimestre:</label>
                          <div class="col-md-9">
-                       <select class="form-control" id="Semestre" name="semestre">
+                       <select class="form-control" id="Cuatrimestre" name="cuatrimestre">
                       <?php 
-                          while($fila=mysqli_fetch_row($semestre)){
+                          while($fila=mysqli_fetch_row($cuatrimestre)){
                           echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
                           }
                           ?>
@@ -128,18 +128,7 @@ if(isset($_SESSION['NombreUsuario'])) {
               <div style="margin-top: 10px"> <center><input type="submit" value="Buscar"  class="btn btn-success" /></center>    </div>         
              </div>         
             </form>
-                            </div>
-                        </div> 
-                         <div class="form-group"> <label for="carrera" class="col-md-3 control-label">Asignaturas:</label>
-                         <div class="col-md-9">
-                       <select class="form-control" id="Semestre" name="semestre">
-                     <option>Asignatura 1</option>
-                       <option>Asignatura 2</option>
-                      </select>
-                                         
-                </div>
-        </div>
-          
+                         
 
 
 
@@ -162,7 +151,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                         <?php
                       $consulta=mysqli_query($conexion,"select idAsignatura, NombreAsignatura from asignaturas ORDER BY idAsignatura desc");
                        if (isset($_POST['carrera'])){
-                       $consulta=mysqli_query($conexion,"select idAsignatura, NombreAsignatura from asignaturas where Idcarrera = '".$_POST['carrera']."' and Idyear = '".$_POST['year']."' and idsemestre = '".$_POST['semestre']."' ORDER BY idAsignatura desc"); 
+                       $consulta=mysqli_query($conexion,"select idAsignatura, NombreAsignatura from asignaturas where Idcarrera = '".$_POST['carrera']."' and Idyear = '".$_POST['year']."' and idcuatrimestre = '".$_POST['cuatrimestre']."' ORDER BY idAsignatura desc"); 
                     }
                      
                            while($filas=mysqli_fetch_array($consulta)){

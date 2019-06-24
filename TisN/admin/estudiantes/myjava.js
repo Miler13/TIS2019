@@ -110,3 +110,65 @@ function pagination(partida){
 	});
 	return false;
 }
+function validar(){
+    var CodigoSIS, Nombres, Apellidos, CI, Correo, Celular, Telefono, Direccion, expresion;
+    CodigoSIS = document.getElementById("carnet").value;
+    Nombres = document.getElementById("nombre").value;
+    Apellidos = document.getElementById("apellido").value;
+    CI = document.getElementById("cedula").value;
+    Correo = document.getElementById("correo").value;
+    Celular = document.getElementById("celular").value;
+    Telefono = document.getElementById("telefono").value;
+    Direccion = document.getElementById("direccion").value;
+    expresion = /\w+@\w+\.+[a-z]/;    
+    if(CodigoSIS === ""|| Nombres ===""|| Apellidos ===""|| CI === ""|| Correo ===""|| Celular ==="" || Telefono === ""|| Direccion ===""){
+        alert("todos los campos son obligatorios");
+        return false;
+    }
+    else if(CodigoSIS.length>9){
+        alert("El codigo SIS es muy largo, solo debe tener 9 digitos");
+        return false;
+    }
+    else if(Nombres.length>25){
+        alert("Su(s) nombre(s) es muy largo");
+        return false;
+    }
+    else if(Apellidos.length>30){
+        alert("Su(s) apellido(s) es muy largo");
+        return false;
+    }
+    else if(CI.length>9){
+        alert("su CI es muy largo");
+        return false;
+    }
+    else if(Correo.length>50){
+        alert("El correo es muy largo");
+        return false;
+    }
+    else if(!expresion.test(Correo)){
+        alert("El correo no es valido: Ejm: texto@texto.texto");
+        return false;
+    }
+    else if(Celular.length>8){
+        alert("su numero de celular es muy largo");
+        return false;
+    }
+    else if(isNaN(Celular)){
+        alert("su numero de celular no es numero");
+        return false;
+    }
+    else if(Telefono.length>8){
+        alert("su numero de telefono es muy largo");
+        return false;
+    }
+    else if(isNaN(Telefono)){
+        alert("su numero de telefono no es numero");
+        return false;
+    }
+    else if(Direccion.length>50){
+        alert("su direccion es muy largo");
+        return false;
+    }
+    
+    
+}
