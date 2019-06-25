@@ -28,7 +28,7 @@ include('../conexion.php');
   	}else{
   		$limit = $nroLotes*($paginaActual-1);
   	}
-  	$registro = mysqli_query($conexion,"SELECT * FROM docentes LIMIT $limit, $nroLotes ");
+  	$registro = mysqli_query($conexion,"SELECT * FROM usuarios LIMIT $limit, $nroLotes ");
   	$tabla = $tabla.'<table class="table table-striped table-condensed table-hover table-responsive">
 			                <tr>
                          <th width="20%">Nombre Usuario</th>

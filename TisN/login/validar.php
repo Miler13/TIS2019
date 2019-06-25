@@ -33,7 +33,7 @@
 				}
 				else{
 					echo '<script> alert("Usuario o contraseña incorrectos. ");</script>';
-					echo '<script> window.location="../login.php"; </script>';
+					echo '<script> window.location="../index.l.php"; </script>';
 				}
 			}
 		?>	

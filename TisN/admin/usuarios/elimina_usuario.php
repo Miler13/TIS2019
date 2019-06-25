@@ -17,10 +17,10 @@ echo '<table class="table table-striped table-condensed table-hover table-respon
                    </tr>';
 	while($registro2 = mysqli_fetch_array($registro)){
 		        echo '<tr>
-		                           <td>'.$registro2['NombreUsuario'].'</td>
+		                        <td>'.$registro2['NombreUsuario'].'</td>
                                 <td>'.$registro2['PassUsuario'].'</td>
                                 <td>'.$registro2['NivelUsuario'].'</td>
-                                 <td>'.$registro2['Codigo'].'</td>
+                                <td>'.$registro2['Codigo'].'</td>
                                <td> <a href="javascript:editarRegistro('.$registro2['idUsuario'].');">
                               <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
                               <a href="javascript:eliminarRegistro('.$registro2['idUsuario'].');">

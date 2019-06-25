@@ -11,7 +11,7 @@
 			        if($data['Nombreusuario'] != $username && ['PassUsuario'] != $password)  {
 						//echo "No a introducido una contrasenia correcta";
 						echo '<script> alert("Datos Incorrectos.");</script>';
-						header ("Location: ../login.php");
+						header ("Location: ../index.l.php");
 						exit();
 		             }
 		             else

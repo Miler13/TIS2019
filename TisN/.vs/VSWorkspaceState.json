@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\admin",
-    "\\auxiliares",
-    "\\auxiliares\\estudiantes"
+    "\\admin\\usuarios"
   ],
-  "SelectedNode": "\\auxiliares\\estudiantes\\paginar_estudiante0.php",
+  "SelectedNode": "\\js",
   "PreviewInSolutionExplorer": false
 }

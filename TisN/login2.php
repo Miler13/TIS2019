@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-
-<html class="no-js">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Laboratorios de informatica-sistemas UMSS</title>
+	<title>Laboratorios de informatica-sistemas UMSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="admin/css/bootstrap.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
-       <link rel="shortcut icon" href="imagenes/logoUNI.ico" type="image/x-icon">
+    <meta name="author" content="">
 
-      <script src="js/jquery.js"></script>
-         <link href="admin/sweetalert/sweetalert.css" rel="stylesheet">
-    <script src="admin/sweetalert/sweetalert.min.js"></script>
-     <script src="admin/sweetalert/sweetalert-dev.js"></script>
-      <script src="js/jquery.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link rel="shortcut icon" href="imagenes/logoUNI.ico" type="image/x-icon">
+      <link rel="stylesheet" href="css/index.css">
+	  <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="admin/css/bootstrap.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/estilo.css">
+
 </head>
+
 <body>
 
+<?php include('includes/menuPublico.php') ?>
 
+    <!-- Header Carousel -->
+    
 
-    <section id="login-container" style="background-color: #868186; ">
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
         <div class="row">
-            <div class="col-md-3" id="login-wrapper">
+            <div class="col-lg-12">
+                <div class="row">
+            <div class="col-md-6" id="login-wrapper">
                 <div class="panel panel-primary animated flipInY">
                     <div class="panel-heading">
                         <div  style="text-align: center;">
@@ -68,12 +76,38 @@
                 </div>
             </div>
         </div>
-    </section>
+            </div> 
+			<div class="col-lg-12">
+                 <h2 class="page-header">Identifique su tipo de usuario y haga click en entrar</h2> 
+            </div>
+                             
+        </div>
 
-
+        </div>
+        <!-- /.row -->
+        <!-- Features Section -->
+        <div class="row">
+            
+          
+          
+        </div>
+        <!-- para avisos Estimado usuario, le recordamos NO usar acentos, ñ's o caracteres especiales del LENGUAJE ESPAÑOL,
+                      en los nombres de sus archivos y/o documentos que suba a la plataforma. -->
+   <hr>
+    </div>
+    <script src="js/jquery.js"></script>
+     <script src="js/back-to-top.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+    
+<?php
+include('includes/footer.php');
+ ?>
 
 </body>
-
-
 
 </html>

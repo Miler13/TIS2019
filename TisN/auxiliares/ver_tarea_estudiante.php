@@ -19,9 +19,8 @@ if(isset($_SESSION['NombreUsuario'])) {
                  $consulta2 = mysqli_query($conexion,"select concat (NombresAuxiliar, ' ', ApellidosAuxiliar) as Auxiliar from auxiliares where idAuxiliar = $codigo"); 
                  while($filas2=mysqli_fetch_array($consulta2)){
                          $Auxiliar=$filas2['Auxiliar'];                           
-                 }
-    
-        ?>
+                 }    
+         ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,9 +123,9 @@ include ('menu_auxiliares.php');
      }
      else{
         echo '<script> alert("No Tienes los permisos para acceder a esta pagina.");</script>';
-         echo '<script> window.location="../login.php"; </script>';
+         echo '<script> window.location="../index.l.php"; </script>';
      }
 }else{
- echo '<script> window.location="../login.php"; </script>';
+ echo '<script> window.location="../index.l.php"; </script>';
 }
 ?>

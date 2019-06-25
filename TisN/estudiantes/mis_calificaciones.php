@@ -120,9 +120,9 @@ include ('menu_inicio_estudiante.php');
      }
      else{
         echo '<script> alert("No Tienes los permisos para acceder a esta pagina.");</script>';
-         echo '<script> window.location="../login.php"; </script>';
+         echo '<script> window.location="../index.l.php"; </script>';
      }
 }else{
- echo '<script> window.location="../login.php"; </script>';
+ echo '<script> window.location="../index.l.php"; </script>';
 }
 ?>
