@@ -31,10 +31,15 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="usuarios/myjava.js"></script>
+    <script src="validar.js"></script>
 
     <link href="css/sweetalert.css" rel="stylesheet">
     <script src="js/functions.js"></script>
     <script src="js/sweetalert.min.js"></script>
+
+
+  
+
 </head>
 <body>
            <?php
@@ -125,10 +130,10 @@ include('conexion.php');
 				<div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
 			   </div> <br>
 			   <div class="form-group"> <label for="nombre" class="col-md-2 control-label">Nombre:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" required maxlength="50"></div>
+				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese  nombre" onkeypress="return sololetras(event)" required maxlength="20"></div>
 			   </div><br>
 			   <div class="form-group"> <label for="pass" class="col-md-2 control-label">Password:</label>
-				<div class="col-md-10"><input type="Password" class="form-control" id="pass" name="pass" required maxlength="50"></div>
+				<div class="col-md-10"><input type="Password" class="form-control" id="pass" name="pass"  placeholder="Ingrese  password" required maxlength="10"></div>
 			   </div><br>
 			   <div class="form-group"> <label for="nivel" class="col-md-2 control-label">Nivel:</label>
 				<div class="col-md-10">
@@ -141,7 +146,7 @@ include('conexion.php');
         </div>
 			   </div><br>
 			   <div class="form-group"> <label for="codigo" class="col-md-2 control-label">Codigo:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="codigo" name="codigo" required maxlength="50"></div>
+				<div class="col-md-10"><input type="text" class="form-control" id="codigo" placeholder="codigo " onkeypress="return solonumeros(event)"name="codigo" required maxlength="10"></div>
 			   </div><br>
                 <br>
                  <div id="mensaje"></div>           
