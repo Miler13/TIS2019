@@ -28,7 +28,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Sistema de Laboratorios de informatica-sistemas UMSS UNI</title>
+    <title>Sistema de Laboratorios de informatica-sistemas UMSS </title>
     <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
@@ -39,6 +39,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="asignaturas/myjava.js"></script>
+    <script src="validar.js"></script>
 
 </head>
 <body>
@@ -86,7 +87,7 @@ if(isset($_SESSION['NombreUsuario'])) {
             <div class="row">
 		               <div class="col-md-1"><h4>Buscar:</h4></div>
 		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre de la Asignatura">
+		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre de la Asignatura" onkeypress="return sololetras(event)">
 		               </div>
 		               	<div class="col-md-6">
 		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nueva Materia</button> 
@@ -131,7 +132,7 @@ include('conexion.php');
 			   </div> <br>
 
                <div class="form-group"> <label for="carnet" class="col-md-2 control-label">Asignatura:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" required maxlength="50"></div>
+				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre de la Asignatura" onkeypress="return sololetras(event)" required maxlength="50"></div>
 			   </div> <br>    
                      <div class="form-group"> <label for="carrera" class="col-md-2 control-label">Carrera:</label>
                          <div class="col-md-10">

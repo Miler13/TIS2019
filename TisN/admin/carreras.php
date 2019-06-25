@@ -35,6 +35,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <link href="css/sweetalert.css" rel="stylesheet">
     <script src="js/functions.js"></script>
     <script src="js/sweetalert.min.js"></script>
+    <script src="validar.js"></script>
 </head>
 <body>
            <?php
@@ -81,7 +82,7 @@ if(isset($_SESSION['NombreUsuario'])) {
             <div class="row">
 		               <div class="col-md-1"><h4>Buscar:</h4></div>
 		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre de la Carrera">
+		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre de la Carrera" onkeypress="return sololetras(event)">
 		               </div>
 		               	<div class="col-md-6">
 		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nueva Carrera</button> 
@@ -125,7 +126,7 @@ include('conexion.php');
 				<div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
 			   </div> <br><br>
                <div class="form-group"> <label for="carnet" class="col-md-2 control-label">Carrera:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" required maxlength="50"></div>
+				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe el nombre de la Carrera" onkeypress="return sololetras(event)" required maxlength="50"></div>
 			   </div> <br>
                  <div id="mensaje"></div>           
              </div>         
