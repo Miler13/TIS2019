@@ -11,7 +11,7 @@ $registro = mysqli_query($conexion,"SELECT * FROM Semestres ORDER BY idSemestre 
 
 echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	          <tr>
-                        <th width="80%">Nombre de Semestre</th>           
+                        <th width="80%">Nombre de Semestre</th>
                         <th width="20%">Opciones</th>
                    </tr>';
 	while($registro2 = mysqli_fetch_array($registro)){

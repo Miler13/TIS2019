@@ -19,9 +19,8 @@ if(isset($_SESSION['NombreUsuario'])) {
                  $consulta2 = mysqli_query($conexion,"select concat (NombresAuxiliar, ' ', ApellidosAuxiliar) as Auxiliar from auxiliares where idAuxiliar = $codigo"); 
                  while($filas2=mysqli_fetch_array($consulta2)){
                          $Auxiliar=$filas2['Auxiliar'];                           
-                 }
-    
-        ?>
+                 }    
+         ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
