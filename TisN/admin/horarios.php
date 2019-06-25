@@ -92,6 +92,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                       <div class="container">
                         <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
                         <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</button>
+                        <a class="btn btn-primary" href="Calendario/index.php"><i class="fa fa-calendar" aria-hidden="true"></i> Nuevo Evento</a>
                       </div>
                     </div>
                       <!-- menu -->

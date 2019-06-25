@@ -37,12 +37,11 @@ require_once'include/functions.php';
     <script src="horarios/myjava.js"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
-    
-
-
     <link href="css/sweetalert.css" rel="stylesheet">
     <script src="js/functions.js"></script>
     <script src="js/sweetalert.min.js"></script>
+    
+    
 </head>
 <body>
     <?php
@@ -95,8 +94,9 @@ require_once'include/functions.php';
                     <div id="menu" class="col-md-12 ">
                       <div class="container">
                         
-                        
+                      <a class="btn btn-primary" href="Calendario/index.php"><i class="fa fa-calendar" aria-hidden="true"></i> Nuevo Evento</a>
                         <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</button>
+                        
                       </div>
                     </div>
                       <!-- menu -->
