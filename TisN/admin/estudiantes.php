@@ -149,7 +149,6 @@ include('conexion.php');
 			            	<div class="col-md-10"><input type="text" class="form-control" id="carnet" name="carnet" placeholder="Ingrese su codigo de 9 digitos" onkeypress="return solonumeros(event)" required maxlength="9" minlength="9"> </div>
 			            </div> <br>
 			            <div class="form-group"> <label for="nombre" class="col-md-2 control-label">Nombres:</label>
-				            <div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" onkeypress="return sololetras(event)" required maxlength="50"></div>
 				            <div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su(s) nombre(s)" onkeypress="return sololetras(event)" required maxlength="50"></div>
 			            </div><br>
 			            <div class="form-group"> <label for="apellido" class="col-md-2 control-label">Apellidos:</label>
