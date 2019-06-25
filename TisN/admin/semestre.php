@@ -35,6 +35,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <link href="css/sweetalert.css" rel="stylesheet">
     <script src="js/functions.js"></script>
     <script src="js/sweetalert.min.js"></script>
+    <script src="validar.js"></script>
 </head>
 <body>
            <?php
@@ -125,7 +126,7 @@ include('conexion.php');
 				<div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
 			   </div> <br><br>
                <div class="form-group"> <label for="carnet" class="col-md-2 control-label">Semestre:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" required maxlength="50"></div>
+				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="codigo Semestre" onkeypress="return solonumeros(event)" required maxlength="10" minlength="5"></div>
 			   </div> <br>
                  <div id="mensaje"></div>           
              </div>         

@@ -25,14 +25,7 @@ require_once'include/functions.php';
   <body>
 
     <!-- menu -->
-    <div id="menu" class="col-md-12 text-right">
-      <div class="container">
-          <a class="btn btn-primary" href="lista.php"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</a>
-          <a class="btn btn-warning" href="NuevoHorario.php"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</a>
-      </div>
-    </div>
-    <!-- menu -->
-
+  
 
     <!-- container -->
       <div class="container" >

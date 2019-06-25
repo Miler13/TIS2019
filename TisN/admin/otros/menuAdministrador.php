@@ -132,7 +132,7 @@
                     <div class="panel-body">
                             <h4 class="media-heading">Horarios</h4>
                         <p>Total de Horarios: <span class="label label-danger pull-right"><?php echo $TotalHorarios ?></span></p>
-                      <a href="horarios.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
+                      <a href="horarios2.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
                     
                    
