@@ -147,7 +147,7 @@ include('conexion.php');
 			   <div class="form-group"> <label for="apellido" class="col-md-2 control-label">Apellidos:</label>
 				<div class="col-md-10"><input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese su(s) apellido(s)" onkeypress="return sololetras(event)" required maxlength="50"></div>
 			   </div><br>
-         <div class="form-group"> <label for="cedula" class="col-md-2 control-label">Cedula:</label>
+         <div class="form-group"> <label for="cedula" class="col-md-2 control-label">CI:</label>
 				<div class="col-md-10"><input type="text" class="form-control" id="cedula" name="cedula" placeholder="Ingrese su carnet de identidad" onkeypress="return solonumeros(event)" required maxlength="10" minlength="5"></div>
 			   </div><br>
 			   <div class="form-group"> <label for="correo" class="col-md-2 control-label">Correo:</label>
