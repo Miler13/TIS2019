@@ -44,6 +44,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="../js/jquery.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../inscripcion_asignaturas/myjava.js"></script>
 
 </head>
 <body>
@@ -156,7 +157,7 @@ if(isset($_SESSION['NombreUsuario'])) {
         <div class="panel-body">
             <div class="row">        
                    <div style="margin-left: : 10px; margin-right: 10px;">
-                   <form action="inscripcion_asignaturas/recibir_inscripcion.php" method="POST">
+                   <form action="inscripcion_asignaturas/recibir_inscripcion.php" method="POST"  onsubmit="return agregarRegistro();">
                   <table class="table table-striped table-condensed table-hover table-responsive">
                     <tr>
                       <th>Asignatura (as) a Inscribir</th>
