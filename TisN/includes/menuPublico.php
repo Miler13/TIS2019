@@ -39,7 +39,7 @@
                         </ul>
                     </li>
                      <li>
-                        <a href="login.php"><i class="glyphicon glyphicon-user"></i> Login</a>
+                        <a href="index.l.php"><i class="glyphicon glyphicon-user"></i> Login</a>
                      </li>
                 </ul>
 
