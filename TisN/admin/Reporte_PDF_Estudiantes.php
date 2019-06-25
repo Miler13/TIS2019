@@ -26,7 +26,7 @@ function Header()
    // $this->SetLineWidth(1);
 
 	$this->Cell(10, 8, 'No.' ,1,0,'C');
-	$this->Cell(20, 8, 'Carnet' ,1,0,'C');
+	$this->Cell(20, 8, 'Codigo SIS' ,1,0,'C');
 	$this->Cell(30, 8, 'Nombres' ,1,0,'C');
 	$this->Cell(30, 8, 'Apellidos' ,1,0,'C');
 	$this->Cell(30, 8, 'Cedula' ,1,0,'C');

@@ -101,7 +101,7 @@ if(isset($_SESSION['NombreUsuario'])) {
             <div class="row">
 		               <div class="col-md-1"><h4>Buscar:</h4></div>
 		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el Nombre del Estudiante">
+		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el Nombre del Estudiante" onkeypress="return sololetras(event)">
 		               </div>
 		               	<div class="col-md-6">
 		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nuevo Estudiante</button> 
@@ -146,30 +146,31 @@ include('conexion.php');
 				            <div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
 			            </div> <br>
                   <div class="form-group"> <label for="carnet" class="col-md-2 control-label">CodigoSIS:</label>
-			            	<div class="col-md-10"><input type="text" class="form-control" id="carnet" name="carnet" onkeypress="return solonumeros(event)" required maxlength="9"></div>
+			            	<div class="col-md-10"><input type="text" class="form-control" id="carnet" name="carnet" placeholder="Ingrese su codigo de 9 digitos" onkeypress="return solonumeros(event)" required maxlength="9" minlength="9"> </div>
 			            </div> <br>
 			            <div class="form-group"> <label for="nombre" class="col-md-2 control-label">Nombres:</label>
 				            <div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" onkeypress="return sololetras(event)" required maxlength="50"></div>
+				            <div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su(s) nombre(s)" onkeypress="return sololetras(event)" required maxlength="50"></div>
 			            </div><br>
 			            <div class="form-group"> <label for="apellido" class="col-md-2 control-label">Apellidos:</label>
-				            <div class="col-md-10"><input type="text" class="form-control" id="apellido" name="apellido" onkeypress="return sololetras(event)" required maxlength="50"></div>
+				            <div class="col-md-10"><input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese su(s) apellido(s)" onkeypress="return sololetras(event)" required maxlength="50"></div>
 			            </div><br>
 			            <div class="form-group"> <label for="cedula" class="col-md-2 control-label">CI:</label>
-				            <div class="col-md-10"><input type="text" class="form-control" id="cedula" name="cedula" onkeypress="return solonumeros(event)" required maxlength="10"></div>
+				            <div class="col-md-10"><input type="text" class="form-control" id="cedula" name="cedula" placeholder="Ingrese su carnet de identidad" onkeypress="return solonumeros(event)" required maxlength="10" minlength="5"></div>
 			            </div><br>
 			            <div class="form-group"> <label for="correo" class="col-md-2 control-label">Correo:</label>
-                    <div class="col-md-10"><input type="text" class="form-control" id="correo" name="correo" onkeyup="validarEmail(this)" required maxlength="50">
+                    <div class="col-md-10"><input type="text" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo electronico" onkeyup="validarEmail(this)" required maxlength="50">
                                            <a id='resultado'></a></div>
 			            </div><br>
 			            <div class="form-group"> <label for="celular" class="col-md-2 control-label">Celular:</label>
-				            <div class="col-md-10"><input type="text" class="form-control" id="celular" name="celular" onkeypress="return solonumeros(event)" required maxlength="8"></div>
+				            <div class="col-md-10"><input type="text" class="form-control" id="celular" name="celular" placeholder="Ingrese su número de celular" onkeypress="return solonumeros(event)" required maxlength="8" minlength="8"></div>
 			            </div><br>
 			            <div class="form-group"> <label for="telefono" class="col-md-2 control-label">Telefono:</label>
-				            <div class="col-md-10"><input type="text" class="form-control" id="telefono" name="telefono" onkeypress="return solonumeros(event)" required maxlength="7"></div>
+				            <div class="col-md-10"><input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su numero de telefono fijo" onkeypress="return solonumeros(event)" required maxlength="7"minlength="7"></div>
 			            </div><br>
-			            <div class="form-group"> <label for="direccion" class="col-md-2 control-label">Direccion:</label>
+			            <div class="form-group"> <label for="direccion" class="col-md-2 control-label" >Direccion:</label>
 				            <div class="col-md-10">
-                        <textarea class="form-control" id="direccion" name="direccion"  required="" maxlength="250"></textarea>
+                        <textarea class="form-control" id="direccion" name="direccion"  required="" maxlength="250" placeholder="Ingrese su direccion de domicilio"></textarea>
                     </div>
 		                <br><br>
 			            </div>
