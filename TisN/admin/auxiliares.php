@@ -15,7 +15,8 @@ if(isset($_SESSION['NombreUsuario'])) {
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <meta charset="utf-8">
+    
+<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -37,6 +38,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="js/sweetalert.min.js"></script>
     <script src="validar.js"></script>
     <script type="text/javascript">
+    
         function validarEmail(elemento) {
 
             var texto = document.getElementById(elemento.id).value;
@@ -101,7 +103,7 @@ if(isset($_SESSION['NombreUsuario'])) {
 		               </div>
 		               	<div class="col-md-6">
 		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nuevo Auxiliar</button> 
-		                  <a href="reportes/Reporte_Auxiliar.php"> <button class="btn btn-primary"><i class="fa fa-file-pdf-o"></i>  Exportar Listado a PDF</button> </a>
+		                  
 		               </div>
 	              <br>
  <br>
@@ -142,10 +144,10 @@ include('conexion.php');
 				            <div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
 			          </div> <br>
 			          <div class="form-group"> <label for="nombre" class="col-md-2 control-label">Nombres:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su(s) nombre(s)" onkeypress="return sololetras(event)" required maxlength="50"></div>
+				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su(s) nombre(s)" onkeypress="return sololetras(event)" required maxlength="50"minlength="3"></div>
 			   </div><br>
 			   <div class="form-group"> <label for="apellido" class="col-md-2 control-label">Apellidos:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese su(s) apellido(s)" onkeypress="return sololetras(event)" required maxlength="50"></div>
+				<div class="col-md-10"><input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese su(s) apellido(s)" onkeypress="return sololetras(event)" required maxlength="50"minlength="3"></div>
 			   </div><br>
          <div class="form-group"> <label for="cedula" class="col-md-2 control-label">CI:</label>
 				<div class="col-md-10"><input type="text" class="form-control" id="cedula" name="cedula" placeholder="Ingrese su carnet de identidad" onkeypress="return solonumeros(event)" required maxlength="10" minlength="5"></div>
@@ -153,17 +155,10 @@ include('conexion.php');
 			   <div class="form-group"> <label for="correo" class="col-md-2 control-label">Correo:</label>
 				<div class="col-md-10"><input type="email" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo electronico" onkeyup="validarEmail(this)" required maxlength="50"></div>
 			   </div><br>
-			   <div class="form-group"> <label for="celular" class="col-md-2 control-label">Celular:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="celular" name="celular" placeholder="Ingrese su número de celular" onkeypress="return solonumeros(event)" required maxlength="8" minlength="8"></div>
+			   <div class="form-group"> <label for="celular" class="col-md-2 control-label">Telefono:</label>
+				<div class="col-md-10"><input type="text" class="form-control" id="celular" name="celular" placeholder="Ingrese su telefono fijo o movil" onkeypress="return solonumeros(event)" required maxlength="8" minlength="6"></div>
 			   </div><br>
-			   <div class="form-group"> <label for="telefono" class="col-md-2 control-label">Telefono:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su numero de telefono fijo" onkeypress="return solonumeros(event)" required maxlength="7"minlength="7"></div>
-			   </div><br>
-			   <div class="form-group"> <label for="direccion" class="col-md-2 control-label">Direccion:</label>
-				<div class="col-md-10">
-		       <textarea class="form-control" id="direccion" name="direccion" required="" maxlength="250" placeholder="Ingrese su direccion de domicilio"></textarea></div>
-		       <br>
-			   </div><br>
+			   
 			   <div class="form-group"> <label for="estado" class="col-md-2 control-label">Estado:</label>
 				 <div class="col-md-10">
                    <select class="form-control" id="estado" name="estado" required="">

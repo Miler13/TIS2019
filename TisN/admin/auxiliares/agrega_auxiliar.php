@@ -6,27 +6,27 @@ $id = $_POST['id-registro'];
 $proceso = $_POST['pro'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
-$password = $_POST['password'];
+$cedula = $_POST['cedula'];
 $correo = $_POST['correo'];
 $celular = $_POST['celular'];
-$cedula = $_POST['cedula'];
-$direccion = $_POST['direccion'];
 $estado = $_POST['estado'];
 $foto = "images/fotos_perfil/perfil.jpg";
 
-switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO auxiliares (NombresAuxiliar, ApellidosAuxiliar, PasswordAuxiliar, CorreoAuxiliar, CelularAuxiliar, CedulaAuxiliar, DireccionAuxiliar, Estado, Foto) VALUES('$nombre','$apellido','$password','$correo','$celular','$cedula','$direccion','$estado','$foto')");
 
-  $consulta=mysqli_query($conexion,"SELECT idAuxiliar from auxiliares where CedulaAuxiliar = '$password' and CorreoAuxiliar = '$correo'");
+
+switch($proceso){
+	case 'Registro': mysqli_query($conexion,"INSERT INTO auxiliares (NombresAuxiliar, ApellidosAuxiliar, PasswordAuxiliar, CorreoAuxiliar, CelularAuxiliar, CedulaAuxiliar, DireccionAuxiliar, Estado, Foto) VALUES('$nombre','$apellido','$cedula','$correo','$celular','$cedula','none','$estado','$foto')");
+
+  $consulta=mysqli_query($conexion," SELECT idAuxiliar from auxiliares where CedulaAuxiliar = '$cedula' and CorreoAuxiliar = '$correo'");
                            while($filas=mysqli_fetch_array($consulta)){
                                  $codigo_auxiliar=$filas['idAuxiliar'];
                  }
-     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$correo','$password','4','$codigo_auxiliar', '$foto')");
+                 mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$correo','$cedula','4','$codigo_auxiliar', '$foto')");
 
 	break;
-	case 'Edicion': mysqli_query($conexion,"UPDATE auxiliares SET NombresAuxiliar = '$nombre', ApellidosAuxiliar = '$apellido', PasswordAuxiliar = '$password', CorreoAuxiliar = '$correo', CelularDocente = '$celular', CedulaAuxiliar = '$cedula', DireccionAuxiliar = '$direccion', Estado = '$estado' where idAuxiliar = '$id'");
+	case 'Edicion': mysqli_query($conexion,"UPDATE auxiliares SET NombresAuxiliar = '$nombre', ApellidosAuxiliar = '$apellido', PasswordAuxiliar = '$cedula', CorreoAuxiliar = '$correo', CelularDocente = '$celular', CedulaAuxiliar = '$cedula', DireccionAuxiliar = '$direccion', Estado = '$estado' where idAuxiliar = '$id'");
 
-    mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$correo', PassUsuario = '$password' where Codigo = '$id'");
+    mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$correo', PassUsuario = '$cedula' where Codigo = '$id'");
 
 	break;
    }

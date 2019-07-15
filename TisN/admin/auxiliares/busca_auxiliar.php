@@ -11,7 +11,7 @@ $registro = mysqli_query($conexion,"SELECT * FROM auxiliares WHERE NombresAuxili
                          <th width="10%">Correo</th>
                          <th width="10%">Celular</th>
                          <th width="10%">Cedula</th>
-                         <th width="20%">Direccion</th>
+                       
                          <th width="5%">Estado</th>            
                         <th width="10%">Opciones</th>
             </tr>';
@@ -24,7 +24,7 @@ $registro = mysqli_query($conexion,"SELECT * FROM auxiliares WHERE NombresAuxili
                                  <td>'.$registro2['CorreoAuxiliar'].'</td>
                                 <td>'.$registro2['CelularAuxiliar'].'</td>
                                 <td>'.$registro2['CedulaAuxiliar'].'</td>
-                                <td>'.$registro2['DireccionAuxiliar'].'</td>
+                                
                                 <td>'.$registro2['Estado'].'</td>
                                <td> <a href="javascript:editarRegistro('.$registro2['idAuxiliar'].');">
                               <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>

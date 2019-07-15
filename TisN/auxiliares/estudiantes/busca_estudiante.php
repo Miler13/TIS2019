@@ -7,14 +7,16 @@ $registro = mysqli_query($conexion,"SELECT * FROM estudiantes WHERE NombresEstud
         	<tr>
                          <th width="10%">Nombres</th>
                          <th width="10%">Apellidos</th>
-						 <th width="10%">Asistencia</th>
+                                     <th width="10%">Asistencia</th>
+                                     <th width="15%">Obserbaciones</th>
             </tr>';
       if(mysqli_num_rows($registro)>0){
 	     while($registro2 = mysqli_fetch_array($registro)){
 		      echo '<tr>
                   <td>'.$registro2['NombresEstudiante'].'</td>
                   <td>'.$registro2['ApellidosEstudiante'].'</td>
-				  <td><input type="checkbox" name="valor1"></td>
+                          <td><input type="checkbox" name="valor1"></td>
+                          <td><input type="text" name="ob"></th>
 			        	</tr>';
       	}
       }else{

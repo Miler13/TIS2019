@@ -82,8 +82,8 @@ function editarRegistro(id){
 				$('#correo').val(datos[3]);
 				$('#celular').val(datos[4]);
 				$('#cedula').val(datos[5]);
-				$('#direccion').val(datos[6]);
-				$('#estado').val(datos[7]);
+				
+				$('#estado').val(datos[6]);
 				$('#registra-datos').modal({
 					show:true,
 					backdrop:'static'
@@ -96,6 +96,7 @@ function editarRegistro(id){
 
 function pagination(partida){
 	var url = 'auxiliares/paginar_auxiliar.php';
+	
 	$.ajax({
 		type:'POST',
 		url:url,
