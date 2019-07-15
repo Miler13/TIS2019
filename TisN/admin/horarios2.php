@@ -165,12 +165,12 @@ if(isset($_SESSION['NombreUsuario'])) {
 			   <div class="form-group"> <label for="estado" class="col-md-2 control-label">Dia:</label>
 				 <div class="col-md-10">
                    <select class="form-control" id="dia" name="dia" required="">
-					            <option value="1" selected="">lunes</option>
-								<option value="2">martes</option>
-								<option value="3">miercoles</option>
-					            <option value="4">jueves</option>
-								<option value="3">viernes</option>
-					            <option value="4">sabado</option>
+					            <option value="lunes" selected="">lunes</option>
+								<option value="martes">martes</option>
+								<option value="miercoles">miercoles</option>
+					            <option value="jueves">jueves</option>
+								<option value="viernes">viernes</option>
+					            <option value="sabado">sabado</option>
 				  </select>
 				 </div>
 			   </div>
@@ -225,16 +225,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                       </select>
 		               </div><br>
 					   <br>
-					   <div class="form-group"><label for="grupo" class="col-md-2 control-label">Laboratorio:</label>
-					   <div class="col-md-10">
-						<select class="form-control" id="semestre" name="semestre" required="">
-					            <option value="1" selected="">Laboratorio 1</option>
-								<option value="2">Laboratorio 2</option>
-								<option value="3">Laboratorio 3</option>
-					            <option value="4">Laboratorio 4</option>
-						</select>
-					   </div>
-					   <br>
+					  
                  <div id="mensaje"></div>           
              </div>         
             <div class="modal-footer">

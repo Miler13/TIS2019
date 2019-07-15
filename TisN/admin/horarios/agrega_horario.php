@@ -18,25 +18,36 @@ $d5 = "viernes";
 $d6 = "sabado";
 switch($proceso){
 	case 'Registro': mysqli_query($conexion,"INSERT INTO horarios3 (dia, hora, materia, grupo, semestre) VALUES('$dia', '$hora', '$materia', '$grupo', '$semestre')");
-					if($dia = $d1 ){
-						mysqli_query($conexion,"UPDATE horarios2 SET lunes = '1' where horarios2.idHorario = '1'");
+					if($dia = 'lunes' ){
+						mysqli_query($conexion,"UPDATE horarios2 SET lunes = '1' where hora = '$hora'");
+						break;
+					}else{
+						if($dia2 = 'martes' ){
+						mysqli_query($conexion,"UPDATE horarios2 SET martes = '2' where hora = '$hora'");
+						break;
+						}else{
+							if($dia2 = 'miercoles' ){
+							mysqli_query($conexion,"UPDATE horarios2 SET miercoles = '3' where hora = '$hora'");
+							break;
+							}else{
+								if($dia2 = 'jueves' ){
+								mysqli_query($conexion,"UPDATE horarios2 SET jueves = '4' where hora = '$hora'");
+								break;
+								}else{
+									if($dia2 = 'viernes' ){
+									mysqli_query($conexion,"UPDATE horarios2 SET viernes = '5' hora = '$hora'");
+									break;
+									}else{
+										if($dia2 = 'sabado' ){
+										mysqli_query($conexion,"UPDATE horarios2 SET sabado = '6' hora = '$hora'");
+										break;
+										}	
+									}
+								}
+							}
+						}
 					}
-					if($dia = $d2 ){
-						mysqli_query($conexion,"UPDATE horarios2 SET martes = '1' where horarios2.idHorario = '1'");
-					}
-					if($dia = $d3 ){
-						mysqli_query($conexion,"UPDATE horarios2 SET miercoles = '1' where horarios2.idHorario = '1'");
-					}
-					if($dia = $d4 ){
-						mysqli_query($conexion,"UPDATE horarios2 SET jueves = '1' where horarios2.idHorario = '1'");
-					}
-					if($dia = $d5 ){
-						mysqli_query($conexion,"UPDATE horarios2 SET viernes = '1' where horarios2.idHorario = '1'");
-					}
-					if($dia = $d6 ){
-						mysqli_query($conexion,"UPDATE horarios2 SET sabado = '1' where horarios2.idHorario = '1'");
-					}
-					
+		
 	break;
 	case 'Edicion': mysqli_query($conexion,"UPDATE horarios SET NombreHorario = '$nombre' where idHorario = '$id'");
 	break;

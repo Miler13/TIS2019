@@ -9,8 +9,12 @@ $pass = $_POST['pass'];
 $nivel = $_POST['nivel'];
 $codigo = $_POST['codigo'];
 
-mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$nombre','$pass','$nivel','$codigo', 'images/fotos_perfil/perfil.jpg')");
-
+switch($proceso){
+	case 'Registro': mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$nombre','$pass','$nivel','$codigo', 'images/fotos_perfil/perfil.jpg')");
+		break;
+	case 'Edicion': mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$nombre', PassUsuario = '$pass', NivelUsuario = '$nivel', Codigo = '$codigo'where idUsuario = '$id'");
+		break;
+}
     $registro = mysqli_query($conexion,"SELECT * FROM usuarios ORDER BY idUsuario ASC");
 
     echo '<table class="table table-striped table-condensed table-hover">
