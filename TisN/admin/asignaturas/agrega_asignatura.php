@@ -26,12 +26,13 @@ semestres.NombreSemestre as Semestre FROM asignaturas
 
     echo '<table class="table table-striped table-condensed table-hover">
         	 <tr>
-                         <th width="20%">Asignatura</th>  
+                        <th width="20%">Asignatura</th>  
                         <th width="20%">Carrera</th> 
                         <th width="20%">Año</th>
                         <th width="20%">Semestre</th>       
                         <th width="20%">Opciones</th>
                    </tr>';
+                   
 	while($registro2 = mysqli_fetch_array($registro)){
 		echo '<tr>
                           <td>'.$registro2['Asignatura'].'</td>

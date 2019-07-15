@@ -83,24 +83,41 @@ if(isset($_SESSION['NombreUsuario'])) {
             </div>
             <center><h4><b>Administracion de Materias</b></h4></center>
         </div>
-        <div class="panel-body">
+
+        <?php
+       include ('conexion.php');
+
+           $TotalGrupos = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM grupos"));
+        ?>
+
+                
+      <div class="panel-body">
             <div class="row">
 		               <div class="col-md-1"><h4>Buscar:</h4></div>
 		               <div class="col-md-5">
 		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre de la Asignatura" onkeypress="return sololetras(event)">
 		               </div>
 		               	<div class="col-md-6">
-		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nueva Materia</button> 
-		               </div>
-	              <br>
+                      <button id="nuevo-producto" class="btn btn-success" style="margin-right: 100px"> <i class="glyphicon glyphicon-plus"></i> Nueva Materia</button> 
+                      <button style="margin-bottom: 10px">
+                         <div class="cold-md-7">
+                         <p>Cantidad de grupos por materias: <span class="label label-danger pull-right"><?php echo $TotalGrupos ?></span></p>
+                         <a href="grupos.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>crear grupos para las materias</a>
+                         </div>
+                         </button>
+                    </div> 
+		                                     
+                   <br>
  <br>
+       
+
     <div class="registros" style="width:100%;" id="agrega-registros"></div>
       <div class="col-md-6" style="text-align: left;">
 		    <center>
 		        <ul class="pagination" id="pagination"></ul>
 		    </center>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-3">
 		   <center>
 		   <h4 style="font-weight: bold;"> 
     <?php
@@ -111,7 +128,8 @@ include('conexion.php');
         </h4>
           </center>
       </div>
-   
+
+  
   
     <!-- MODAL PARA EL REGISTRO-->
     <div class="modal fade" id="registra-datos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -161,7 +179,8 @@ include('conexion.php');
                          <div class="col-md-10">
                        <select class="form-control" id="year" name="year">
                      <?php 
-                          while($fila=mysqli_fetch_row($grupos)){
+                          while($fila=mysqli_fetch_row($grupos))
+                          {
                           echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
                           }
                           ?>

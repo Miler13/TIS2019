@@ -11,7 +11,7 @@ $registro = mysqli_query($conexion,"SELECT * FROM grupos ORDER BY idGrupo ASC");
 
 echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	          <tr>
-                           <th width="40%">Numero de Grupo</th>
+                        <th width="40%">Numero de Grupo</th>
                         <th width="40%">Nombre de Grupo</th>            
                         <th width="20%">Opciones</th>
                    </tr>';
@@ -23,7 +23,7 @@ echo '<table class="table table-striped table-condensed table-hover table-respon
                           <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
                           <a href="javascript:eliminarRegistro('.$registro2['idGrupo'].');">
                           <img src="images/borrar.png" width="25" height="25" alt="delete" title="Eliminar" /></a>
-                          </td>s>
+                          </td>
 			         	</tr>';
 	}
 echo '</table>';

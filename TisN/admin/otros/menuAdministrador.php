@@ -105,7 +105,7 @@
                 </div>
             </div>
 
-              <div class="col-md-3 col-sm-6">
+             <!---<div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                         <span class="fa-stack fa-3x">
@@ -120,7 +120,7 @@
                     </div>
                    
                 </div>
-            </div>
+            </div>--->
             <div class="col-md-3 col-sm-6">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
@@ -200,7 +200,7 @@
 						</div>
 						<div class="panel-body">
 						  <h4 class="media-heading">Incripciones Asignaturas</h4>
-							<p>Total de Inscripciones: <span class="label label-danger pull-right"><?php echo $TotalInscripciones ?></span></p>
+							<p>Total de Asignaturas: <span class="label label-danger pull-right"><?php echo $TotalInscripciones ?></span></p>
 							<a href="inscripcion_Asignaturas.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
 						</div>
 					</div>

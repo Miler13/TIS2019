@@ -29,10 +29,10 @@ include('../conexion.php');
   		$limit = $nroLotes*($paginaActual-1);
   	}
   	$registro = mysqli_query($conexion,"SELECT asignaturas.idAsignatura as id, asignaturas.NombreAsignatura as Asignatura, carreras.NombreCarrera as Carrera, grupos.NumeroGrupo as grupo, 
-Semestre.NombreSemestre as Semestre FROM asignaturas 
+semestres.NombreSemestre as Semestre FROM asignaturas 
                                  INNER JOIN carreras ON  asignaturas.Idcarrera =  carreras.idCarrera 
 
-                                 INNER JOIN Semestre ON  asignaturas.Idsemestre =  Semestre.idSemestre 
+                                 INNER JOIN semestres ON  asignaturas.Idsemestre =  semestres.idSemestre 
                                  
                                  INNER JOIN grupos ON  asignaturas.IdGrupo =  grupos.idGrupo
   LIMIT $limit, $nroLotes ");
@@ -46,7 +46,7 @@ Semestre.NombreSemestre as Semestre FROM asignaturas
                    </tr>';		
           	while($registro2 = mysqli_fetch_array($registro)){
       $tabla = $tabla.'<tr>
-                       <td>'.$registro2['Asignatura'].'</td>
+                              <td>'.$registro2['Asignatura'].'</td>
 		                      <td>'.$registro2['Carrera'].'</td>
 		                      <td>'.$registro2['grupo'].'</td>
 		                      <td>'.$registro2['Semestre'].'</td>
@@ -56,8 +56,8 @@ Semestre.NombreSemestre as Semestre FROM asignaturas
                              <img src="images/borrar.png" width="25" height="25" alt="delete" title="Eliminar" /></a>
                              </td>
                 </tr>';	
-	}
-        
+    }
+            
     $tabla = $tabla.'</table>';
     $array = array(0 => $tabla,
     			   1 => $lista);

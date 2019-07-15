@@ -32,6 +32,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="grupos/myjava.js"></script>
+    <script src="validar.js"></script>
 
 </head>
 <body>
@@ -58,6 +59,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
                     <li><a href="admin.php">Administrador</a></li>
+                    <li><a href="asignaturas.php">Materias</a></li>
                     <li class="active">Grupos</li>
                 </ol>
             </div>
@@ -121,14 +123,16 @@ include('conexion.php');
 
                  <div class="form-group"> <label for="codigo" class="col-md-2 control-label">Proceso:</label>
 				<div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
-			   </div> <br><br>
+        
+      </div> <br><br>
 
           <div class="form-group"> <label for="codigo" class="col-md-2 control-label">Numero Grupo:</label>
-        <div class="col-md-10"><input type="text" class="form-control" id="numero" name="numero" required="true" /></div>
-         </div> <br><br>
+        <div class="col-md-10"><input type="text" class="form-control" id="numero" name="numero" placeholder="Ingrese el numero de la asignatura" onkeypress="return solonumeros(event)" required maxlength="2"minlength="1"></div> 
+        
+        </div> <br><br>
 
                <div class="form-group"> <label for="carnet" class="col-md-2 control-label">Nombre Grupo:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" required="true" maxlength="50"></div>
+				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese un nombre cualquiera"  required maxlength="10"></div>
 			   </div> <br>  <br><br>  
                  <div id="mensaje"></div>           
              </div>  

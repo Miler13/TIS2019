@@ -35,6 +35,7 @@ function agregarRegistro(){
 			$('#formulario')[0].reset();
 			$('#mensaje').addClass('bien').html('Registro completado con exito').show(200).delay(2500).hide(200);
 			$('#agrega-registros').html(registro);
+			$('#pro').val('Registro');
 			return false;
 			}else{
 			$('#mensaje').addClass('bien').html('Edicion completada con exito').show(200).delay(2500).hide(200);
@@ -55,7 +56,7 @@ function eliminarRegistro(id){
 		data:'id='+id,
 		success: function(registro){
 			$('#agrega-registros').html(registro);
-			return false;
+			return false;			
 		}
 	});
 	return false;
@@ -103,4 +104,20 @@ function pagination(partida){
 		}
 	});
 	return false;
+}
+
+function validar(){
+    var Asignatura;
+    Asignatura = document.getElementById("nombre").value;
+    expresion = /\w+@\w+\.+[a-z]/;    
+    if(Asignatura === ""){
+        alert("todos los campos son obligatorios");
+        return false;
+    }
+    else if(Asignatura.length>30){
+        alert("El nombre de la materia es muy largo");
+        return false;
+    }
+    
+    
 }

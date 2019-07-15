@@ -8,7 +8,7 @@ $numero = $_POST['numero'];
 $nombre = $_POST['nombre'];
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO grupos (NumeroGrupo, NombreGrupo) VALUES('$numero','$nombre')");
+   case 'Registro': mysqli_query($conexion,"INSERT INTO grupos (NumeroGrupo, NombreGrupo) VALUES('$numero','$nombre')");
 	break;
 	case 'Edicion': mysqli_query($conexion,"UPDATE grupos SET NumeroGrupo = '$numero', NombreGrupo = '$nombre' where idGrupo = '$id'");
 	break;
