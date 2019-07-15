@@ -13,7 +13,7 @@
                 <ul class="nav navbar-nav navbar-right">
                 
                     <li>
-                        <a href=""><i class="glyphicon glyphicon-folder-open"></i> &nbsp;  Material Didactico</a>
+                        <a href=""><i class="glyphicon glyphicon-folder-open"></i> &nbsp;  Portafolio</a>
                     </li>
                     <li>
                         <a href=""><i class="glyphicon glyphicon-file"></i> &nbsp; Planificacion de Tareas</a>

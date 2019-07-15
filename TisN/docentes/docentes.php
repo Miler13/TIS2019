@@ -93,7 +93,7 @@ include ('menu_docente.php');
                         </span>
                     </div>
                     <div class="panel-body">
-                        <h4>Material Didactico para estudiantes</h4>
+                        <h4>Portafolio para estudiantes</h4>
                         <a href="material_didactico.php" class="btn btn-primary"> <i class="glyphicon glyphicon-download"></i>   Entrar</a>
                     </div>
                 </div>

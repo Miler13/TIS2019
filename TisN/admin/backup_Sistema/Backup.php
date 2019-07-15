@@ -5,7 +5,7 @@ $mont=date("m");
 $year=date("Y");
 $hora=date("H-i-s");
 $fecha=$day.'_'.$mont.'_'.$year;
-$DataBASE="Backup_SIAD_".$fecha."_(".$hora."_hrs).sql";
+$DataBASE="Backup_stadust_db".$fecha."_(".$hora."_hrs).sql";
 $tables=array();
 $result=SGBD::sql('SHOW TABLES');
 if($result){

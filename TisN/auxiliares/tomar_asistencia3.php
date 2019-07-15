@@ -86,11 +86,9 @@ if(isset($_SESSION['NombreUsuario'])) {
             <div class="row">
 		               <div class="col-md-1"><h4>Buscar:</h4></div>
 		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir???">
+		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="buscar">
 		               </div>
-		               <div class="col-md-6">
-		                  <a href="Reporte_PDF_Estudiantes2.php"> <button class="btn btn-primary"><i class="fa fa-file-pdf-o"></i>  Exportar Listado a PDF</button> </a>
-		               </div>
+		               
 	              <br>
  <br>
     <div class="registros" style="width:100%;" id="agrega-registros"></div>
@@ -113,7 +111,8 @@ include('conexion.php');
         ?>
 		<br>
 		<div class="col-md-6">
-		     <button id="nuevo-producto2" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> registrar???</button>
+		     <a  hhref="auxiliares.php" id="nuevo-producto2" class="btn btn-success"> <i class="fa fa-mail-forward"></i> registrar</a>
+             
 		</div>
         </h4>
           </center>

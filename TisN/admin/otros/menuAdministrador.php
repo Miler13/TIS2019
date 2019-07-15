@@ -66,7 +66,7 @@
                         </span>
                     </div>
                     <div class="panel-body">
-                         <h4 class="media-heading">Auxiliares</h4>
+                         <h4 class="media-heading">Registrar Auxiliares</h4>
                        <p>Total de Auxiliares: <span class="label label-danger pull-right"><?php echo $TotalAuxiliares ?></span></p>
                        <a href="auxiliares.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>                    
@@ -82,7 +82,7 @@
                         </span>
                     </div>                    
                     <div class="panel-body">
-                       <h4 class="media-heading">Materias</h4>
+                       <h4 class="media-heading">Registrar Materias</h4>
                        <p>Total de Materias: <span class="label label-danger pull-right"><?php echo $TotalAsignaturas ?></span></p>
                        <a href="asignaturas.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
@@ -98,7 +98,7 @@
                         </span>
                     </div>
                     <div class="panel-body">
-                         <h4 class="media-heading">Carreras</h4>
+                         <h4 class="media-heading">Registrar Carreras</h4>
                       <p>Total de Estudiantes: <span class="label label-danger pull-right"><?php echo $TotalCarreras ?></span></p>
                       <a href="carreras.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
@@ -114,7 +114,7 @@
                         </span>
                     </div>
                     <div class="panel-body">
-                         <h4 class="media-heading">Grupos</h4>
+                         <h4 class="media-heading">Registrar Grupos</h4>
                       <p>Total de Grupos: <span class="label label-danger pull-right"><?php echo $TotalGrupos ?></span></p>
                       <a href="grupos.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
@@ -130,7 +130,7 @@
                         </span>
                     </div>
                     <div class="panel-body">
-                            <h4 class="media-heading">Horarios</h4>
+                            <h4 class="media-heading">Registrar Horarios</h4>
                         <p>Total de Horarios: <span class="label label-danger pull-right"><?php echo $TotalHorarios ?></span></p>
                       <a href="horarios2.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
@@ -147,7 +147,7 @@
                         </span>
                     </div>
                     <div class="panel-body">
-                      <h4 class="media-heading">Usuarios</h4>
+                      <h4 class="media-heading">Registrar Usuarios</h4>
                         <p>Total de Usuarios: <span class="label label-danger pull-right"><?php echo $TotalUsuarios ?></span></p>
                         <a href="usuarios.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>                   
@@ -184,7 +184,7 @@
                  
                         </div>
                     <div class="panel-body">
-                        <h4 class="media-heading">Asignaciones</h4>
+                        <h4 class="media-heading">Materia a Docente</h4>
                        <p>Total de Asignaciones: <span class="label label-danger pull-right"><?php echo $TotalAsignaciones ?></span></p>
                       <a href="asignaciones.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>

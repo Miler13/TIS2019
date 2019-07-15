@@ -33,13 +33,16 @@ include('../conexion.php');
 			                <tr>
                           <th width="10%">Nombres</th>
                          <th width="10%">Apellidos</th>
-						 <th width="10%">Asistencia</th>
+                         <th width="10%">Asistencia</th>
+                         <th width="15%">Obserbaciones</th>
                      </tr>';		
           	while($registro2 = mysqli_fetch_array($registro)){
       $tabla = $tabla.'<tr>
                         <td>'.$registro2['NombresEstudiante'].'</td>
 						<td>'.$registro2['ApellidosEstudiante'].'</td>
-						<td><input type="checkbox" name="valor1"></td>
+                        <td><input type="checkbox" name="asi"></td>
+                        <td><input type="text" name="ob"></th>
+                        
                       </tr>';		
 	}
         

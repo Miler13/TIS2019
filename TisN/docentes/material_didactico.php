@@ -65,7 +65,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
                     <li><a href="docentes.php">Docentes</a></li>
-                    <li class="active">Material Didactico</li>
+                    <li class="active">Material Didactico (Portafolio)</li>
                 </ol>
             </div>
         </div> 
