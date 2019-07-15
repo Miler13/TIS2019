@@ -103,19 +103,3 @@ function pagination(partida){
 	});
 	return false;
 }
-
-function validar(){
-    var Asignatura;
-    Asignatura = document.getElementById("carnet").value;
-    expresion = /\w+@\w+\.+[a-z]/;    
-    if(Asignatura === ""){
-        alert("todos los campos son obligatorios");
-        return false;
-    }
-    else if(Asignatura.length>30){
-        alert("El nombre de la materia es muy largo");
-        return false;
-    }
-    
-    
-}
