@@ -30,12 +30,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                Laboratorios de informatica - sistemas UMSS
+                SISTEMA GRLIS 
                 </h1>
             </div>
             <div class="col-lg-12">
                 <p>
-                     Bienvenidos al Sistema de Laboratorios de informatica-sistemas UMSS
+                     Bienvenidos al Sistema de gestion y reserva de Laboratorios de informatica-sistemas
                 </p>
                 <br>
             </div>
