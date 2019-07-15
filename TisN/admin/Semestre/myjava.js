@@ -29,19 +29,27 @@ function agregarRegistro(){
 	$.ajax({
 		type:'POST',
 		url:url,
-		data:$('#formulario').serialize(),
-		success: function(registro){
-			if ($('#pro').val() == 'Registro'){
-			$('#formulario')[0].reset();
-			$('#mensaje').addClass('bien').html('Registro completado con exito').show(200).delay(2500).hide(200);
-			$('#agrega-registros').html(registro);
-			return false;
-			}else{
-			$('#mensaje').addClass('bien').html('Edicion completada con exito').show(200).delay(2500).hide(200);
-			$('#agrega-registros').html(registro);
-			return false;
-			}
-		}
+        data: $('#formulario').serialize(),
+        success: function (registro) {
+            if ($('#pro').val() == 'Registro') {
+                var num2 = parseInt($('#gestion').val(), 10);
+                $('#formulario')[0].reset();
+                if (num2 > 1999 && num2 < 2051) {
+                    $('#mensaje').addClass('bien').html('Registro completado con exito').show(200).delay(2500).hide(200);
+                } else {
+                    $('#mensaje').addClass('bien').html('Gestion no registrada, esta debe estar entre las gestiones de 2000 y 2050').show(200).delay(2500).hide(200);
+                }
+                //$('#mensaje').addClass('bien').html('Registro completado con exito').show(200).delay(2500).hide(200);
+                $('#agrega-registros').html(registro);
+                $('#pro').val('Registro');
+                return false;
+            } else {
+                $('#mensaje').addClass('bien').html('Edicion realizada con exito').show(200).delay(2500).hide(200);
+                $('#agrega-registros').html(registro);
+                $('#pro').val('Edicion');
+                return false;
+            }
+        }       
 	});
 	return false;
 }

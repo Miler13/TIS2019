@@ -36,6 +36,21 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="js/functions.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="validar.js"></script>
+
+	<script type="text/javascript">
+        function validarGestion(elemento) {
+
+            var texto = document.getElementById(elemento.id).value;
+			var integer = parseInt(text, 10);
+
+			if(integer < 2000 && integer > 2050){
+				document.getElementById("resultado").innerHTML = "gestion invalida";
+			} else {
+                document.getElementById("resultado").innerHTML = "";
+            }
+        }
+	</script>
+
 </head>
 <body>
            <?php
@@ -124,9 +139,19 @@ include('conexion.php');
 
                  <div class="form-group"> <label for="codigo" class="col-md-2 control-label">Proceso:</label>
 				<div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
-			   </div> <br><br>
-               <div class="form-group"> <label for="carnet" class="col-md-2 control-label">Semestre:</label>
-				<div class="col-md-10"><input type="text" class="form-control" id="nombre" name="nombre" placeholder="codigo Semestre" onkeypress="return solonumeros(event)" required maxlength="10" minlength="5"></div>
+			   </div> <br>
+			   <div class="form-group"> <label for="estado" class="col-md-2 control-label">Semestre:</label>
+				 <div class="col-md-10">
+                   <select class="form-control" id="semestre" name="semestre" required="">
+					            <option value="1" selected="">1 - Regular</option>
+								<option value="2">2 - Regular</option>
+								<option value="3">3 - Invierno</option>
+					            <option value="4">4 - Verano</option>
+				  </select>
+				 </div>
+			   </div><br>
+               <div class="form-group"> <label for="carnet" class="col-md-2 control-label">Gestion:</label>
+				<div class="col-md-10"><input type="text" class="form-control" id="gestion" name="gestion" placeholder="Gestion a la que pertenece el semestre" onkeypress="return solonumeros(event)" onkeyup="validarGestion(this)" required maxlength="4" minlength="4"></div>
 			   </div> <br>
                  <div id="mensaje"></div>           
              </div>         

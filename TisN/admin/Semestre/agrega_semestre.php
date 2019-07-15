@@ -4,12 +4,20 @@ include('../conexion.php');
 
 $id = $_POST['id-registro'];
 $proceso = $_POST['pro'];
-$nombre = $_POST['nombre'];
+$nombre = $_POST['gestion'];
+$semestre = $_POST['semestre'];
+$valor = $semestre . " - " . $nombre;
+//$gestion = $_POST['gestion'];
 
+
+$x = (int)$nombre;
+$a = 1999;
+$b = 2051;
+if($x > $a AND $x < $b){
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO Semestres (NombreSemestre) VALUES('$nombre')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO Semestres (NombreSemestre) VALUES('$valor')");
 	break;
-	case 'Edicion': mysqli_query($conexion,"UPDATE Semestres SET NombreSemestre = '$nombre' where idSemestre = '$id'");
+	case 'Edicion': mysqli_query($conexion,"UPDATE Semestres SET NombreSemestre = '$valor' where idSemestre = '$id'");
 	break;
    }
     $registro = mysqli_query($conexion,"SELECT * FROM Semestres ORDER BY idSemestre ASC");
@@ -29,6 +37,8 @@ switch($proceso){
                           </td>
                 </tr>';
   }
+  } else {
+  }
 	
-   echo '</table>';
+   echo '</table>';   
 ?>

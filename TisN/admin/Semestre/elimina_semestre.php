@@ -3,9 +3,7 @@ include('../conexion.php');
 
 $id = $_POST['id'];
 
-if (!mysqli_query($conexion,"DELETE FROM Semestre WHERE idSemestre = '$id'")) {
-  echo '<script> alert("Este registro no se puede borrar porque esta siendo utilizado por el sistema.");</script>';
-}
+mysqli_query($conexion,"DELETE FROM semestres WHERE idSemestre = '$id'");
 
 $registro = mysqli_query($conexion,"SELECT * FROM Semestres ORDER BY idSemestre ASC");
 

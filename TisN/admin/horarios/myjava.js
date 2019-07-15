@@ -31,14 +31,16 @@ function agregarRegistro(){
 		url:url,
 		data:$('#formulario').serialize(),
 		success: function(registro){
-			if ($('#pro').val() == 'Registro'){
-			$('#formulario')[0].reset();
-			$('#mensaje').addClass('bien').html('Registro completado con exito').show(200).delay(2500).hide(200);
-			$('#agrega-registros').html(registro);
+            if ($('#pro').val() == 'Registro') {
+                $('#formulario')[0].reset();
+			    $('#mensaje').addClass('bien').html('Registro completado con exito').show(200).delay(2500).hide(200);
+                $('#agrega-registros').html(registro);
+                $('#pro').val('Registro');
 			return false;
 			}else{
 			$('#mensaje').addClass('bien').html('Edicion completada con exito').show(200).delay(2500).hide(200);
-			$('#agrega-registros').html(registro);
+                $('#agrega-registros').html(registro);
+                $('#pro').val('Edicion');
 			return false;
 			}
 		}
@@ -97,6 +99,32 @@ function pagination(partida){
 			var array = eval(data);
 			$('#agrega-registros').html(array[0]);
 			$('#pagination').html(array[1]);
+		}
+	});
+	return false;
+}
+
+function agregarRegistro2(id) {
+    $('#formulario')[0].reset();
+    var url = 'horarios/agrega_horario.php';
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: $('#formulario').serialize(),
+        success: function (registro){
+				$('#reg').hide();
+				$('#edi').show();
+				$('#pro').val('Edicion');
+				$('#id-registro').val(id);
+                $('#dia').val(datos[0]);
+                $('#hora').val(datos[1]);
+                $('#grupo').val(datos[2]);
+                $('#semestre2').val(datos[3]);
+				$('#registra-datos').modal({
+					show:true,
+					backdrop:'static'
+				});
+			return false;
 		}
 	});
 	return false;

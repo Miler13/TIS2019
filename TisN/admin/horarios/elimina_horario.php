@@ -12,8 +12,13 @@ $registro = mysqli_query($conexion,"SELECT * FROM horarios ORDER BY idHorario AS
 
 echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	          <tr>
-                        <th width="80%">Descripcion de Horario</th>           
-                        <th width="20%">Opciones</th>
+                        <th width="10%">Horario</th>           
+                        <th width="15%">Lunes</th>
+						<th width="15%">Martes</th>           
+                        <th width="15%">Miercoles</th>
+						<th width="15%">Jueves</th>           
+                        <th width="15%">Viernes</th>
+						<th width="15%">Sabado</th>
                    </tr>';
 	while($registro2 = mysqli_fetch_array($registro)){
 		        echo '<tr>

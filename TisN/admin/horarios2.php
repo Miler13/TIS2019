@@ -12,10 +12,21 @@ if(isset($_SESSION['NombreUsuario'])) {
                          $foto=$filas['Foto'];                           
                  }
         ?>
-        <?php
-include 'include/config.php';
-require_once'include/functions.php';
-?>
+		<?php 
+          $consulta1="select IdCarrera, NombreCarrera from carreras";
+          $carrera=mysqli_query($conexion,$consulta1);
+           $consulta2="select idGrupo, NumeroGrupo from grupos";
+          $grupos=mysqli_query($conexion,$consulta2);
+           $consulta3="select idSemestre, NombreSemestre from semestres ";
+          $semestre=mysqli_query($conexion,$consulta3);
+		  $consulta5="select idAsignatura, NombreAsignatura from asignaturas ";
+		  $materia=mysqli_query($conexion,$consulta5);
+		  $consulta4="select idGrupo, NombreGrupo from grupos ";
+		  $grupo=mysqli_query($conexion,$consulta4);		  
+		  $consulta6="select idSemestre, NombreSemestre from semestres ";
+		  $semestres2=mysqli_query($conexion,$consulta6);
+		  
+         ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +35,9 @@ require_once'include/functions.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Sistema de Laboratorios de informatica-sistemas UMSS UNI</title>
+    <title>Sistema de Laboratorios de informatica-sistemas UMSS </title>
     <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
-    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../css/estilo.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
@@ -36,224 +47,212 @@ require_once'include/functions.php';
     <script src="../js/bootstrap.min.js"></script>
     <script src="horarios/myjava.js"></script>
 
-    <link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
     <link href="css/sweetalert.css" rel="stylesheet">
     <script src="js/functions.js"></script>
     <script src="js/sweetalert.min.js"></script>
-    
-    
+    <script src="validar.js"></script>
+
+	<script type="text/javascript">
+        function validarGestion(elemento) {
+
+            var texto = document.getElementById(elemento.id).value;
+			var integer = parseInt(text, 10);
+
+			if(integer < 2000 && integer > 2050){
+				document.getElementById("resultado").innerHTML = "gestion invalida";
+			} else {
+                document.getElementById("resultado").innerHTML = "";
+            }
+        }
+	</script>
+
 </head>
 <body>
-    <?php
-      include ('menuAdmin.php');
-    ?>
-    <br>
-    <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-            <div class="col-md-3"><img src="../imagenes/logoSiad.png" width="80" height="80" class="img-responsive">
-            </div>
-            <div class="col-md-6">         
-              <img src="../imagenes/baner.png" class="img-responsive">
+           <?php
+        include ('menuAdmin.php');
+            ?>
+       <br>
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12">
+            <div class="col-md-3"><img src="../imagenes/logoSiad.png" width="80" height="80" class="img-responsive"></div>
+             <div class="col-md-6">         
+               
+                <img src="../imagenes/baner.png" class="img-responsive">
                      
-            </div>
-            <div class="col-md-3">
-              <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
+             </div>
+               <div class="col-md-3">
+             <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
               <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $user ?></h5>
-            </div> 
+               </div> 
 
-          </div>
-          <div class="col-lg-12">
-            <ol class="breadcrumb">
-              <li><a href="../index.php">Inicio</a></li>
-              <li><a href="admin.php">Administrador</a></li>
-              <li class="active">Horarios</li>
-            </ol>
-          </div>
+            </div>
+            <div class="col-lg-12">
+                    <ol class="breadcrumb">
+                    <li><a href="../index.php">Inicio</a></li>
+                    <li><a href="admin.php">Administrador</a></li>
+                    <li class="active">Horarios</li>
+                </ol>
+            </div>
         </div> 
         <!-- /.row -->
         <!-- Content Row -->
-        
+<?php //include('otros/menuAdministrador.php') ?>
         <div class="row">
             <!-- Content Column -->
-          <div class="col-md-9">
-            <div class="container">
-              <div class="panel panel-success">
-                <div class="panel-heading">
-                  <div class="btn-group pull-right">
-                  </div>
-                  <center><h4><b>Administracion de Horarios de Clases</b></h4></center>
-                </div>
-                <div class="panel-body">
-                  <div class="row">
-                   
-                  
-
-
-                      <!-- menu -->
-                    <div id="menu" class="col-md-12 ">
-                      <div class="container">
-                        
-                      <a class="btn btn-primary" href="Calendario/index.php"><i class="fa fa-calendar" aria-hidden="true"></i> Nuevo Evento</a>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><i class="fa fa-calendar-check-o"></i> Nuevo Horario</button>
-                        
-                      </div>
-                    </div>
-                      <!-- menu -->
-
-
-    <!-- container -->
-      <div class="container">
-       <div id="clockindex" class="col-sm-12 text-center">
-         <i class="fa fa-calendar-plus-o icon-clock-index animated infinite pulse" aria-hidden="true"></i>
-       </div>
-       <div id="mynew" class="col-sm-12">
-          
-
-          
-       </div>
-      </div>
-    <!-- container -->
-<!-- container -->
-<div class="container" >
-         <div class="panel panel-info" style="margin-top: 20px;">
-           <div class="panel-heading"><i class="fa fa-calendar" aria-hidden="true"></i> Lista de Horarios</div>
-           <div class="panel-body nopadding">
-                <?php 
-                    if (isset($_GET['page'])){
-                      horariostable($_GET['page']);
-                    }else{
-                      horariostable(1);
-                    }
-                ?>
-           </div>
-         </div>
-      </div>
-
-
-<!-- append modal set data -->
-<div class="modal fade" id="DataEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close canceltask" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
-        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-thumb-tack"></i> Agregar Tarea</h4>
-      </div>
-      <div class="modal-body">
-        
-        <form id="taskfrm">
-           <label>Tarea</label>
-           <input class="form-control" type="text" id="nametask" >
-           <label>Color:</label>
-           <select class="form-control" id="idcolortask">
-              <option value="purple-label">Purpura</option>
-              <option value="red-label">Rojo</option>
-              <option value="blue-label">Azul</option>
-              <option value="pink-label">Rosa</option>
-              <option value="green-label">Verde</option>
-           </select> 
-          <input id="tede" type="hidden" name="tede" >
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="savetask btn btn-success"><i class="fa fa-floppy-o"></i> Guardar</button>
-        <button type="button" class="canceltask btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- append modal set data -->
-
-
-
-
-<!-- modal nuevo horario -->
-<div class="modal fade animated bounceInLeft" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close cancel-new" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
-        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-calendar"></i> Nuevo Horario</h4>
-      </div>
-      <div class="modal-body">
-        
-         <form id="horariofrm">
-            <label>Nombre Horario:</label>
-            <input class="form-control" type="text" name="nombre" >
-            <label>Descripción:</label>
-            <textarea class="form-control" name="descripcion" rows="3"></textarea>
-            <label>Dias:</label>
-            <div id="days-list" class="col-sm-12">
-               <a data-day="1" class="day-option">Lunes</a>
-               <a data-day="2" class="day-option">Martes</a>
-               <a data-day="3" class="day-option">Miercoles</a>
-               <a data-day="4" class="day-option">Jueves</a>
-               <a data-day="5" class="day-option">Viernes</a>
-               <a data-day="6" class="day-option">Sabado</a>
-               
+            <div class="col-md-9">
+                <div class="container">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+            <div class="btn-group pull-right">
             </div>
-            <input id="days-chose" class="form-control" type="text" name="days" >
-            <label>Inicio:</label>
-            <input class="form-control" type="text" id="time1" name="tiempo1">
-            <label>Final:</label>
-            <input class="form-control" type="text" id="time2" name="tiempo2">
-            <label>Dividir Entre:</label>
-            <select class="form-control" name="minutos">
-                <option></option>
-                
-                <option value="90">1 Hora y Media</option>
-            </select>
-            
-         </form>
+            <center><h4><b>Administracion de Horarios</b></h4></center>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+		               <div class="col-md-1"><h4>Buscar:</h4></div>
+		               <div class="col-md-5">
+		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre del horario">
+		               </div>
+					   <br>
+					   <br>
+					   <div class="col-md-1"><h4>Gestion:</h4></div>
+		               <div class="col-md-5">
+		               <select class="form-control" id="semestre" name="semestre" onselect="pagination()">
+						<?php 
+                          while($fila=mysqli_fetch_row($semestre)){
+                          echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
+                          }
+                          ?>
+                      </select>
+		               </div>
+					   <div class="col-md-6">
+		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Reservar horario</button> 
+		               </div>
+	              <br>
+ <br>
+    <div class="registros" style="width:100%;" id="agrega-registros"></div>
+      <div class="col-md-6" style="text-align: left;">
+		    <center>
+		        <ul class="pagination" id="pagination"></ul>
+		    </center>
+      </div>
+      <div class="col-md-6">
+		   <center>
+		   <h4 style="font-weight: bold;"> 
+        </h4>
+          </center>
+      </div>
+	  <br>
+  
+    <!-- MODAL PARA EL REGISTRO-->
+    <div class="modal fade" id="registra-datos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="background:#337ab7; text-align: center;">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" style="color:white;" id="myModalLabel"><b>
+              <i class='glyphicon glyphicon-th'></i>&nbsp;&nbsp;Semestre</b></h4>
+            </div>
+            <form id="formulario" class="form-group" onsubmit="return agregarRegistro();">
+            <div class="modal-body">
 
+            <input type="text" class="form-control" required readonly id="id-registro" name="id-registro" readonly="readonly" style="visibility:hidden; height:5px;"/>
+
+                 <div class="form-group"> <label for="codigo" class="col-md-2 control-label">Proceso:</label>
+				<div class="col-md-10"><input type="text" class="form-control" required readonly id="pro" name="pro" hidden="true" /></div>
+			   </div> <br>
+			   <div class="form-group"> <label for="estado" class="col-md-2 control-label">Dia:</label>
+				 <div class="col-md-10">
+                   <select class="form-control" id="dia" name="dia" required="">
+					            <option value="1" selected="">lunes</option>
+								<option value="2">martes</option>
+								<option value="3">miercoles</option>
+					            <option value="4">jueves</option>
+								<option value="3">viernes</option>
+					            <option value="4">sabado</option>
+				  </select>
+				 </div>
+			   </div>
+			   <br>
+               <div class="form-group"> <label for="semestre2" class="col-md-2 control-label">Semestre:</label>
+				<div class="col-md-10">
+		               <select class="form-control" id="semestre2" name="semestre2">
+						<?php 
+                          while($fila=mysqli_fetch_row($semestres2)){
+                          echo "<option value='".$fila['1']."'>".$fila['1']."</option>";
+                          }
+                          ?>
+                      </select>
+		               </div><br>
+					   <br>
+			   <div class="form-group"> <label for="hora" class="col-md-2 control-label">Hora:</label>
+				<div class="col-md-10">
+                   <select class="form-control" id="hora" name="hora" required="">
+					            <option value="6:45-8:15" selected="">6:45-8:15</option>
+								<option value="8:15-9:45">8:15-9:45</option>
+								<option value="9:45-11:15">9:45-11:15</option>
+					            <option value="11:15-12:45">11:15-12:45</option>
+								<option value="12:45-14:15">12:45-14:15</option>
+					            <option value="14:15-15:45">14:15-15:45</option>
+								<option value="15:45-17:15">15:45-17:15</option>
+								<option value="17:15-18:45">17:15-18:45</option>
+					            <option value="18:45-20:15">18:45-20:15</option>
+								<option value="20:15-21:45">20:15-21:45</option>
+				  </select>
+				 </div>
+			   </div>
+			   <br>
+			   <div class="form-group"><label for="materia" class="col-md-2 control-label">Materia:</label>
+		               <div class="col-md-10">
+		               <select class="form-control" id="materia" name="materia">
+						<?php 
+                          while($fila=mysqli_fetch_row($materia)){
+                          echo "<option value='".$fila['1']."'>".$fila['1']."</option>";
+                          }
+                          ?>
+                      </select>
+		               </div><br>
+					   <br>
+			   <div class="form-group"><label for="grupo" class="col-md-2 control-label">Grupo:</label>
+		               <div class="col-md-10">
+		               <select class="form-control" id="grupo" name="grupo">
+						<?php 
+                          while($fila=mysqli_fetch_row($grupo)){
+                          echo "<option value='".$fila['1']."'>".$fila['1']."</option>";
+                          }
+                          ?>
+                      </select>
+		               </div><br>
+					   <br>
+					   <div class="form-group"><label for="grupo" class="col-md-2 control-label">Laboratorio:</label>
+					   <div class="col-md-10">
+						<select class="form-control" id="semestre" name="semestre" required="">
+					            <option value="1" selected="">Laboratorio 1</option>
+								<option value="2">Laboratorio 2</option>
+								<option value="3">Laboratorio 3</option>
+					            <option value="4">Laboratorio 4</option>
+						</select>
+					   </div>
+					   <br>
+                 <div id="mensaje"></div>           
+             </div>         
+            <div class="modal-footer">
+                <input type="submit" value="Registrar" class="btn btn-success" id="reg"/>
+                <input type="submit" value="Editar" class="btn btn-warning"  id="edi"/>
+            </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="create-horario btn btn-success"><i class="fa fa-calendar-check-o"></i> Crear</button>
-        <button type="button" class="cancel-new btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- modal nuevo horario -->
 
-    
-<!-- append modal set data -->
-<div class="modal fade" id="DataEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close canceltask" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
-        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-thumb-tack"></i> Docente</h4>
-      </div>
-      <div class="modal-body">
-        
-        <form id="taskfrm">
-           <label>Tarea</label>
-           <input class="form-control" type="text" id="nametask" >
-           <label>Color:</label>
-           <select class="form-control" id="idcolortask">
-              <option value="purple-label">Grupo 1</option>
-              <option value="red-label">Grupo 2</option>
-              <option value="blue-label">Grupo 3</option>
-              <option value="pink-label">Grupo 4</option>
-              <option value="green-label">Grupo 5</option>
-           </select> 
-          <input id="tede" type="hidden" name="tede" >
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="savetask btn btn-success"><i class="fa fa-floppy-o"></i> Guardar</button>
-        <button type="button" class="canceltask btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- append modal set data -->
-
-
-    
+            </div>
+                    
+        </div>
+        <!-- Fin del Panel -->
       </div>
     </div>
 </div>
