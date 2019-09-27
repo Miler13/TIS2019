@@ -1,0 +1,6 @@
+[2019-09-24 19:12:48] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Illuminate\Routing\Router::loadRoutes(): Failed opening required 'F:\xampp\htdocs\saslis-softsolutions-develop\routes/api.php' (include_path='F:\xampp\php\PEAR') in F:\xampp\htdocs\saslis-softsolutions-develop\vendor\laravel\framework\src\Illuminate\Routing\Router.php:327
+Stack trace:
+#0 {main}  
+[2019-09-24 19:13:04] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Illuminate\Routing\Router::loadRoutes(): Failed opening required 'F:\xampp\htdocs\saslis-softsolutions-develop\routes/api.php' (include_path='F:\xampp\php\PEAR') in F:\xampp\htdocs\saslis-softsolutions-develop\vendor\laravel\framework\src\Illuminate\Routing\Router.php:327
+Stack trace:
+#0 {main}  
