@@ -24,7 +24,7 @@
 					  	 	echo '<script> window.location="../especialistas/especialista.php"; </script>';
 							}
 						   elseif ($_SESSION["NivelUsuario"] == 3) {
-							echo '<script> window.location="../index.php"; </script>'; 
+							echo '<script> window.location="../ninos/nino.php"; </script>'; 
 						}
 							 else {
 						  	 	echo '<script> window.location="../index.php"; </script>';

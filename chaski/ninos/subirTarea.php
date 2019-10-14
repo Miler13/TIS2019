@@ -139,6 +139,11 @@ where inscripciones_Asignaturas.idEstudiante = '$codigo'";
                     </div>
       </div>
     </div>
+
+
+
+
+
 </div>
 </div>
         <hr>

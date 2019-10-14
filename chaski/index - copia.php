@@ -33,7 +33,9 @@
                 </h1>
             </div>
             <div class="col-lg-12">
-                
+                <p>
+                 Bienvenidos al Sistema Chasqui
+                <p>
                 <br>
             </div>
 
@@ -90,9 +92,9 @@
                     </div>
                     <div class="panel-body">
                         <h4>Niños </h4>
-                        <p> Bienvenidos</p>
+                        <p> Bienvenidos</p><br>
                         <a href="loginNinos.php" class="btn btn-primary"><i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
-                        <a href="renino.php" class="btn btn-success"><i class="fa fa-mail-forward"></i> Registrate</a>
+                        <a href="" class="btn btn-success"><i class="fa fa-mail-forward"></i> Registrate</a>
                     </div>
                 </div>
             </div>
