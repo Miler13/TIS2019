@@ -155,7 +155,7 @@ include('conexion.php');
 
                     <div class="form-group"> <label for="semestre" class="col-md-2 control-label">SubArea:</label>
                          <div class="col-md-10">
-                       <select class="form-control" id="asignatura" name="asignatura">
+                       <select class="form-control" id="SubArea" name="SubArea">
                      <?php 
                           while($fila=mysqli_fetch_row($subarea)){
                           echo "<option value='".$fila['0']."'>".$fila['1']."</option>";

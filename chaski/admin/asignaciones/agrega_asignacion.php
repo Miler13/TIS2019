@@ -8,8 +8,7 @@ $nombre = $_POST['nombre'];
 $Especialista = $_POST['Especialista'];
 $SubArea = $_POST['SubArea'];
 $grupo = $_POST['grupo'];
-$turno = $_POST['turno'];
-$horario = $_POST['horario'];
+
 $estado = $_POST['estado'];
 $numero = $_POST['numero'];
 
@@ -23,6 +22,7 @@ switch($proceso){
              subareas.NombreSubArea AS SubArea, grupos.NumeroGrupo AS Grupo,  asignaciones.Estado AS Estado, asignaciones.NumeroAsignacion AS NumeroA
 FROM       asignaciones INNER JOIN Especialistas ON asignaciones.idEspecialista = Especialistas.idEspecialista 
                         INNER JOIN subareas ON asignaciones.idSubArea = subareas.idSubArea 
+                        INNER JOIN grupos ON asignaciones.idGrupo = grupos.idGrupo 
              ORDER BY asignaciones.idAsignacion ASC");
 
     echo '<table class="table table-striped table-condensed table-hover">
@@ -31,8 +31,7 @@ FROM       asignaciones INNER JOIN Especialistas ON asignaciones.idEspecialista 
                         <th width="15%">Especialista</th> 
                         <th width="15%">SubArea</th>
                         <th width="7%">Grupo</th>
-                        <th width="8%">Turno</th>        
-                        <th width="15%">Horario</th>
+                        
                         <th width="10%">Estado</th>
                         <th width="10%">Numero</th>
                         <th width="10%">Opciones</th>
@@ -43,9 +42,7 @@ FROM       asignaciones INNER JOIN Especialistas ON asignaciones.idEspecialista 
                           <td>'.$registro2['Especialista'].'</td>
                           <td>'.$registro2['SubArea'].'</td>
                           <td>'.$registro2['Grupo'].'</td>
-                          <td>'.$registro2['Turno'].'</td>
-                          <td>'.$registro2['Horario'].'</td>
-                           <td>'.$registro2['Estado'].'</td>
+                          <td>'.$registro2['Estado'].'</td>
                           <td>'.$registro2['NumeroA'].'</td>
                            <td> <a href="javascript:editarRegistro('.$registro2['id'].');">
                               <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>

@@ -16,9 +16,6 @@ switch($proceso){
    }
     $registro = mysqli_query($conexion,"SELECT subareas.idSubArea as id, subareas.Nombresubarea as subarea, Areas.NombreArea as Area, grupos.NumeroGrupo grupo FROM subareas 
                                  INNER JOIN Areas ON  subareas.IdArea =  Areas.idArea 
-
-                                 
-                                 
                                  INNER JOIN grupos ON  subareas.IdGrupo =  grupos.NumeroGrupo
   ORDER BY subareas.idsubarea ASC");
 
@@ -35,9 +32,9 @@ switch($proceso){
                           <td>'.$registro2['subarea'].'</td>
                           <td>'.$registro2['Area'].'</td>
                          
-                           <td> <a href="javascript:editarRegistro('.$registro2['idSubArea'].');">
+                           <td> <a href="javascript:editarRegistro('.$registro2['id'].');">
                               <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
-                              <a href="javascript:eliminarRegistro('.$registro2['idSubArea'].');">
+                              <a href="javascript:eliminarRegistro('.$registro2['id'].');">
                              <img src="images/borrar.png" width="25" height="25" alt="delete" title="Eliminar" /></a>
                              </td>
                 </tr>';

@@ -59,7 +59,7 @@ if(isset($_SESSION['NombreUsuario'])) {
         <div class="container">
             <div class="row">
             <div class="col-lg-12">
-            <div class="col-md-3"><img src="../imagenes/logo.JPG" width="80" height="80" class="img-responsive"></div>
+            <div class="col-md-3"><img src="" width="80" height="80" class="img-responsive"></div>
              <div class="col-md-6">         
                
                 <img src="../imagenes/baner.png" class="img-responsive">
@@ -75,7 +75,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
                     <li><a href="admin.php">Administrador</a></li>
-                    <li class="active">Doctor</li>
+                    <li class="active">Especialista</li>
                 </ol>
             </div>
         </div> 
