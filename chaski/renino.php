@@ -37,26 +37,26 @@
                            <div  style="text-align: center;">
                              <p style="font-weight: bold">Registrate</p>   
                            </div>                   
-                        <form class="form-horizontal" role="form" method="post" action="login/validar.php">
+                        <form class="form-horizontal" role="form" method="post" action="reg/agrega_nino.php">
                         Cual es tu animal preferido?
         <br>
-             <input name="strImagen" type="checkbox" value="0" />
+             <input name="strImagen[]"  type="checkbox" value="0" />
              <img src="imagenes/leon.png" width="100" height="100" />  
-             <input name="strImagen" type="checkbox" value="1" />
+             <input name="strImagen[]" type="checkbox" value="1" />
              <img src="imagenes/mono.png" width="100" height="100" />  
-             <input name="strImagen" type="checkbox" value="2"  />
+             <input name="strImagen[]" type="checkbox" value="2"  />
              <img src="imagenes/leona.png" width="100" height="100" />  <br>
-             <input name="strImagen" type="checkbox" value="3"  />
+             <input name="strImagen[]" type="checkbox" value="3"  />
              <img src="imagenes/elefante.png" width="100" height="100" />  
-             <input name="strImagen" type="checkbox" value="4"  />
+             <input name="strImagen[]" type="checkbox" value="4"  />
              <img src="imagenes/perico.png" width="100" height="100" /> 
-             <input name="strImagen" type="checkbox" value="5"  />
+             <input name="strImagen[]" type="checkbox" value="5"  />
              <img src="imagenes/oso.png" width="100" height="100" />  <br>
         
                           
                             <div class="form-group">
                                <div class="col-md-12">
-                                    <input type="text" style="text-align: center;" class="form-control" name="nick" placeholder="Introduce tu nick o una letra" required="true">
+                                    <input type="text" style="text-align: center;" class="form-control" name="edad" placeholder="Introduce tu Edad" required="true">
                                     <i class="fa fa-lock"></i>
                                 </div>
                             </div>

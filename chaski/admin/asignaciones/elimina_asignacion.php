@@ -7,13 +7,12 @@ if (!mysqli_query($conexion,"DELETE FROM asignaciones WHERE idAsignacion = '$id'
   echo '<script> alert("Este registro no se puede borrar porque esta siendo utilizado por el sistema.");</script>';
 }
 
-$registro = mysqli_query($conexion,"SELECT  asignaciones.idAsignacion AS id, asignaciones.Descripcion AS Asignacion,concat(Especialistas.NombresEspecialista,' ',Especialistas.ApellidosEspecialista) as Especialista, 
-             subarea.NombreSubArea AS SubArea, grupos.NumeroGrupo AS Grupo, turnos.NombreTurno AS Turno, horarios.NombreHorario AS Horario, asignaciones.Estado AS Estado, asignaciones.NumeroAsignacion AS NumeroA
-FROM       asignaciones INNER JOIN Especialistas ON asignaciones.idEspecialista = Especialistas.idEspecialista 
-                        INNER JOIN subarea ON asignaciones.idSubArea = subarea.idSubArea 
-            INNER JOIN grupos ON asignaciones.idGrupo = grupos.idGrupo 
-            INNER JOIN turnos ON asignaciones.idTurno = turnos.idTurno 
-            INNER JOIN horarios ON asignaciones.idHorario = horarios.idHorario ORDER BY asignaciones.idAsignacion ASC");
+$registro = mysqli_query($conexion,"SELECT asignaciones.idAsignacion AS id, asignaciones.Descripcion AS Asignacion,
+concat(Especialistas.NombresEspecialista,' ',Especialistas.ApellidosEspecialista) as Especialista, subareas.NombreSubArea AS SubArea,
+ grupos.NumeroGrupo AS Grupo, asignaciones.Estado AS Estado, asignaciones.NumeroAsignacion AS NumeroA FROM asignaciones 
+INNER JOIN Especialistas ON asignaciones.idEspecialista = Especialistas.idEspecialista 
+INNER JOIN subareas ON asignaciones.idSubArea = subareas.idSubArea 
+INNER JOIN grupos ON asignaciones.idGrupo = grupos.idGrupo ORDER BY asignaciones.idAsignacion ASC");
 
 echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	          <tr>

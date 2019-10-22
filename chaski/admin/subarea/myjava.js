@@ -67,22 +67,18 @@ function eliminarRegistro(id){
 function editarRegistro(id){
 	$('#formulario')[0].reset();
 	var url = 'subarea/edita_subarea.php';
-	$va='1';
 		$.ajax({
 		type:'POST',
 		url:url,
 		data:'id='+id,
-		
 		success: function(valores){
 				var datos = eval(valores);
 				$('#reg').hide();
 				$('#edi').show();
 				$('#pro').val('Edicion');
 				$('#id-registro').val(id);
-				$('#subarea').val(datos[0]);
-				$('#Area').val(datos[1]);
-				$va.val(datos[2]);
-				
+				$('subarea').val(datos[0]);
+				$('Area').val(datos[1]);
 				$('#registra-datos').modal({
 					show:true,
 					backdrop:'static'
@@ -107,4 +103,3 @@ function pagination(partida){
 	});
 	return false;
 }
-

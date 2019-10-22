@@ -56,10 +56,8 @@ include ('menu_inicio_nino.php');
              </div>
                <div class="col-md-7x">
                <br>
-               <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
-              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $estudiante ?>
-
-              </h5>
+              
+              
                </div>
 
             </div>
@@ -71,7 +69,7 @@ include ('menu_inicio_nino.php');
 
             <!-- Sidebar Column -->
             <?php
-include ('menu_estudiante.php');
+include ('menu_nino.php');
  ?>
             <!-- Content Column -->
             <div class="col-md-9" >
@@ -85,13 +83,14 @@ include ('menu_estudiante.php');
                
       <div class="panel" style="background-color: rgba(255, 155, 10, .4);">
             
-                  <form id="formulario" class="form-group" action="entrega_tareas/recibirSubida.php" method="post" enctype="multipart/form-data">
+                  <form id="formulario" class="form-group" action="validar_mensaje.php" method="post"  enctype="multipart/form-data" >
+                  <input type="hidden"  id="nino"  name="nino" value="<?php echo $estudiante; ?>"/>
             <div class="modal-body" style="background-color: rgba(255, 155, 10, .3);">
 
               <div class="form-group"> <label for="carta" class="col-md-3 control-label">tu carta:</label>
-              <p></p>                 <br>
+             
                 <div class="col-md-9">
-                <textarea class="form-control rounded-0" id="carta" name="carta" required maxlength="1000" required="true"  rows="10" ></textarea>
+                <textarea class="form-control rounded-0" id="mensaje" name="mensaje" required maxlength="1000" required="true"  rows="18" ></textarea>
                 </div>
          </div> <br>
 
@@ -102,11 +101,11 @@ include ('menu_estudiante.php');
                
          
                <div class="form-group"> <label for="carnet" class="col-md-3 control-label">Archivo:</label>
-        <div class="col-md-9"><input type="file" class="form-control" id="archivo" name="archivo" required="true"></div>
-         </div> <br> 
+        <div class="col-md-9"><input type="file" class="form-control" id="foto" name="foto" ></div>
+         </div> 
 
-<br>
-               
+         <br>
+         <div class="col-md-12"> </div> <br>
                <center><input type="submit" value="Entregar Carta" name="subir" class="btn btn-success" id="reg"/></center>    
           
              </div> 

@@ -95,7 +95,7 @@ include ('menu_estudiante.php');
             <div class="btn-group pull-right">
             </div>
             <center>
-            <h4><b>Cambio de Foto de Usuario</b></h4>
+            <h4><b>Cambio de Foto </b></h4>
             </center>
         </div>
         <div class="panel-body">

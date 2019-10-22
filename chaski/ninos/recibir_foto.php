@@ -11,15 +11,15 @@ move_uploaded_file($rutatemporal, $rutadestino);
 
  if (($tipo == "image/jpeg") || ($tipo == "image/png") || ($tipo == "image/jpg")) 
      {  
-		$sql="UPDATE estudiantes SET Foto = '$rutadestino' where idEstudiante = '$codigo'";
+		$sql="UPDATE ninos SET Foto = '$rutadestino' where idNino = '$codigo'";
 		$res=mysqli_query($conexion,$sql);
 		if($res){ 
 		 echo '<script> alert("Se ha actualizado su Foto.");</script>';
-		 echo '<script> window.location="estudiantes.php"; </script>';			
+		 echo '<script> window.location="nino.php"; </script>';			
 		}
 		else {
 		 echo '<script> alert("Error al actualizar su Foto.");</script>';
-		 echo '<script> window.location="estudiantes.php"; </script>';
+		 echo '<script> window.location="nino.php"; </script>';
 			 }
 
     }

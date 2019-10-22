@@ -20,8 +20,8 @@ $registro = mysqli_query($conexion,"SELECT * FROM Ninos WHERE NombresNino LIKE '
                  
                   <td>'.$registro2['CedulaNino'].'</td>
                 
-                  <td> <a href="javascript:editarRegistro('.$registro2['idNino'].');">
-                  <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
+                  
+                  <td>                   
                   <a href="javascript:eliminarRegistro('.$registro2['idNino'].');">
                   <img src="images/borrar.png" width="25" height="25" alt="delete" title="Eliminar" /></a>
                   </td>

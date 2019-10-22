@@ -130,7 +130,7 @@ include('conexion.php');
             <div class="modal-header" style="background:#337ab7; text-align: center;">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               <h4 class="modal-title" style="color:white;" id="myModalLabel"><b>
-              <i class='glyphicon glyphicon-user'></i>&nbsp;&nbsp;Doctor</b></h4>
+              <i class='glyphicon glyphicon-user'></i>&nbsp;&nbsp;Especialista</b></h4>
             </div>
             <form id="formulario" class="form-group" onsubmit="return agregarRegistro();">
             <div class="modal-body">

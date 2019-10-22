@@ -33,10 +33,6 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="usuarios/myjava.js"></script>
     <script src="validar.js"></script>
 
-    <link href="css/sweetalert.css" rel="stylesheet">
-    <script src="js/functions.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-
 
   
 
@@ -112,8 +108,8 @@ include('conexion.php');
       </div>
    
   
-    <!-- MODAL PARA EL REGISTRO-->
-    <div class="modal fade" id="registra-datos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <!-- MODAL PARA EL REGISTRO-->
+   <div class="modal fade" id="registra-datos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header" style="background:#337ab7; text-align: center;">
@@ -138,14 +134,17 @@ include('conexion.php');
 			   <div class="form-group"> <label for="nivel" class="col-md-2 control-label">Nivel:</label>
 				<div class="col-md-10">
        <select name="nivel" class="form-control">
-         <option value="1">Administrador</option>
-        <option value="2">Doctor</option>
+         
+        <option value="2">Especialista</option>
         <option value="3">Niño</option>
-	
+        <option value="4">editor</option>
+		
        </select>
         </div>
 			   </div><br>
-			   <br>
+			   <div class="form-group"> <label for="codigo" class="col-md-2 control-label">Codigo:</label>
+				<div class="col-md-10"><input type="text" class="form-control" id="codigo" placeholder="codigo " onkeypress="return solonumeros(event)"name="codigo" required maxlength="10"></div>
+			   </div><br>
                 <br>
                  <div id="mensaje"></div>           
              </div>         

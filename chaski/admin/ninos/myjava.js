@@ -77,12 +77,12 @@ function editarRegistro(id){
 				$('#edi').show();
 				$('#pro').val('Edicion');
 				$('#id-registro').val(id);
-				$('#carnet').val(datos[0]);
-				$('#nombre').val(datos[1]);
+				$('EdadNino').val(datos[0]);
+				$('NombresNino').val(datos[1]);
 				
-				$('#cedula').val(datos[2]);
+				$('CedulaNino').val(datos[2]);
 				
-				$('#estado').val(datos[3]);
+				$('Estado').val(datos[3]);
 				
 				$('#registra-datos').modal({
 					show:true,

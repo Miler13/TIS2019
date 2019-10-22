@@ -27,8 +27,8 @@
 							echo '<script> window.location="../ninos/nino.php"; </script>'; 
 						}
 							 else {
-						  	 	echo '<script> window.location="../index.php"; </script>';
-						  	 	echo $numero;
+						  	 	echo '<script> window.location="../editor/editor.php"; </script>';
+						  	 	//echo $numero;
 						  	 }
 				}
 				else{

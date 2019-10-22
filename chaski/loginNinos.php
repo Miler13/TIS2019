@@ -38,7 +38,7 @@
                            <div  style="text-align: center;">
                              <p style="font-weight: bold"> Introduce tus datos de acceso</p>   
                            </div>                   
-                        <form class="form-horizontal" role="form" method="post" action="login/validar.php">
+                        <form class="form-horizontal" role="form" method="post" action="login/validarnino.php">
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <input type="text" style="text-align: center;" class="form-control" name="usuario" placeholder="Introduce  tu Nick" required="true">

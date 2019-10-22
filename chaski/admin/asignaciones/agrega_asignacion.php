@@ -15,7 +15,7 @@ $numero = $_POST['numero'];
 switch($proceso){
 	case 'Registro': mysqli_query($conexion,"INSERT INTO asignaciones (Descripcion, idEspecialista, idSubArea, idGrupo,  Estado, NumeroAsignacion) VALUES('$nombre','$Especialista','$SubArea','$grupo','$estado','$numero')");
 	break;
-	case 'Edicion': mysqli_query($conexion,"UPDATE asignaciones SET Descripcion = '$nombre', idSubArea = '$SubArea',idGrupo = '$grupo',idTurno = '$turno',idHorario = '$horario' ,Estado = '$estado',NumeroAsignacion = '$numero' where idAsignacion = '$id'");
+	case 'Edicion': mysqli_query($conexion,"UPDATE asignaciones SET Descripcion = '$nombre', idSubArea = '$SubArea',idGrupo = '$grupo' ,Estado = '$estado',NumeroAsignacion = '$numero' where idAsignacion = '$id'");
 	break;
    }
     $registro = mysqli_query($conexion,"SELECT  asignaciones.idAsignacion AS id, asignaciones.Descripcion AS Asignacion,concat(Especialistas.NombresEspecialista,' ',Especialistas.ApellidosEspecialista) as Especialista, 
