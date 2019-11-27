@@ -11,13 +11,11 @@ class Conexion
         try {
 
             $host = 'localhost';
-            $db =   'stadust_db';
-            $user = 'stadust';
-            $pwd =  'N3^B<gv9(=~WLv;';
+            $db =   'mbkmsoft_db';
+            $user = 'mbkmsoft';
+            $pwd =  ',5OJt(-rA7_1V.(';
             $this->dbh = new PDO('mysql:host='.$host.';dbname='.$db, $user, $pwd);
             $this->dbh->exec("SET CHARACTER SET utf8");
-
-
 
 
 

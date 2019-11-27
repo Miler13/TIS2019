@@ -1,10 +1,11 @@
 <?php 
 class Conect_MySql {   
-     var $obj = array ( "dbname"	=>	"stadust_db",
-                       "dbuser"		=>	"stadust"		,
-                       "dbpwd"		=>	"N3^B<gv9(=~WLv;"		,
+     var $obj = array ( "dbname"	=>	"mbkmsoft_db",
+                       "dbuser"		=>	"mbkmsoft"		,
+                       "dbpwd"		=>	",5OJt(-rA7_1V.("		,
                        "dbhost"		=>	"localhost"	);
 
+					  
                          var $q_id	="";
                          var $ExeBit	="";
                          var $db_connect_id = "";

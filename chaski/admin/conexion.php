@@ -1,3 +1,3 @@
 <?php
-$conexion = new mysqli('localhost', 'stadust', 'N3^B<gv9(=~WLv;', 'chasqui') or die (mysqli_error($conexion));	
+$conexion = new mysqli('localhost', 'mbkmsoft', ',5OJt(-rA7_1V.(', 'mbkmsoft_db') or die (mysqli_error($conexion));	
 ?>
