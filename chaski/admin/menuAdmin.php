@@ -27,20 +27,15 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-lock"></i> Administracion <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-lock"></i> Correo <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="">Admin de Doctores</a>
+                                <a href="bandejamensajes.php">Mis Correos</a>
                             </li>
                             <li>
-                                <a href="">Admin de Niños</a>
+                                <a href="enviarCorreo.php">Enviar Correo</a>
                             </li>
-                            <li>
-                                <a href="">Material de Estudio</a>
-                            </li>
-                            <li>
-                                <a href="">Asignaciones</a>
-                            </li>
+                            
                         </ul>
                     </li>
                       

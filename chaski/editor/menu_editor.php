@@ -7,7 +7,9 @@
                     </a>
             
     
-         <a href="cambiar_foto.php" class="list-group-item"> <i class="glyphicon glyphicon-user"></i>   &nbsp;&nbsp; Cambiar Foto
+         <a href="enviarCorreo.php" class="list-group-item"> <i class="glyphicon glyphicon-user"></i>   &nbsp;&nbsp; Enviar Correo
+                    </a>
+                    <a href="bandejamensajes.php" class="list-group-item"> <i class="glyphicon glyphicon-user"></i>   &nbsp;&nbsp; Mis Correos
                     </a>
          
                     <br>

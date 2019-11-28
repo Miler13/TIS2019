@@ -1,111 +1,68 @@
+
 <?php
-session_start();
-include 'conexion.php';
+$dato = $_POST['id'];
 
-if(isset($_SESSION['NombreUsuario'])) {
-     if ($_SESSION["NivelUsuario"] == 1) {
-            $user = $_SESSION['NombreUsuario'];
-              $codigo = $_SESSION["Codigo"];
+include '../admin/conexion.php';
 
-              $consulta=mysqli_query($conexion,"select Foto from usuarios where Codigo = $codigo");                  
-                while($filas=mysqli_fetch_array($consulta)){
-                         $foto=$filas['Foto'];                           
-                 }
-        ?>
+
+      
+      
+                $registro = mysqli_query($conexion,"SELECT * FROM mensajes  WHERE idMensaje= '$dato'");
+
+                $registro2 = mysqli_fetch_array($registro);
+
+
+               $remi= $registro2['Remitente'];
+               $mensaje= $registro2['Mensaje'];
+               $ima= $registro2['foto'];
+               
+      ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Chasqui</title>
-    <link rel="shortcut icon" href="../imagenes/logoUNI.ico" type="image/x-icon">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="../css/modern-business.css" rel="stylesheet">
-    <link href="../css/estilo.css" rel="stylesheet">
-    <link href="../css/modern-business.css" rel="stylesheet">
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script src="../js/jquery.js"></script>
-    <script src="js/back-to-top.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="mensajes/myjava.js"></script>
 
-    <link href="css/sweetalert.css" rel="stylesheet">
-    <script src="js/functions.js"></script>
-    <script src="js/sweetalert.min.js"></script>
+
+     
 </head>
-<body>
-           <?php
-        include ('menuAdmin.php');
-            ?>
-       <br>
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-12">
-            <div class="col-md-3"><img src="../imagenes/logoSiad.png" width="80" height="80" class="img-responsive"></div>
-             <div class="col-md-6">         
-               
-                <img src="../imagenes/baner.png" class="img-responsive">
-                     
-             </div>
-               <div class="col-md-3">
-              <img class="img-responsive img-circle" src="<?php echo $foto ?>" width="50px" height="50px">
-              <h5><i class="fa fa-circle fa-stack-1x fa-inverse" style="color:green; text-align: left; "></i><b> &nbsp; Online:</b> <?php echo $user ?></h5>
-               </div> 
 
-            </div>
-             <div class="col-lg-12">
-                    <ol class="breadcrumb">
-                    <li><a href="../index.php">Inicio</a></li>
-                    <li><a href="admin.php">Administrador</a></li>
-                    <li class="active">Mensajes</li>
-                </ol>
-            </div>
-        </div> 
-        <!-- /.row -->
+<body>
+
+<br>
+    <!-- Page Content -->
+    <div class="container">
+
+     
+
         <!-- Content Row -->
-<?php //include('otros/menuAdministrador.php') ?>
-        <div class="row">
-            <!-- Content Column -->
-            <div class="col-md-9">
-                <div class="container">
-      <div class="panel panel-success">
-        <div class="panel-heading">
-            <div class="btn-group pull-right">
+
+            <!-- Sidebar Column -->
+ 
+
+      <div class="row">
+            <div class="col-lg-8">
+                <h2 class="page-header"><?php echo $remi?></h2>
             </div>
-            <center><h4><b>Administracion de Mensajes</b></h4></center>
+            <div class="col-md-6">
+                
+                    <strong><?php echo $mensaje ?></strong>
+                   
+                </ul>
+                <p></p>
+            </div>
+            <div class="col-md-12">
+               <img class="img-responsive" src=../ninos/<?php echo $ima ?>   alt="">
+            </div>
         </div>
-        <div class="panel-body">
-            <div class="row">
-		               <div class="col-md-1"><h4>Buscar:</h4></div>
-		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre del Remitente">
-		               </div>
-		               	<div class="col-md-6">
-		               </div>
-	              <br>
- <br>
-    <div class="registros" style="width:100%;" id="agrega-registros"></div>
-      <div class="col-md-6" style="text-align: left;">
-		    <center>
-		        <ul class="pagination" id="pagination"></ul>
-		    </center>
-      </div>
-      <div class="col-md-6">
-		   <center>
-		   <h4 style="font-weight: bold;"> 
-    <?php
-include('conexion.php');
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM mensajes"));
-    echo "Registros Totales: $numeroRegistros";
-        ?>
-        </h4>
-          </center>
-      </div>
    
-  
+        <a href="admin.php" class="btn btn-success"><i class="fa fa-mail-forward"></i> volver</a>
     <!-- MODAL PARA EL REGISTRO-->
    
             </div>
@@ -122,18 +79,11 @@ include('conexion.php');
 </div>
         <hr>
     </div>
-    <?php
-    include('../includes/footer.php');
- ?>
+
 </body>
+
 </html>
+
 <?php
-     }
-     else{
-        echo '<script> alert("No Tienes los permisos para acceder a esta pagina.");</script>';
-         echo '<script> window.location="../index.l.php"; </script>';
-     }
-}else{
- echo '<script> window.location="../index.l.php"; </script>';
-}
+  
 ?>

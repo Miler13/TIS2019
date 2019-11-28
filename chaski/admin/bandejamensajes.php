@@ -4,7 +4,7 @@ session_start();
 include '../admin/conexion.php';
 
 if(isset($_SESSION['NombreUsuario'])) {
-     if ($_SESSION["NivelUsuario"] == 2) {
+     if ($_SESSION["NivelUsuario"] == 1) {
             $user = $_SESSION['NombreUsuario'];
             $codigo = $_SESSION["Codigo"];
 
@@ -46,7 +46,7 @@ if(isset($_SESSION['NombreUsuario'])) {
 
 <body>
 <?php
-include ('menu_inicio_especialista.php');
+include ('menuAdmin.php');
  ?>
 <br>
     <!-- Page Content -->
@@ -72,7 +72,8 @@ include ('menu_inicio_especialista.php');
             <div class="col-lg-12">
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
-                    <li class="active">Especialistas</li>
+                    <li><a href="admin.php">administrador</a></li>
+                    <li class="active">Correo</li>
                 </ol>
             </div>
         <!-- /.row -->
@@ -81,7 +82,7 @@ include ('menu_inicio_especialista.php');
 
             <!-- Sidebar Column -->
             <?php
-include ('menu_especialista.php');
+
  ?>
       
 

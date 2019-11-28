@@ -35,7 +35,7 @@
                     </div>
                     <div class="panel-body">
                    <div style="text-align: center;">
-                       <img src="imagenes/logo.JPG">
+                       <img src="imagenes/logo.jpg">
                    </div>
                    <br> 
                            <div  style="text-align: center;">

@@ -5,7 +5,7 @@ include('../../admin/conexion.php');
 $user = $_SESSION['NombreUsuario'];
 	$paginaActual = $_POST['partida'];
 
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM mensajes WHERE para='%$user%'"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM mensajes WHERE para='$user'"));
     $nroLotes = 10;
     $nroPaginas = ceil($numeroRegistros/$nroLotes);
     $lista = '';
@@ -31,11 +31,11 @@ $user = $_SESSION['NombreUsuario'];
   	}else{
   		$limit = $nroLotes*($paginaActual-1);
   	}
-  	$registro = mysqli_query($conexion,"SELECT * FROM mensajes  WHERE para='%$user%' LIMIT $limit, $nroLotes ");
+  	$registro = mysqli_query($conexion,"SELECT * FROM mensajes  WHERE para='$user' LIMIT $limit, $nroLotes ");
   	$tabla = $tabla.'<table class="table table-striped table-condensed table-hover table-responsive">
 			                <tr>
                         <th width="20%">Remitente</th>  
-                       <th width="20%">foto</th> 
+                       <th width="20%">adjunto</th> 
                   
                        <th width="20%">Fecha Envio</th>         
                         <th width="20%">Opciones</th>

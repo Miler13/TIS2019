@@ -13,7 +13,7 @@ $registro = mysqli_query($conexion,"SELECT * FROM mensajes ORDER BY idMensaje AS
 echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	          <tr>
                         <th width="20%">Remitente</th>  
-                       <th width="20%">foto</th> 
+                       <th width="20%">adjunto</th> 
                        
                        <th width="20%">Fecha Envio</th>         
                         <th width="20%">Opciones</th>

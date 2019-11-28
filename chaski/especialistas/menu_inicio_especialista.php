@@ -13,7 +13,7 @@
                 <ul class="nav navbar-nav navbar-right">
                 
                     <li>
-                        <a href=""><i class="glyphicon glyphicon-folder-open"></i> &nbsp; Mis Boletines</a>
+                        <a href=""><i class="glyphicon glyphicon-folder-open"></i> &nbsp; Mi Correo</a>
                     </li>
                     
                     

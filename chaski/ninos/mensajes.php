@@ -62,7 +62,7 @@ include '../admin/conexion.php';
             </div>
         </div>
    
-        <a href="editor.php" class="btn btn-success"><i class="fa fa-mail-forward"></i> volver</a>
+        <a href="especialista.php" class="btn btn-success"><i class="fa fa-mail-forward"></i> volver</a>
     <!-- MODAL PARA EL REGISTRO-->
    
             </div>
