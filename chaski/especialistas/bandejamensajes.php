@@ -115,7 +115,7 @@ include ('menu_especialista.php');
 		   <h4 style="font-weight: bold;"> 
     <?php
 
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM mensajes"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM mensajes WHERE para='%user%' "));
     echo "Registros Totales: $numeroRegistros";
         ?>
         </h4>
