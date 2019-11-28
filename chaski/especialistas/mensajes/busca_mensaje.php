@@ -1,6 +1,9 @@
 <?php
+session_start();
 include('../../admin/conexion.php');
 
+
+$user = $_SESSION['NombreUsuario'];
 $dato = $_POST['dato'];
 
 $registro = mysqli_query($conexion,"SELECT * FROM mensajes WHERE Remitente LIKE '%$dato%' ORDER BY idMensaje ASC");

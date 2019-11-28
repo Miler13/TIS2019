@@ -1,9 +1,11 @@
 <?php
+session_start();
 include('../../admin/conexion.php');
 
+$user = $_SESSION['NombreUsuario'];
 	$paginaActual = $_POST['partida'];
 
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM mensajes"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM mensajes WHERE para='%user%'"));
     $nroLotes = 10;
     $nroPaginas = ceil($numeroRegistros/$nroLotes);
     $lista = '';

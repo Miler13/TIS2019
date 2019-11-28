@@ -17,7 +17,7 @@ session_start();
 		
 if( !(($tipo == "image/jpeg") || ($tipo == "image/png") || ($tipo == "image/jpg")) ){
 
-$sql="INSERT into mensajes(Remitente,foto,Mensaje,FechaEnvio) values ('$nombre',' ','$mensaje','$fechaMensaje')";
+$sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ('','$nombre',' ','$mensaje','$fechaMensaje')";
 
 $res=mysqli_query($conexion,$sql);
 if($res){ 
@@ -33,7 +33,7 @@ if($res){
 		
 		if (($tipo == "image/jpeg") || ($tipo == "image/png") || ($tipo == "image/jpg")) 
 		{  
-			$sql="INSERT into mensajes(Remitente,foto,Mensaje,FechaEnvio) values ('$nombre','$rutadestino','$mensaje','$fechaMensaje')";
+			$sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ('','$nombre','$rutadestino','$mensaje','$fechaMensaje')";
 		   $res=mysqli_query($conexion,$sql);
 		   if($res){ 
 			echo '<script> alert("Se mando  su carta con  exito.");</script>';
