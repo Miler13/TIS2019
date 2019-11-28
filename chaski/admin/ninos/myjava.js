@@ -95,7 +95,7 @@ function editarRegistro(id){
 }
 
 function pagination(partida){
-	var url = 'ninos/paginar_Nino.php';
+	var url = 'ninos/paginar_nino.php';
 	$.ajax({
 		type:'POST',
 		url:url,

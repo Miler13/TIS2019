@@ -12,7 +12,7 @@ $(function(){
 	});	
 	$('#bs-prod').on('keyup',function(){
 		var dato = $('#bs-prod').val();
-		var url = 'especialista/busca_Especialista.php';
+		var url = 'especialista/busca_especialista.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -25,7 +25,7 @@ $(function(){
 	});	
 });
 function agregarRegistro(){
-	var url = 'especialista/agrega_Especialista.php';
+	var url = 'especialista/agrega_especialista.php';
 	$.ajax({
 		type:'POST',
 		url:url,
@@ -47,7 +47,7 @@ function agregarRegistro(){
 	return false;
 }
 function eliminarRegistro(id){
-	var url = 'especialista/elimina_Especialista.php';
+	var url = 'especialista/elimina_especialista.php';
 	var pregunta = confirm('¿Esta seguro de eliminar este Registro?');
 	if(pregunta==true){
 		$.ajax({
@@ -66,7 +66,7 @@ function eliminarRegistro(id){
 }
 function editarRegistro(id){
 	$('#formulario')[0].reset();
-	var url = 'especialista/edita_Especialista.php';
+	var url = 'especialista/edita_especialista.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -96,7 +96,7 @@ function editarRegistro(id){
 }
 
 function pagination(partida){
-	var url = 'especialista/paginar_Especialista.php';
+	var url = 'especialista/paginar_especialista.php';
 	$.ajax({
 		type:'POST',
 		url:url,
