@@ -6,7 +6,7 @@ include('../../admin/conexion.php');
 $user = $_SESSION['NombreUsuario'];
 $dato = $_POST['dato'];
 
-$registro = mysqli_query($conexion,"SELECT * FROM mensajes WHERE Remitente LIKE '%$dato%' ORDER BY idMensaje ASC");
+$registro = mysqli_query($conexion,"SELECT * FROM mensajes WHERE para ='%$user%' and Remitente LIKE '%$dato%' ORDER BY idMensaje ASC");
        echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	<tr>
                        <th width="20%">Remitente</th>  
