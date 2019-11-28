@@ -86,7 +86,7 @@
             <div class="col-md-4 col-sm-4">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
-                        <img src="imagenes/Boletines.png" width="250" height="150">
+                        <img src="imagenes/boletines.png" width="250" height="150">
                     </div>
                     <div class="panel-body">
                         <h4>Boletines </h4>
