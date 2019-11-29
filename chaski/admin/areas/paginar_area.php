@@ -2,7 +2,7 @@
 include('../conexion.php');
 	$paginaActual = $_POST['partida'];
 
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM ninos"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM areas"));
     $nroLotes = 10;
     $nroPaginas = ceil($numeroRegistros/$nroLotes);
     $lista = '';
@@ -28,30 +28,21 @@ include('../conexion.php');
   	}else{
   		$limit = $nroLotes*($paginaActual-1);
   	}
-  	$registro = mysqli_query($conexion,"SELECT * FROM ninos LIMIT $limit, $nroLotes ");
+  	$registro = mysqli_query($conexion,"SELECT * FROM areas LIMIT $limit, $nroLotes ");
   	$tabla = $tabla.'<table class="table table-striped table-condensed table-hover table-responsive">
 			                <tr>
-                          <th width="10%">Edad</th>
-                         <th width="10%">Nick</th>
-                         
-                         <th width="10%">Pass</th>
-                        
-                                   
-                        <th width="10%">Opciones</th>
-                     </tr>';		
+                        <th width="80%">Nombre de la Area</th>           
+                        <th width="20%">Opciones</th>
+                   </tr>';		
           	while($registro2 = mysqli_fetch_array($registro)){
       $tabla = $tabla.'<tr>
-                          <td>'.$registro2['EdadNino'].'</td>
-                          <td>'.$registro2['NombresNino'].'</td>
-                         
-                          <td>'.$registro2['CedulaNino'].'</td>
-                           
-                          
-                           <td> 
-                          <a href="javascript:eliminarRegistro('.$registro2['idNino'].');">
+                      <td>'.$registro2['NombreArea'].'</td>
+                       <td> <a href="javascript:editarRegistro('.$registro2['idArea'].');">
+                          <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
+                          <a href="javascript:eliminarRegistro('.$registro2['idArea'].');">
                           <img src="images/borrar.png" width="25" height="25" alt="delete" title="Eliminar" /></a>
                           </td>
-                      </tr>';		
+                </tr>';	
 	}
         
     $tabla = $tabla.'</table>';

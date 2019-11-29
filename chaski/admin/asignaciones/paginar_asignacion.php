@@ -28,9 +28,9 @@ include('../conexion.php');
   	}else{
   		$limit = $nroLotes*($paginaActual-1);
   	}
-  	$registro = mysqli_query($conexion,"SELECT  asignaciones.idAsignacion AS id, asignaciones.Descripcion AS Asignacion,concat(Especialistas.NombresEspecialista,' ',Especialistas.ApellidosEspecialista) as Especialista, 
+  	$registro = mysqli_query($conexion,"SELECT  asignaciones.idAsignacion AS id, asignaciones.Descripcion AS asignacion,concat(especialistas.NombresEspecialista,' ',especialistas.ApellidosEspecialista) as Especialista, 
              subareas.NombreSubArea AS SubArea, grupos.NumeroGrupo AS Grupo, asignaciones.Estado AS Estado, asignaciones.NumeroAsignacion AS NumeroA
-FROM       asignaciones INNER JOIN Especialistas ON asignaciones.idEspecialista = Especialistas.idEspecialista 
+FROM       asignaciones INNER JOIN especialistas ON asignaciones.idEspecialista = especialistas.idEspecialista 
                         INNER JOIN subareas ON asignaciones.idSubArea = subareas.idSubArea 
             INNER JOIN grupos ON asignaciones.idGrupo = grupos.idGrupo 
             LIMIT $limit, $nroLotes ");
@@ -46,7 +46,7 @@ FROM       asignaciones INNER JOIN Especialistas ON asignaciones.idEspecialista 
                    </tr>';		
           	while($registro2 = mysqli_fetch_array($registro)){
       $tabla = $tabla.'<tr>
-                          <td>'.$registro2['Asignacion'].'</td>
+                          <td>'.$registro2['asignacion'].'</td>
                           <td>'.$registro2['Especialista'].'</td>
                           <td>'.$registro2['SubArea'].'</td>
                           

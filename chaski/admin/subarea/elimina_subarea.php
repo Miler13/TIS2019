@@ -7,8 +7,8 @@ if (!mysqli_query($conexion,"DELETE FROM subareas WHERE idsubarea = '$id'")) {
   echo '<script> alert("Este registro no se puede borrar porque esta siendo utilizado por el sistema.");</script>';
 }
 
-$registro = mysqli_query($conexion,"SELECT subareas.idsubarea as id, subareas.Nombresubarea as subarea, Areas.NombreArea as Area, grupos.NumeroGrupo as grupo FROM subareas 
-                                 INNER JOIN Areas ON  subareas.IdArea =  Areas.idArea 
+$registro = mysqli_query($conexion,"SELECT subareas.idsubarea as id, subareas.Nombresubarea as subarea, areas.NombreArea as area, grupos.NumeroGrupo as grupo FROM subareas 
+                                 INNER JOIN areas ON  subareas.IdArea =  areas.idArea 
 
                                 
                                  

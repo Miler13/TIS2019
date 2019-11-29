@@ -2,9 +2,9 @@
 include('../conexion.php');
 $dato = $_POST['dato'];
 
-$registro = mysqli_query($conexion,"SELECT  asignaciones.idAsignacion AS id, asignaciones.Descripcion AS Asignacion,concat(Especialistas.NombresEspecialista,' ',Especialistas.ApellidosEspecialista) as Especialista, 
-             subareas.NombreSubArea AS SubArea, grupos.NumeroGrupo AS Grupo,  asignaciones.Estado AS Estado, asignaciones.NumeroAsignacion AS NumeroA
-FROM       asignaciones INNER JOIN Especialistas ON asignaciones.idEspecialista = Especialistas.idEspecialista 
+$registro = mysqli_query($conexion,"SELECT  asignaciones.idAsignacion AS id, asignaciones.Descripcion AS asignacion,concat(especialistas.NombresEspecialista,' ',especialistas.ApellidosEspecialista) as especialista, 
+             subareas.NombreSubArea AS subArea, grupos.NumeroGrupo AS Grupo,  asignaciones.Estado AS Estado, asignaciones.NumeroAsignacion AS NumeroA
+FROM       asignaciones INNER JOIN especialistas ON asignaciones.idEspecialista = especialistas.idEspecialista 
                         INNER JOIN subareas ON asignaciones.idSubArea = subareas.idSubArea 
             INNER JOIN grupos ON asignaciones.idGrupo = grupos.idGrupo 
          
@@ -24,9 +24,9 @@ FROM       asignaciones INNER JOIN Especialistas ON asignaciones.idEspecialista 
       if(mysqli_num_rows($registro)>0){
 	     while($registro2 = mysqli_fetch_array($registro)){
 		      echo '<tr>
-                          <td>'.$registro2['Asignacion'].'</td>
-		                      <td>'.$registro2['Especialista'].'</td>
-		                      <td>'.$registro2['SubArea'].'</td>
+                          <td>'.$registro2['asignacion'].'</td>
+		                      <td>'.$registro2['especialista'].'</td>
+		                      <td>'.$registro2['subArea'].'</td>
 		                      <td>'.$registro2['Grupo'].'</td>
 		                     
                           

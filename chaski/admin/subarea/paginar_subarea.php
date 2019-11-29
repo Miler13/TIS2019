@@ -28,8 +28,8 @@ include('../conexion.php');
   	}else{
   		$limit = $nroLotes*($paginaActual-1);
   	}
-  	$registro = mysqli_query($conexion,"SELECT subareas.idsubarea as id, subareas.Nombresubarea as subarea, Areas.NombreArea as Area, grupos.NumeroGrupo as grupo FROM subareas 
-                                 INNER JOIN Areas ON  subareas.IdArea =  Areas.idArea 
+  	$registro = mysqli_query($conexion,"SELECT subareas.idsubarea as id, subareas.Nombresubarea as subarea, areas.NombreArea as area, grupos.NumeroGrupo as grupo FROM subareas 
+                                 INNER JOIN areas ON  subareas.IdArea =  areas.idArea 
 
                                 
                                  
@@ -46,7 +46,7 @@ include('../conexion.php');
           	while($registro2 = mysqli_fetch_array($registro)){
       $tabla = $tabla.'<tr>
                               <td>'.$registro2['subarea'].'</td>
-		                      <td>'.$registro2['Area'].'</td>
+		                      <td>'.$registro2['area'].'</td>
 		                      
 		                     
 		                       <td> <a href="javascript:editarRegistro('.$registro2['id'].');">

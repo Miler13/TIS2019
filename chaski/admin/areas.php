@@ -45,7 +45,7 @@ if(isset($_SESSION['NombreUsuario'])) {
         <div class="container">
             <div class="row">
             <div class="col-lg-12">
-            <div class="col-md-3"><img src="../imagenes/logo.JPG" width="80" height="80" class="img-responsive"></div>
+            <div class="col-md-3"><img src="../imagenes/logo.jpg" width="80" height="80" class="img-responsive"></div>
              <div class="col-md-6">         
                
                 <img src="../imagenes/baner.png" class="img-responsive">
@@ -80,10 +80,7 @@ if(isset($_SESSION['NombreUsuario'])) {
         </div>
         <div class="panel-body">
             <div class="row">
-		               <div class="col-md-1"><h4>Buscar:</h4></div>
-		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre del Area" onkeypress="return sololetras(event)">
-		               </div>
+		              
 		               	<div class="col-md-6">
 		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nueva Area</button> 
 		               </div>

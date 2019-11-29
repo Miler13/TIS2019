@@ -14,7 +14,7 @@ $estado = $_POST['estado'];
 $foto = "images/fotos_perfil/perfil.jpg";
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO Ninos (EdadNino, NombresNino, CedulaNino, Estado, Idgrupo, Foto) VALUES('10','$nombre','$cedula','$estado', '1', '$foto')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO ninos (EdadNino, NombresNino, CedulaNino, Estado, Idgrupo, Foto) VALUES('10','$nombre','$cedula','$estado', '1', '$foto')");
 
           $consulta=mysqli_query($conexion,"SELECT idNino from Ninos where EdadNino = '10' ");              
                            while($filas=mysqli_fetch_array($consulta)){
@@ -24,13 +24,13 @@ switch($proceso){
 	
   break;
 
-	case 'Edicion': mysqli_query($conexion,"UPDATE Ninos SET EdadNino = '10', NombresNino = '$nombre', CedulaNino = '$cedula', Estado = '$estado' , Idgrupo = '1' where idNino = '$id'");
+	case 'Edicion': mysqli_query($conexion,"UPDATE ninos SET EdadNino = '10', NombresNino = '$nombre', CedulaNino = '$cedula', Estado = '$estado' , Idgrupo = '1' where idNino = '$id'");
 
   mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$nombre', PassUsuario = '$cedula' where Codigo = '$id'");
 
 	break;
    }
-    $registro = mysqli_query($conexion,"SELECT * FROM Ninos ORDER BY idNino ASC");
+    $registro = mysqli_query($conexion,"SELECT * FROM ninos ORDER BY idNino ASC");
 
     echo '<table class="table table-striped table-condensed table-hover">
         	<tr>

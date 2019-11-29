@@ -14,8 +14,8 @@ switch($proceso){
 	case 'Edicion': mysqli_query($conexion,"UPDATE subareas SET Nombresubarea = '$nombre', IdArea = '$Area', IdGrupo = '1' where idsubarea = '$id'");
 	break;
    }
-   $registro = mysqli_query($conexion,"SELECT subareas.idsubarea as id, subareas.Nombresubarea as subarea, Areas.NombreArea as Area, grupos.NumeroGrupo as grupo FROM subareas 
-   INNER JOIN Areas ON  subareas.IdArea =  Areas.idArea 
+   $registro = mysqli_query($conexion,"SELECT subareas.idsubarea as id, subareas.Nombresubarea as subarea, areas.NombreArea as Area, grupos.NumeroGrupo as grupo FROM subareas 
+   INNER JOIN areas ON  subareas.IdArea =  areas.idArea 
 
   
    

@@ -26,7 +26,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Chasqui </title>
-    <link rel="shortcut icon" href="../imagenes/logo.JPG" type="image/x-icon">
+    <link rel="shortcut icon" href="../imagenes/logo.jpg" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../css/estilo.css" rel="stylesheet">
@@ -90,10 +90,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                 
       <div class="panel-body">
             <div class="row">
-		               <div class="col-md-1"><h4>Buscar:</h4></div>
-		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el nombre del Sub Area" onkeypress="return sololetras(event)">
-		               </div>
+		              
 		               	<div class="col-md-6">
                       <button id="nuevo-producto" class="btn btn-success" style="margin-right: 100px"> <i class="glyphicon glyphicon-plus"></i> Nueva Area</button> 
                      
