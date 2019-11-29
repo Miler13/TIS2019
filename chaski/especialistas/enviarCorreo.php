@@ -97,7 +97,7 @@ include ('menu_inicio_especialista.php');
                 <form action="validar_mensaje.php" method="post" >
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Nombre Remitente:</label>
+                            <label>Nombres Remitente:</label>
                             <input type="text" class="form-control" name="nombre" required="true" value = "<?php echo $user ?>" readonly="readonly">
                             <p class="help-block"></p>
                         </div>

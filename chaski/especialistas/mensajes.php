@@ -16,6 +16,20 @@ include '../admin/conexion.php';
                $mensaje= $registro2['Mensaje'];
                $ima= $registro2['foto'];
                
+                $tam=strlen($mensaje);
+                $letra=substr($mensaje,$tam-1,$tam-1);
+                $advertencia="";
+                if($letra=="P"){
+                    $advertencia="El contenido de la carta contiene palabras malas, agresivas es recomendable enviar a un area de psicologia";
+                }else{
+                    if($letra=="E"){
+                        $advertencia="El contenido de la carta contiene contenido educativo, propio de un buen escritor de carta";
+
+                    }else{
+                        $advertencia="El contenido de la carta es comun";
+                    }
+                }
+                $mensaje=substr($mensaje,0,$tam-2);
       ?>
 
 <!DOCTYPE html>
@@ -28,8 +42,6 @@ include '../admin/conexion.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-
      
 </head>
 
@@ -53,13 +65,30 @@ include '../admin/conexion.php';
             <div class="col-md-6">
                 
                     <strong><?php echo $mensaje ?></strong>
-                   
+                
+                    <br><br><br>
+                <?php 
+                    if($letra=='P'){
+                        echo '<h5 style="color:#cc0000">' . $advertencia . '</h6>';
+                    }else{
+                        if($letra=='E'){
+                            echo '<h5 style="color:green">' . $advertencia . '</h6>';
+                        }else{
+                            echo '<h5 style="color:#2980B9">' . $advertencia . '</h6>';
+                        }
+                    }
+                ?>                        
+                
+                
                 </ul>
                 <p></p>
             </div>
+
+
             <div class="col-md-12">
                <img class="img-responsive" src=../ninos/<?php echo $ima ?>   alt="">
             </div>
+
         </div>
    
         <a href="especialista.php" class="btn btn-success"><i class="fa fa-mail-forward"></i> volver</a>
@@ -79,7 +108,7 @@ include '../admin/conexion.php';
 </div>
         <hr>
     </div>
-
+    
 </body>
 
 </html>
