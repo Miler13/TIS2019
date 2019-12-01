@@ -7,7 +7,7 @@ include '../admin/conexion.php';
     SELECT * FROM asignaciones, especialistas,subareas, areas 
     WHERE asignaciones.idEspecialista =especialistas.idEspecialista and subareas.idSubArea=asignaciones.idSubArea and subareas.IdArea='$idArea' GROUP By especialistas.CorreoEspecialista
     ") or die(mysqli_error());
-		echo '<option value = "">Selecciona un municipio  </option>';
+		echo '<option value = "">Selecciona un correo </option>';
 	if($municipios->execute()){
 		$a_result = $municipios->get_result();
 	}

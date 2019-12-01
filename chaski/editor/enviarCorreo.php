@@ -36,11 +36,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <link href="../css/estilo.css" rel="stylesheet">
     <link href="../css/modern-business.css" rel="stylesheet">
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script src="../js/jquery.js"></script>
-    <script src="js/back-to-top.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-      <script src="mensajes/myjava.js"></script>
-
+    
      
 </head>
 
@@ -129,7 +125,7 @@ include ('menu_inicio_editor.php');
                     <div class = "form-group">
 							<label>correos:</label>
 							<select  id = "correos" name = "correos"  class = "form-control" disabled = "disabled" required = "required">
-								<option value = "">Selecciona un municipio</option>
+								<option value = "">Selecciona un correo</option>
 							</select>
 						</div>
                         </div>

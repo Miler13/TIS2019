@@ -8,6 +8,19 @@ $palabras=explode(" ", $contenido);//["MI","CASA","VUELA"]
 $array_peligrosas = array("MATAR", "MUERTE", "MORIRME", "SANGRE","MATANZA","ASESINAR","APUÃ‘ALAR");
 $array_correctas = array("ESTUDIO","LEER","CANTAR","REZAR","AGRADECER","DIOS","AMOR");
 
+
+$consultaarea ="SELECT palabraClave FROM pclave where areas_idArea='1'";
+
+
+$resultadomedicina = mysql_query($consultaarea);
+while ($fila = mysql_fetch_row($resultadomedicina)) {
+$datosmedicina[] = $fila; ) }
+
+
+$resultado = mysql_query($consulta);
+while ($fila = mysql_fetch_row($resultado)) {
+$datos[] = $fila; 
+}
 $resultado="";
 
 for($i=0;$i<count($palabras);$i++){

@@ -4,7 +4,7 @@ session_start();
 include '../admin/conexion.php';
 
 if(isset($_SESSION['NombreUsuario'])) {
-     if ($_SESSION["NivelUsuario"] == 1) {
+     if ($_SESSION["NivelUsuario"] == 4) {
             $user = $_SESSION['NombreUsuario'];
             $codigo = $_SESSION["Codigo"];
 
@@ -39,13 +39,14 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="../js/jquery.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-      
+      <script src="mensajes/myjava.js"></script>
+
      
 </head>
 
 <body>
 <?php
-include ('menuAdmin.php');
+include ('menu_inicio_editor.php');
  ?>
 <br>
     <!-- Page Content -->
@@ -71,7 +72,7 @@ include ('menuAdmin.php');
             <div class="col-lg-12">
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
-                    <li><a href="admin.php">administrador</a></li>
+                    <li><a href="editor.php">Editor</a></li>
                     <li class="active">Enviar Correo</li>
                 </ol>
             </div>
@@ -128,7 +129,7 @@ include ('menuAdmin.php');
                     <div class = "form-group">
 							<label>correos:</label>
 							<select  id = "correos" name = "correos"  class = "form-control" disabled = "disabled" required = "required">
-								<option value = "">Selecciona un correo</option>
+								<option value = "">Selecciona un municipio</option>
 							</select>
 						</div>
                         </div>
