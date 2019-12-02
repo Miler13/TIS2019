@@ -1,59 +1,6 @@
 <?php include ('../admin/conexion.php');
 $nombre=$_POST['nino'];
 $mensaje=$_POST['mensaje'];
-
-//INICIO
-$contenido=strtoupper($mensaje);//MI CASA VUELA
-$palabras=explode(" ", $contenido);//["MI","CASA","VUELA"]
-$array_peligrosas = array("MATAR", "MUERTE", "MORIRME", "SANGRE","MATANZA","ASESINAR","APUÃ‘ALAR");
-$array_correctas = array("ESTUDIO","LEER","CANTAR","REZAR","AGRADECER","DIOS","AMOR");
-
-
-$consultaarea ="SELECT palabraClave FROM pclave where areas_idArea='1'";
-
-
-$resultadomedicina = mysql_query($consultaarea);
-while ($fila = mysql_fetch_row($resultadomedicina)) {
-$datosmedicina[] = $fila; ) }
-
-
-$resultado = mysql_query($consulta);
-while ($fila = mysql_fetch_row($resultado)) {
-$datos[] = $fila; 
-}
-$resultado="";
-
-for($i=0;$i<count($palabras);$i++){
-	$aux=$palabras[$i];
-	
-	for($j=0;$j<count($array_peligrosas);$j++){
-
-		if($aux==$array_peligrosas[$j]){
-
-			$resultado="P";
-			
-			$j=count($array_peligrosas);
-			$i=count($palabras);      
-		}
-	}
-	
-	if($resultado==""){
-		for($j=0;$j<count($array_correctas);$j++){
-			if($aux==$array_correctas[$j]){
-				$resultado="E";
-				$j=count($array_peligrosas);
-				$i=count($palabras);
-			}
-		}
-	}
-}
-
-if($resultado==""){
-	$resultado="N";
-}
-//FIN
-$mensaje=$mensaje . "" .$resultado;
-
 $fechaMensaje=date("Y-m-d");
 
 session_start();
@@ -62,41 +9,184 @@ session_start();
 		$rutaservidor='images';
 		$rutatemporal=$_FILES['foto']['tmp_name'];
 		$nombrefoto=$_FILES['foto']['name'];
-		 $tipo = $_FILES['foto']['type'];
+		$tipo = $_FILES['foto']['type'];
 		$rutadestino=$rutaservidor.'/'.$nombrefoto;
 		move_uploaded_file($rutatemporal, $rutadestino);
 		
 if( !(($tipo == "image/jpeg") || ($tipo == "image/png") || ($tipo == "image/jpg")) ){
 
+	
+
+///////////////////////////////////////////////////////////////////////////para  llenar los  datos del  correo  
+  
 
 
-$sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ('','$nombre',' ','$mensaje','$fechaMensaje')";
+		//INICIO
+$contenido=strtoupper($mensaje);//MI CASA VUELA
+$palabras=explode(" ", $contenido);//["MI","CASA","VUELA"]
+$consulta1="select IdArea, NombreArea from areas";
+$Area=mysqli_query($conexion,$consulta1);
 
-$res=mysqli_query($conexion,$sql);
-if($res){ 
-	echo '<script> alert("Hemos enviado tu Mensaje de forma Correcta. Gracias por tu Mensaje");</script>';
-		echo '<script> window.location="nino.php"; </script>';
-	}else {
-	echo '<script> alert("Lo sentimos no pudimos mandar el mensaje");</script>';
-		echo '<script> window.location="nino.php"; </script>';
+
+while( $filaArea=mysqli_fetch_row($Area)) {
+	 $co=$filaArea['0'];
+	 $contt=0;
+	 echo  $co . " // " ; 
+	 $consultaarea ="SELECT palabraClave FROM pclave where areas_idArea='$co'";
+     $resultadomedicina = mysqli_query($conexion,$consultaarea);
+
+	while ($filapPcla = mysqli_fetch_row($resultadomedicina)) {
+ 
+			for($i=0;$i<count($palabras);$i++){
+				$aux=$palabras[$i];
+		
+				for($j=0;$j<count($filapPcla);$j++){
+	
+					if($aux==$filapPcla[$j]){
+						echo  $filapPcla[$j] . "  " ; 
+						$j=count($filapPcla);
+						$i=count($palabras);      
+						}
+					}
+
+			if(0<$j)	{ 				$contt=1;			}
+			
+				}
+	
+
 		}
+	if(0<$contt){
+		$espe= "SELECT especialistas.CorreoEspecialista  FROM asignaciones, especialistas,subareas, areas 
+		WHERE asignaciones.idEspecialista =especialistas.idEspecialista and subareas.idSubArea=asignaciones.idSubArea and subareas.IdArea='$co'
+		GROUP By especialistas.CorreoEspecialista " ;
+		$resultEsp= mysqli_query($conexion,$espe);
+
+		while ($filaEsp = mysqli_fetch_row($resultEsp)) 
+			{ //
+			$Ep =$filaEsp['0'];
+				
+
+
+
+					$sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ('$Ep','$nombre',' ','$mensaje','$fechaMensaje')";
+					$res=mysqli_query($conexion,$sql);
+					if($res){ 
+						echo '<script> alert("Hemos enviado tu Mensaje de forma Correcta. Gracias por tu Mensaje");</script>';
+						echo '<script> window.location="nino.php"; </script>';
+					}else {
+						echo '<script> alert("Lo sentimos no pudimos mandar el mensaje");</script>';
+						echo '<script> window.location="nino.php"; </script>';
+						}
+				}
+			}else{
+
+				$sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ('admin','$nombre',' ','$mensaje','$fechaMensaje')";
+					$res=mysqli_query($conexion,$sql);
+					if($res){ 
+						echo '<script> alert("Hemos enviado tu Mensaje de forma Correcta. Gracias por tu Mensaje");</script>';
+						echo '<script> window.location="nino.php"; </script>';
+					}else {
+						echo '<script> alert("Lo sentimos no pudimos mandar el mensaje");</script>';
+						echo '<script> window.location="nino.php"; </script>';
+						}
+
+			}
+
+		}
+
+////finnn
+
+
+
+
 	}else {
 		//se aumento esta linea para que llegue a su correo
-		$para="Especialista@gmail.com";
 		
 		
-		if (($tipo == "image/jpeg") || ($tipo == "image/png") || ($tipo == "image/jpg")) 
-		{  
-			$sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ('$para','$nombre','$rutadestino','$mensaje','$fechaMensaje')";
-		   $res=mysqli_query($conexion,$sql);
-		   if($res){ 
+		
+		if (($tipo == "image/jpeg") || ($tipo == "image/png") || ($tipo == "image/jpg")) 	{  
+
+
+
+		///////////////////////////////////////////////////////////////////////////para  llenar los  datos del  correo 
+		
+		
+		//INICIO
+$contenido=strtoupper($mensaje);//MI CASA VUELA
+$palabras=explode(" ", $contenido);//["MI","CASA","VUELA"]
+$consulta1="select IdArea, NombreArea from areas";
+$Area=mysqli_query($conexion,$consulta1);
+
+
+while( $filaArea=mysqli_fetch_row($Area)) {
+	 $co=$filaArea['0'];
+	 $contt=0;
+	 echo  $co . " // " ; 
+	 $consultaarea ="SELECT palabraClave FROM pclave where areas_idArea='$co'";
+     $resultadomedicina = mysqli_query($conexion,$consultaarea);
+
+	while ($filapPcla = mysqli_fetch_row($resultadomedicina)) {
+ 
+			for($i=0;$i<count($palabras);$i++){
+				$aux=$palabras[$i];
+		
+				for($j=0;$j<count($filapPcla);$j++){
+	
+					if($aux==$filapPcla[$j]){
+						echo  $filapPcla[$j] . "  " ; 
+						$j=count($filapPcla);
+						$i=count($palabras);      
+						}
+					}
+
+			if(0<$j)	{ 				$contt=1;			}
+			
+				}
+	
+
+		}
+	if(0<$contt){
+		$espe= "SELECT especialistas.CorreoEspecialista  FROM asignaciones, especialistas,subareas, areas 
+		WHERE asignaciones.idEspecialista =especialistas.idEspecialista and subareas.idSubArea=asignaciones.idSubArea and subareas.IdArea='$co'
+		GROUP By especialistas.CorreoEspecialista " ;
+		$resultEsp= mysqli_query($conexion,$espe);
+
+		while ($filaEsp = mysqli_fetch_row($resultEsp)) 
+			{ //
+			$Ep =$filaEsp['0'];
+		
+			$sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ($Ep,'$nombre','$rutadestino','$mensaje','$fechaMensaje')";
+			$res=mysqli_query($conexion,$sql);
+	   if($res){ 
 			echo '<script> alert("Se mando  su carta con  exito.");</script>';
 			echo '<script> window.location="nino.php"; </script>';			
-		   }
-		   else {
-			echo '<script> alert("Error al mandar la carta.");</script>';
-			echo '<script> window.location="nino.php"; </script>';
+	 		  }
+	 		  else {
+					echo '<script> alert("Error al mandar la carta.");</script>';
+					echo '<script> window.location="nino.php"; </script>';
 				}
+			}
+		} else{
+			$sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ('admin','$nombre','$rutadestino','$mensaje','$fechaMensaje')";
+			$res=mysqli_query($conexion,$sql);
+		   if($res){ 
+				echo '<script> alert("Se mando  su carta con  exito.");</script>';
+				echo '<script> window.location="nino.php"; </script>';			
+				   }
+			   else {
+					echo '<script> alert("Error al mandar la carta.");</script>';
+					echo '<script> window.location="nino.php"; </script>';
+				}
+
+
+
+
+			}
+
+		}
+
+////finnn
+
    
 	   }
 	   
