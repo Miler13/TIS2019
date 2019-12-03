@@ -13,7 +13,7 @@ session_start();
 		$rutaservidor='images';
 		$rutatemporal=$_FILES['foto']['tmp_name'];
 		$nombrefoto=$_FILES['foto']['name'];
-		 $tipo = $_FILES['foto']['type'];
+		$tipo = $_FILES['foto']['type'];
 		$rutadestino=$rutaservidor.'/'.$nombrefoto;
 		move_uploaded_file($rutatemporal, $rutadestino);
 		
@@ -24,10 +24,10 @@ $sql="INSERT into mensajes(para,Remitente,foto,Mensaje,FechaEnvio) values ('$par
 $res=mysqli_query($conexion,$sql);
 if($res){ 
 	echo '<script> alert("Hemos enviado tu Mensaje de forma Correcta. Gracias por tu Mensaje");</script>';
-		echo '<script> window.location="especialista.php"; </script>';
+		echo '<script> window.location="editor.php"; </script>';
 	}else {
 	echo '<script> alert("Lo sentimos no pudimos mandar el mensaje");</script>';
-		echo '<script> window.location="especialista.php"; </script>';
+		echo '<script> window.location="editor.php"; </script>';
 		}
 	}else {
 
@@ -39,18 +39,18 @@ if($res){
 		   $res=mysqli_query($conexion,$sql);
 		   if($res){ 
 			echo '<script> alert("Se mando  su carta con  exito.");</script>';
-			echo '<script> window.location="especialista.php"; </script>';			
+			echo '<script> window.location="editor.php"; </script>';			
 		   }
 		   else {
 			echo '<script> alert("Error al mandar la carta.");</script>';
-			echo '<script> window.location="especialista.php"; </script>';
+			echo '<script> window.location="editor.php"; </script>';
 				}
    
 	   }
 	   
 	   else{
 			echo '<script> alert("Solo se permiten imagenes de Tipo PNG y JPG.");</script>';
-			echo '<script> window.location="nino.php"; </script>';
+			echo '<script> window.location="editor.php"; </script>';
 			}
    
    

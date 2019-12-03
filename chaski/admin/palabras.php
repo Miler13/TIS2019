@@ -35,7 +35,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="../js/jquery.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="subarea/myjava.js"></script>
+    <script src="Pclave/myjava.js"></script>
     <script src="validar.js"></script>
 
 </head>

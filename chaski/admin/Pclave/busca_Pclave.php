@@ -23,8 +23,7 @@ $registro = mysqli_query($conexion,"SELECT subareas.idsubarea as id, subareas.No
                                <td>'.$registro2['subarea'].'</td>
                           <td>'.$registro2['area'].'</td>
                         
-                           <td> <a href="javascript:editarRegistro('.$registro2['id'].');">
-                              <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
+                          <td> 
                               <a href="javascript:eliminarRegistro('.$registro2['id'].');">
                              <img src="images/borrar.png" width="25" height="25" alt="delete" title="Eliminar" /></a>
                              </td>
