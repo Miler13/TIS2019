@@ -22,8 +22,6 @@
                      </a>
           
           
-         <a href="cambiar_foto.php" class="list-group-item"   style="background-color: rgba(255, 150, 0, .2); "><i class="glyphicon glyphicon-user"></i>   &nbsp;&nbsp; Cambiar Foto
-                    </a>
                    
                 </div>
 

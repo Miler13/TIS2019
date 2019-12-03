@@ -18,6 +18,7 @@
         $TotalAsignaciones = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM asignaciones"));
      
          $TotalMensajes = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM mensajes"));
+         $TotalPalabras = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM pclave"));
         ?>
 
          <div class="row">
@@ -151,6 +152,24 @@
                 </div>
 			</div>  
            		
+                
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-3x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                 
+                        </div>
+                    <div class="panel-body">
+                        <h4 class="media-heading"> Palabras por Area</h4>
+                       <p>Total de palabras: <span class="label label-danger pull-right"><?php echo $TotalPalabras ?></span></p>
+                      <a href="palabras.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
+                    </div>
+                </div>
+			</div>  
+
 				<div class="col-md-3 col-sm-6">
 					<div class="panel panel-default text-center">
 						<div class="panel-heading">
