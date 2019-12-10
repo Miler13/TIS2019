@@ -30,7 +30,7 @@ if(isset($_SESSION['NombreUsuario'])) {
     <script src="../js/jquery.js"></script>
     <script src="js/back-to-top.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="especialista/myjava.js"></script>
+    <script src="Editor/myjava.js"></script>
 
     
     
@@ -75,7 +75,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                     <ol class="breadcrumb">
                     <li><a href="../index.php">Inicio</a></li>
                     <li><a href="admin.php">Administrador</a></li>
-                    <li class="active">Especialista</li>
+                    <li class="active">Editor</li>
                 </ol>
             </div>
         </div> 
@@ -90,16 +90,16 @@ if(isset($_SESSION['NombreUsuario'])) {
         <div class="panel-heading">
             <div class="btn-group pull-right">
             </div>
-            <center><h4><b>Administracion de Especialistas</b></h4></center>
+            <center><h4><b>Administracion de Editores</b></h4></center>
         </div>
         <div class="panel-body">
             <div class="row">
 		               <div class="col-md-1"><h4>Buscar:</h4></div>
 		               <div class="col-md-5">
-		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el Nombre del Especialista" onkeypress="return sololetras(event)">
+		               <input type="text" name="s" id="bs-prod" class="form-control" placeholder="Escribir el Nombre del Editor" onkeypress="return sololetras(event)">
 		               </div>
 		               	<div class="col-md-6">
-		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nuevo Especialista</button> 
+		                  <button id="nuevo-producto" class="btn btn-success"> <i class="glyphicon glyphicon-plus"></i> Nuevo Editor</button> 
 		                 
 		               </div>
 	              <br>
@@ -115,7 +115,7 @@ if(isset($_SESSION['NombreUsuario'])) {
 		   <h4 style="font-weight: bold;"> 
     <?php
 include('conexion.php');
-    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM especialistas"));
+    $numeroRegistros = mysqli_num_rows(mysqli_query($conexion,"SELECT * FROM editor"));
     echo "Registros Totales: $numeroRegistros";
         ?>
         </h4>
@@ -130,7 +130,7 @@ include('conexion.php');
             <div class="modal-header" style="background:#337ab7; text-align: center;">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               <h4 class="modal-title" style="color:white;" id="myModalLabel"><b>
-              <i class='glyphicon glyphicon-user'></i>&nbsp;&nbsp;Especialista</b></h4>
+              <i class='glyphicon glyphicon-user'></i>&nbsp;&nbsp;Editor</b></h4>
             </div>
             <form id="formulario" class="form-group" onsubmit="return agregarRegistro();">
             <div class="modal-body">
@@ -163,14 +163,7 @@ include('conexion.php');
 		       <textarea class="form-control" id="direccion" name="direccion" required="" maxlength="250" placeholder="Ingrese su direccion de domicilio"></textarea></div>
 		       <br>
 			   </div><br>
-			   <div class="form-group"> <label for="estado" class="col-md-2 control-label">Estado:</label>
-				 <div class="col-md-10">
-                   <select class="form-control" id="estado" name="estado" required="">
-					            <option value="1" selected="">Activo</option>
-					             <option value="0">Inactivo</option>
-				  </select>
-				 </div>
-			   </div>
+			   
                 <br><br>
                
 

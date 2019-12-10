@@ -24,21 +24,40 @@
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Page Heading/Breadcrumbs -->
-      <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Ayuda
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="index.php">Inicio</a>
-                    </li>
-                    <li class="active">Ayuda</li>
-                </ol>
-            </div>
-        </div>
-        <!-- /.row -->
+<!-- Page Heading/Breadcrumbs -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Ayuda
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="index.php">Inicio</a>
+            </li>
+            <li class="active">Ayuda</li>
+        </ol>
+    </div>
+</div>
+<!-- /.row -->
 
-       
+   <!-- Content Row -->
+<div class="row">
+    <!-- Map Column -->
+<h3>Ver el Manual de Usuario</h3>
+<h2>Consulte con su manual para cualquier problema </h2>
+<img src="imagenes/manual.png">
+<br><br>
+<form action="includes/help.php" method="post">
+<input type="submit" name="" value="Ver Manual" class="btn btn-primary">
+</form>
+</div>
+<hr>
+<br><br><br><br><br><br>
+<!-- /.row -->
+
+
+<!-- /.row -->
+
+<hr>
+</div>
 
   <?php
     include('includes/footer.php');

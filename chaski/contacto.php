@@ -17,7 +17,7 @@
        <link rel="shortcut icon" href="imagenes/logo.JPG" type="image/x-icon">
 
     <script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
-      <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.js"></script>
+   
     <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css"/>
     <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css"/>
 
@@ -64,17 +64,15 @@
                     <abbr title="Hours">Horario</abbr>: Lunes a Viernes: 8:00 AM - 16:00 PM</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li>
-                        <a href="#"><i class="fa fa-facebook-square fa-2x" style="color:#286090"></i></a>
+                        <a href="https://www.facebook.com/mbkm.empresa.3"><i class="fa fa-facebook-square fa-2x" style="color:#286090"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                        <a href="https://www.instagram.com/mbkmsoft/"><i class="fa fa-linkedin-square fa-2x"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-twitter-square fa-2x" style="color:#26a1ab"></i></a>
+                        <a href="https://twitter.com/mbkmsoft"><i class="fa fa-twitter-square fa-2x" style="color:#26a1ab"></i></a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-google-plus-square fa-2x" style="color:#e12330;"></i></a>
-                    </li>
+                   
                 </ul>
             </div>
         </div>

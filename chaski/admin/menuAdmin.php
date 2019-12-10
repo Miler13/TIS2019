@@ -11,21 +11,7 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-file"></i>&nbsp;&nbsp;Administracion de areas <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="">Gestion</a>
-                            </li>
-                            <li>
-                                <a href="">Grupos</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Areas de apoyo</a>
-                            </li>
-                        </ul>
-                    </li>
+               
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-lock"></i> Correo <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -34,6 +20,9 @@
                             </li>
                             <li>
                                 <a href="enviarCorreo.php">Enviar Correo</a>
+                            </li>
+                            <li>
+                                <a href="administrarcartas.php">Administar  cartas</a>
                             </li>
                             
                         </ul>

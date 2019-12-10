@@ -19,6 +19,7 @@
     <script src="admin/sweetalert/sweetalert.min.js"></script>
      <script src="admin/sweetalert/sweetalert-dev.js"></script>
       <script src="js/jquery.js"></script>
+      <script src="validar.js"></script>
 </head>
 <body background="imagenes/fondo.jpg">
 
@@ -40,23 +41,23 @@
                         <form class="form-horizontal" role="form" method="post" action="reg/agrega_nino.php">
                         Cual es tu animal preferido?
         <br>
-             <input name="strImagen[]"  type="checkbox" value="0" />
+             <input name="strImagen[]"  type="checkbox" value="0"  id="leon" class="case"/>
              <img src="imagenes/leon.png" width="100" height="100" />  
-             <input name="strImagen[]" type="checkbox" value="1" />
+             <input name="strImagen[]" type="checkbox" value="1"    id="mono" class="case"/>
              <img src="imagenes/mono.png" width="100" height="100" />  
-             <input name="strImagen[]" type="checkbox" value="2"  />
+             <input name="strImagen[]" type="checkbox" value="2"  id="leona" class="case"/>
              <img src="imagenes/leona.png" width="100" height="100" />  <br>
-             <input name="strImagen[]" type="checkbox" value="3"  />
+             <input name="strImagen[]" type="checkbox" value="3" id="elefante" class="case"/>
              <img src="imagenes/elefante.png" width="100" height="100" />  
-             <input name="strImagen[]" type="checkbox" value="4"  />
+             <input name="strImagen[]" type="checkbox" value="4" id="perico" class="case">
              <img src="imagenes/perico.png" width="100" height="100" /> 
-             <input name="strImagen[]" type="checkbox" value="5"  />
+             <input name="strImagen[]" type="checkbox" value="5" id="oso" class="case"/>
              <img src="imagenes/oso.png" width="100" height="100" />  <br>
         
                           
                             <div class="form-group">
                                <div class="col-md-12">
-                                    <input type="text" style="text-align: center;" class="form-control" name="edad" placeholder="Introduce tu Edad" required="true">
+                                    <input type="text" style="text-align: center;" class="form-control" name="edad" placeholder="Introduce tu Edad" required="true" onkeypress="return solonumeros(event)"  >
                                     <i class="fa fa-lock"></i>
                                 </div>
                             </div>
@@ -77,6 +78,13 @@
         </div>
     </section>
 
+
+
+<script type="text/javascript">
+  $('.case').on('change', function() {
+		    $('.case').not(this).prop('checked', false);  
+		});
+</script>
 
 
 </body>

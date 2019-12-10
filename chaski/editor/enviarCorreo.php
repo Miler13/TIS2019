@@ -84,10 +84,9 @@ include ('menu_inicio_editor.php');
             -->
 
       
-
-           <!-- Content Column -->
+         <!-- Content Column -->
            
-      <div class="row">
+         <div class="row">
             <div class="col-md-8">
                 <h3>Envianos un Mensaje</h3>
                 <form action="validar_mensaje.php" method="post" >
@@ -152,10 +151,8 @@ include ('menu_inicio_editor.php');
 
         
 
-   
-
   
-<script src = "js/jquery-3.1.1.js"></script>
+        <script src = "js/jquery-3.1.1.js"></script>
 <script type = "text/javascript">
 	$(document).ready(function(){
 		$('#idArea').on('change', function(){
@@ -173,10 +170,9 @@ include ('menu_inicio_editor.php');
 
 
    
-  
     <!-- MODAL PARA EL REGISTRO-->
    
-            </div>
+    </div>
         </div>
     </div>
 

@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chasquicito</title>
+    <title>SIAD UNI</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/modern-business.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <link rel="shortcut icon" href="imagenes/imagenes/logo.JPG" type="image/x-icon">
+      <link rel="shortcut icon" href="imagenes/logoUNI.ico" type="image/x-icon">
       <link rel="stylesheet" href="css/reloj.css">
 </head>
 
@@ -19,39 +19,12 @@
 
 <?php include('includes/menuPublico.php') ?>
 
-    <!-- Header Carousel -->
-    
+   
 
-    
-    <!-- Page Content -->
-    <div class="container">
 
-        <!-- Marketing Icons Section -->
-        <div class="row">
-            <div class="col-lg-16">
-                <h1 class="page-header">
-                SISTEMA CHASQUI
-                </h1>
-            </div>
-            <div class="col-lg-16">
-                <p>
-                     
-                     <h3 >
-                     Bienvenidos al Sistema de mensajeria CHASQUI
-                </h3>
-                <p>
-                <p>
-                    
-                <p>
-                <br>
-             
-            </div>
-            <hr>
-            <br>
-            <br>
-             <div class="row row-no-gutters">
-             <br>
-             <div class="col-md-4 col-sm-7">
+
+
+<div class="col-lg-2">
                 <div class="panel panel-default text-center">
                     
                     
@@ -100,8 +73,31 @@
                     
                 </div>
             </div>  
+            </div>  
           
-            <div class="col-md-4 col-sm-7">
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                SISTEMA CHASQUI
+                </h1>
+            </div>
+            <div class="col-lg-12">
+                <p>
+                     Bienvenidos al Sistema de mensajeria CHASQUI
+                <p>
+                <br>
+                <br>
+            </div>
+            <hr>
+             <div class="row">
+
+            
+            <hr>
+            <div class="col-md-6 col-sm-7">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                     <img src="imagenes/boletines.png" width="250" height="150">
@@ -113,8 +109,8 @@
                         </div>
                 </div>
             </div>
-      
-             <div class="col-md-4 col-sm-7">
+            <hr>
+             <div class="col-md-6 col-sm-7">
                 <div class="panel panel-default text-center">
                     <div class="panel-heading">
                     <img src="imagenes/ninos.png" width="250" height="150">
@@ -133,28 +129,25 @@
         </div>
         </div>
         <!-- /.row -->
-
-        <div class="row">
-            <div class="col-lg-12">
-               
-            </div>
-            <br>
-
-            <h3 >
-            <br>
-                </h3>
-            </div>
         <!-- Features Section -->
-       
-        
-        <!-- /.row -->
-   
+        <div class="row">
+           <!-- leeetras asass -->
+           </div>
         </div>
-        <br> <br>
-        <hr>
-   
-<?php
+        <!-- /.row -->
 
+        <hr>   
+    </div>
+    <script src="js/jquery.js"></script>
+     <script src="js/back-to-top.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+    
+<?php
 include('includes/footer.php');
  ?>
 

@@ -17,6 +17,9 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                <li>
+                                <a href="misionvision.php"><i class="glyphicon glyphicon-book"></i> Mision y Vision</a>
+                            </li>
                             <li>
                                 <a href="contacto.php"><i class="glyphicon glyphicon-phone"></i> Contacto</a>
                             </li>

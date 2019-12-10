@@ -6,7 +6,7 @@
     </head>
     <body>
                 <div align="center">
-                <iframe src="" width="100%" height="650"></iframe>
+                <iframe src="manual.pdf" width="100%" height="650"></iframe>
                 </div>
 
     </body>
