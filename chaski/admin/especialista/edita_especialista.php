@@ -1,7 +1,7 @@
 <?php
 include('../conexion.php');
 $id = $_POST['id'];
-$valores = mysqli_query($conexion,"SELECT * FROM Especialistas WHERE idEspecialista = '$id'");
+$valores = mysqli_query($conexion,"SELECT * FROM especialistas WHERE idEspecialista = '$id'");
 $valores2 = mysqli_fetch_array($valores);
 $datos = array(
 				 

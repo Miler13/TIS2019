@@ -25,7 +25,7 @@ echo '<table class="table table-striped table-condensed table-hover table-respon
 	while($registro2 = mysqli_fetch_array($registro)){
     		        echo '<tr>
 		                      <td>'.$registro2['subarea'].'</td>
-                          <td>'.$registro2['Area'].'</td>
+                          <td>'.$registro2['area'].'</td>
                          
                            <td> <a href="javascript:editarRegistro('.$registro2['id'].');">
                               <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>

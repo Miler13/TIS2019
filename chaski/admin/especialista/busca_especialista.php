@@ -2,7 +2,7 @@
 include('../conexion.php');
 $dato = $_POST['dato'];
 
-$registro = mysqli_query($conexion,"SELECT * FROM Especialistas WHERE NombresEspecialista LIKE '%$dato%' ORDER BY idEspecialista ASC");
+$registro = mysqli_query($conexion,"SELECT * FROM especialistas WHERE NombresEspecialista LIKE '%$dato%' ORDER BY idEspecialista ASC");
        echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	<tr>
                        <th width="10%">Nombres</th>

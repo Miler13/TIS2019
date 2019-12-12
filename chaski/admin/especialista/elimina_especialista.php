@@ -3,7 +3,7 @@ include('../conexion.php');
 
 $id = $_POST['id'];
 
-if (!mysqli_query($conexion,"DELETE FROM Especialistas WHERE idEspecialista = '$id'")) {
+if (!mysqli_query($conexion,"DELETE FROM especialistas WHERE idEspecialista = '$id'")) {
   echo '<script> alert("Este registro no se puede borrar porque esta siendo utilizado por el sistema.");</script>';
 }
 

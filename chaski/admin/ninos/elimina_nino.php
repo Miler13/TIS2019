@@ -7,7 +7,7 @@ if (!mysqli_query($conexion,"DELETE FROM ninos WHERE idNino = '$id'")) {
   echo '<script> alert("Este registro no se puede borrar porque esta siendo utilizado por el sistema.");</script>';
 }
 
-$registro = mysqli_query($conexion,"SELECT * FROM Ninos ORDER BY idNino ASC");
+$registro = mysqli_query($conexion,"SELECT * FROM ninos ORDER BY idNino ASC");
 
 echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	          <tr>

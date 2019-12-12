@@ -15,22 +15,22 @@ $estado = $_POST['estado'];
 $foto = "images/fotos_perfil/perfil.jpg";
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO Especialistas (NombresEspecialista, ApellidosEspecialista, CedulaEspecialista, CorreoEspecialista, CelularEspecialista, TelefonoEspecialista, DireccionEspecialista, Estado, Foto) VALUES('$nombre','$apellido','$cedula','$correo','$celular','$telefono','$direccion','$estado','$foto')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO especialistas (NombresEspecialista, ApellidosEspecialista, CedulaEspecialista, CorreoEspecialista, CelularEspecialista, TelefonoEspecialista, DireccionEspecialista, Estado, Foto) VALUES('$nombre','$apellido','$cedula','$correo','$celular','$telefono','$direccion','$estado','$foto')");
 
-  $consulta=mysqli_query($conexion,"SELECT idEspecialista from Especialistas where CedulaEspecialista = '$cedula' and CorreoEspecialista = '$correo'");
+  $consulta=mysqli_query($conexion,"SELECT idEspecialista from especialistas where CedulaEspecialista = '$cedula' and CorreoEspecialista = '$correo'");
                            while($filas=mysqli_fetch_array($consulta)){
                                  $codigo_Especialista=$filas['idEspecialista'];
                  }
      mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$correo','$cedula','2','$codigo_Especialista', '$foto')");
 
 	break;
-	case 'Edicion': mysqli_query($conexion,"UPDATE Especialistas SET NombresEspecialista = '$nombre', ApellidosEspecialista = '$apellido', CedulaEspecialista = '$cedula', CorreoEspecialista = '$correo', CelularEspecialista = '$celular', TelefonoEspecialista = '$telefono', DireccionEspecialista = '$direccion', Estado = '$estado' where idEspecialista = '$id'");
+	case 'Edicion': mysqli_query($conexion,"UPDATE especialistas SET NombresEspecialista = '$nombre', ApellidosEspecialista = '$apellido', CedulaEspecialista = '$cedula', CorreoEspecialista = '$correo', CelularEspecialista = '$celular', TelefonoEspecialista = '$telefono', DireccionEspecialista = '$direccion', Estado = '$estado' where idEspecialista = '$id'");
 
     mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$correo', PassUsuario = '$cedula' where Codigo = '$id'");
 
 	break;
    }
-    $registro = mysqli_query($conexion,"SELECT * FROM Especialistas ORDER BY idEspecialista ASC");
+    $registro = mysqli_query($conexion,"SELECT * FROM especialistas ORDER BY idEspecialista ASC");
 
     echo '<table class="table table-striped table-condensed table-hover">
         	<tr>

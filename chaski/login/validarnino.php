@@ -17,19 +17,9 @@
 					$_SESSION["NombreUsuario"] = $row['NombreUsuario']; 
 				  	$_SESSION["NivelUsuario"] = $row['NivelUsuario']; 
 				  	$_SESSION["Codigo"] = $row['Codigo']; 
-				  	if ($_SESSION["NivelUsuario"] == 1) {
-				  		echo '<script> window.location="../admin/admin.php"; </script>';
+				  	if ($_SESSION["NivelUsuario"] == 3) {
+						echo '<script> window.location="../ninos/nino.php"; </script>'; 
 				  	}
-					  	  elseif ($_SESSION["NivelUsuario"] == 2) {
-					  	 	echo '<script> window.location="../especialistas/especialista.php"; </script>';
-							}
-						   elseif ($_SESSION["NivelUsuario"] == 3) {
-							echo '<script> window.location="../ninos/nino.php"; </script>'; 
-						}
-							 else {
-						  	 	echo '<script> window.location="../index.php"; </script>';
-						  	 	echo $numero;
-						  	 }
 				}
 				else{
 					echo '<script> alert("Usuario o contraseña incorrectos. ");</script>';

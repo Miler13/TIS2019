@@ -90,7 +90,7 @@
                         </span>
                     </div>
                     <div class="panel-body">
-                      <h4 class="media-heading">Registrar Usuarios</h4>
+                      <h4 class="media-heading">Cuentas de Usuarios</h4>
                         <p>Total de Usuarios: <span class="label label-danger pull-right"><?php echo $TotalUsuarios ?></span></p>
                         <a href="usuarios.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>                   
@@ -146,7 +146,7 @@
                  
                         </div>
                     <div class="panel-body">
-                        <h4 class="media-heading">Area a Especialista</h4>
+                        <h4 class="media-heading">Asignaciones Especialista</h4>
                        <p>Total de Asignaciones: <span class="label label-danger pull-right"><?php echo $TotalAsignaciones ?></span></p>
                       <a href="asignaciones.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>

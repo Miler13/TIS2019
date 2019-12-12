@@ -91,8 +91,8 @@ include ('menu_editor.php');
                 <div class="panel panel-default text-center">
                     
                     <div class="panel-body">
-                        <h4>Boletines </h4>
-                        <p> Modelos de  boletines</p>
+                        <h1>Boletines </h1>
+                        <p> <h3>Modelos de  boletines </h3>  </p>
                        
                         
                     </div>

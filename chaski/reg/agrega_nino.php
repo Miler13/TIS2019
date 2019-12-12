@@ -42,7 +42,7 @@ if(in_array('0',$_REQUEST)){
  
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO Ninos (EdadNino, NombresNino, CedulaNino, Estado, Foto)  VALUES('$edad','$nick','$edad', '1', '$foto')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO ninos (EdadNino, NombresNino, CedulaNino, Estado, Foto)  VALUES('$edad','$nick','$edad', '1', '$foto')");
 
           $consulta=mysqli_query($conexion,"SELECT idNino from Ninos where NombresNino= '$nick'and EdadNino='$edad'");              
                            while($filas=mysqli_fetch_array($consulta)){

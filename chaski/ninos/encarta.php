@@ -72,36 +72,51 @@ include ('menu_inicio_nino.php');
      include ('menu_nino.php');
  ?>
             <!-- Content Column -->
-            
-            <!-- Content Column -->
-            <div class="col-md-9 col-sm-4">
-                <div class="panel panel-default text-center" style="background-color: rgba(255, 155, 10, .4);">
-                    
-                    <div class="panel-body">
-                        <h1>Bienvenido </h1>
-                        <h3>'La felicidad no depende de lo que uno tiene, sino del uso que hace de todo lo que tiene'. </h3>
-                        
-                        <div class="col-md-9 col-sm-4">
-                        <img src="images/escarta.png" class="img-responsive" width="100%" height="100%">
-                        </div>
-                        
-                    </div>
-                    <a href="encarta.php" class="btn btn-success"> Enviar carta </a>
-                </div>
-              
-            </div>
-            
-   
-  
-    <!-- MODAL PARA EL REGISTRO-->
-   
-            </div>
-        </div>
-    </div>
+            <div class="col-md-9" >
+                <h3>Bienvenido  : <b style="color:green;"><?php echo $estudiante; ?></b></h3>
+                <p>En esta seccion puedes enviar tu carta.</p>
 
-            </div>
-                    
-        </div>
+
+                <br>
+         
+           
+               
+      <div class="panel" style="background-color: rgba(255, 155, 10, .4);">
+            
+                  <form id="formulario" class="form-group" action="validar_mensaje.php" method="post"  enctype="multipart/form-data" >
+                  <input type="hidden"  id="nino"  name="nino" value="<?php echo $estudiante; ?>"/>
+            <div class="modal-body" style="background-color: rgba(255, 155, 10, .3);">
+
+              <div class="form-group"> <label for="carta" class="col-md-3 control-label">tu carta:</label>
+             
+                <div class="col-md-9">
+                <textarea class="form-control rounded-0" id="mensaje" name="mensaje" required maxlength="1000" required="true"  rows="18" ></textarea>
+                </div>
+         </div> <br>
+
+
+        
+         
+
+               
+         
+               <div class="form-group"> <label for="carnet" class="col-md-3 control-label">Archivo:</label>
+        <div class="col-md-9"><input type="file" class="form-control" id="foto" name="foto" ></div>
+         </div> 
+
+         <br>
+         <div class="col-md-12"> </div> <br>
+               <center><input type="submit" value="Entregar Carta" name="subir" class="btn btn-success" id="reg"/></center>    
+               <a href="nino.php" class="btn btn-success"><i class="fa fa-mail-forward"></i> Volver </a>
+          
+             </div> 
+             <div id="mensaje"> </div>        
+
+
+            </form>
+                      
+                            </div>
+                        </div>
                          <!-- Fin del Row -->       
                
      

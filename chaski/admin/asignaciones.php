@@ -13,7 +13,7 @@ if(isset($_SESSION['NombreUsuario'])) {
                  }
         ?>
            <?php 
-          $consulta1="select idEspecialista, concat(NombresEspecialista, ' ' ,ApellidosEspecialista) as Especialistas FROM Especialistas";
+          $consulta1="select idEspecialista, concat(NombresEspecialista, ' ' ,ApellidosEspecialista) as Especialistas FROM especialistas";
           $Especialista=mysqli_query($conexion,$consulta1);
           $consulta2="select idSubArea, NombreSubArea from subareas";
           $subarea=mysqli_query($conexion,$consulta2);

@@ -78,15 +78,15 @@ include ('menu_inicio_nino.php');
                 <div class="panel panel-default text-center" style="background-color: rgba(255, 155, 10, .4);">
                     
                     <div class="panel-body">
-                        <h1>Bienvenido </h1>
-                        <h3>'La felicidad no depende de lo que uno tiene, sino del uso que hace de todo lo que tiene'. </h3>
+                        <h3>Mensaje enviado con  </h3>
+                        <h1>Éxito  </h1>
                         
                         <div class="col-md-9 col-sm-4">
-                        <img src="images/escarta.png" class="img-responsive" width="100%" height="100%">
+                        <img src="images/exito.png" class="img-responsive" width="100%" height="100%">
                         </div>
                         
                     </div>
-                    <a href="encarta.php" class="btn btn-success"> Enviar carta </a>
+                    <a href="nino.php" class="btn btn-success"><i class="fa fa-mail-forward"></i> Volver </a>
                 </div>
               
             </div>

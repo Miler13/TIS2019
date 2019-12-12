@@ -109,7 +109,7 @@
                     <div class="panel-body">
                         <h4>Boletines </h4>
                         <p> todas las publicaciones</p>
-                        <a href="" class="btn btn-primary"><i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
+                        <a href="presen.php" class="btn btn-primary"><i class="glyphicon glyphicon-download-alt"></i> Entrar</a>
                         </div>
                 </div>
             </div>
