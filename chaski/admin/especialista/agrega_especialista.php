@@ -15,7 +15,8 @@ $estado = $_POST['estado'];
 $foto = "images/fotos_perfil/perfil.jpg";
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO especialistas (NombresEspecialista, ApellidosEspecialista, CedulaEspecialista, CorreoEspecialista, CelularEspecialista, TelefonoEspecialista, DireccionEspecialista, Estado, Foto) VALUES('$nombre','$apellido','$cedula','$correo','$celular','$telefono','$direccion','$estado','$foto')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO especialistas (NombresEspecialista, ApellidosEspecialista, CedulaEspecialista, CorreoEspecialista, CelularEspecialista, TelefonoEspecialista, DireccionEspecialista, Estado, Foto) 
+   VALUES('$nombre','$apellido','$cedula','$correo','$celular','$telefono','$direccion','$estado','$foto')");
 
   $consulta=mysqli_query($conexion,"SELECT idEspecialista from especialistas where CedulaEspecialista = '$cedula' and CorreoEspecialista = '$correo'");
                            while($filas=mysqli_fetch_array($consulta)){

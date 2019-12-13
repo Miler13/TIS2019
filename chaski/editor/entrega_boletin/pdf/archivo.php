@@ -8,7 +8,7 @@
         <?php
         include 'config.inc.php';
         $db=new Conect_MySql();
-            $sql = "select * from entrega_tareas where idEntregaTareas=".$_GET['id'];
+            $sql = "select * from boletin where idBoletin=".$_GET['id'];
             $query = $db->execute($sql);
             if($datos=$db->fetch_row($query)){
                 if($datos['Archivo']==""){?>

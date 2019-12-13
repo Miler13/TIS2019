@@ -113,18 +113,14 @@ include ('menu_inicio_especialista.php');
                             <select id = "idArea" class = "form-control" name = "idArea" required = "required">
 								<option value = "">Selecciona un Area</option>
 								<?php
-									$sql = $conexion->prepare("SELECT * FROM areas");
-									if($sql->execute()){
-										$g_result = $sql->get_result();
-									}
-									while($row = $g_result->fetch_array()){
-								?>
-									<option value = "<?php echo $row['idArea']?>"><?php echo utf8_encode($row['NombreArea'])?></option>
-								<?php
-										}
-									$conexion->close();	
+                                    $sql = "SELECT * FROM areas";
+                                   $Areaaa= mysqli_query($conexion,$sql);
+                                    while($fila=mysqli_fetch_row($Areaaa)){
+                                        echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
+                                        }
 								?>
 							</select>
+
 
                        </div>
                     </div>

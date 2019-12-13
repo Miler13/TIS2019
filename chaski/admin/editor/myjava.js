@@ -84,7 +84,7 @@ function editarRegistro(id){
 				$('#celular').val(datos[4]);
 				$('#telefono').val(datos[5]);
 				$('#direccion').val(datos[6]);
-				$('#estado').val(datos[7]);
+				
 				$('#registra-datos').modal({
 					show:true,
 					backdrop:'static'

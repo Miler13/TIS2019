@@ -75,7 +75,7 @@
                     <div class="panel-body">
                          <h4 class="media-heading">Editor</h4>
                       <p>Total de Editores: <span class="label label-danger pull-right"><?php echo $TotalEditor ?></span></p>
-                      <a href="Editor.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
+                      <a href="editor.php" class="btn btn-success"><i class="fa fa-mail-forward"></i>  Entrar</a>
                     </div>
                    
                 </div>

@@ -15,13 +15,15 @@ $direccion = $_POST['direccion'];
 $foto = "images/fotos_perfil/perfil.jpg";
 
 switch($proceso){
-	case 'Registro': mysqli_query($conexion,"INSERT INTO editor (NombresEditor, ApellidosEditor, CedulaEditor, CorreoEditor, CelularEditor, TelefonoEditor, DireccionEditor,  Foto) VALUES('$nombre','$apellido','$cedula','$correo','$celular','$telefono','$direccion','$,'$foto')");
+	case 'Registro': mysqli_query($conexion,"INSERT INTO editor (NombresEditor, ApellidosEditor, CedulaEditor, CorreoEditor, CelularEditor, TelefonoEditor, DireccionEditor,  Foto) 
+                                                            VALUES('$nombre','$apellido','$cedula','$correo','$celular','$telefono','$direccion','$foto')");
 
   $consulta=mysqli_query($conexion,"SELECT idEditor from editor where CedulaEditor = '$cedula' and CorreoEditor = '$correo'");
                            while($filas=mysqli_fetch_array($consulta)){
-                                 $codigo_Editor=$filas['idEditor'];
+                                 $codigoeditor=$filas['idEditor'];
+                               
                  }
-     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES('$correo','$cedula','2','$codigo_Editor', '$foto')");
+     mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES ('$correo','$cedula','4','$codigoeditor', '$foto')");
 
 	break;
 	case 'Edicion': mysqli_query($conexion,"UPDATE editor SET NombresEditor = '$nombre', ApellidosEditor = '$apellido', CedulaEditor = '$cedula', CorreoEditor = '$correo', CelularEditor = '$celular', TelefonoEditor = '$telefono', DireccionEditor = '$direccion', = '$ where idEditor = '$id'");

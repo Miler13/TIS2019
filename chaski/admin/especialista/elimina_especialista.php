@@ -8,7 +8,7 @@ if (!mysqli_query($conexion,"DELETE FROM especialistas WHERE idEspecialista = '$
 }
 
 
-$registro = mysqli_query($conexion,"SELECT * FROM Especialistas ORDER BY idEspecialista ASC");
+$registro = mysqli_query($conexion,"SELECT * FROM especialistas ORDER BY idEspecialista ASC");
 
 echo '<table class="table table-striped table-condensed table-hover table-responsive">
         	          <tr>

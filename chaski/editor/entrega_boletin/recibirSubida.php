@@ -12,15 +12,16 @@ if (isset($_POST['subir'])) {
     $nombre_sin_acentos = limpiar_acentos($nombre);
     $destino = "../boletin/pdf/archivos/" . $nombre_sin_acentos;
     $fecha = date("Y-m-d");
-
+    move_uploaded_file($ruta, $destino);
     
 
         if ($nombre != "") {
-         if ($tamanio < 1000 * 1024 ) {
+         if ($tamanio < 10000 * 1024 ) {
            
             //validando que el archivo sea menor a 1 MB
-               if ($tipo == "application/vnd.ms-publisher" ) {       //validando que el archivo sea de tipo PDF y WORD (.docx, .doc)          
-                   if (copy($ruta, $destino)) {
+               if ($tipo == "application/vnd.ms-publisher" ) {       //validando que el archivo sea de tipo PDF y WORD (.docx, .doc)      
+                  
+                  
                                 
                     $descripcion= $_POST['descripcion'];
                     $codigoD= $_POST['titulo'];
@@ -32,12 +33,9 @@ if (isset($_POST['subir'])) {
                     $query = mysqli_query($conexion,$sql);
                         if($query){
                                echo '<script> alert("El Boletin se ha subido al servidor con Exito.");</script>';
-                                
-                                echo '<script> window.location="../subirboletin.php"; </script>';
+                                                                echo '<script> window.location="../subirboletin.php"; </script>';
                           }
-                } else {
-                 
-                    echo '<script> alert("Error al subir la Tarea.");</script>';
+                
                 }
 
             }
@@ -51,6 +49,6 @@ if (isset($_POST['subir'])) {
                    echo '<script> window.location="../subirboletin.php"; </script>';
          }
     }
-}
+
 
 ?>

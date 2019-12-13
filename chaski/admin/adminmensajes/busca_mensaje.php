@@ -26,7 +26,7 @@ $registro = mysqli_query($conexion,"SELECT * FROM mensajes WHERE  Remitente LIKE
                           <img src="images/borrar.png" width="25" height="25" alt="delete" title="Eliminar" /></a>
                           
                           <a href="javascript:mostrar('.$registro2['idMensaje'].');">
-                          <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Editar" /></a>
+                          <img src="images/lapiz.png" width="25" height="25" alt="delete" title="Ver" /></a>
                           </td>
                               </tr>';
       	}
