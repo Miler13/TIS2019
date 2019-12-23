@@ -26,7 +26,7 @@ switch($proceso){
      mysqli_query($conexion,"INSERT INTO usuarios (NombreUsuario, PassUsuario, NivelUsuario, Codigo, Foto) VALUES ('$correo','$cedula','4','$codigoeditor', '$foto')");
 
 	break;
-	case 'Edicion': mysqli_query($conexion,"UPDATE editor SET NombresEditor = '$nombre', ApellidosEditor = '$apellido', CedulaEditor = '$cedula', CorreoEditor = '$correo', CelularEditor = '$celular', TelefonoEditor = '$telefono', DireccionEditor = '$direccion', = '$ where idEditor = '$id'");
+	case 'Edicion': mysqli_query($conexion,"UPDATE editor SET NombresEditor = '$nombre', ApellidosEditor = '$apellido', CedulaEditor = '$cedula', CorreoEditor = '$correo', CelularEditor = '$celular', TelefonoEditor = '$telefono', DireccionEditor = '$direccion' where idEditor = '$id'");
 
     mysqli_query($conexion,"UPDATE usuarios SET NombreUsuario = '$correo', PassUsuario = '$cedula' where Codigo = '$id'");
 

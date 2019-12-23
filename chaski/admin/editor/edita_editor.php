@@ -11,7 +11,7 @@ $datos = array(
 				3 => $valores2['CorreoEditor'], 
 				4 => $valores2['CelularEditor'], 
 			    5 => $valores2['TelefonoEditor'], 
-				6 => $valores2['DireccionEditor'],
+				6 => $valores2['DireccionEditor']
 				
 				); 
 echo json_encode($datos);

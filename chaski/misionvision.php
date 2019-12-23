@@ -53,20 +53,44 @@
 
             
             <div class="col-lg-12">
-                <h2 class="page-header">Mision </h2>
+             <h1 class="page-header">  <strong> Mision  </strong></h1>
             </div>
-            <div class="col-md-6">
-                <p>Con el sistema chasqui para la  pubicacion y  elavoracion  de  boletines, puedes realizar todas las actividades necesarias que faciliten el manejo del cartas , entre algunas de las actividades tenemos:</p>
-                <ul>
-                    <li><strong>Administracion Especialistas</strong></li>
-                    <li><strong>Administracion Areas </strong></li>
+            <div class="col-lg-10">
+            <hr>
+            </ul>
+                <p>  <h3 >El chasqui es un Sistema de valoración y publicación del sentir de las niñas y niños
+                            a través de un Sistema, para valorar los sentimientos en diferentes Áreas 
+                            mediante el uso dela Automatización de cartas.
+                        </h3></p>
+              
+             
                     
-                    <li><strong>Administrar las cartas de los niños  evaluarlas</strong></li>
+                <hr>
+                </ul>
+                <p></p>
+            </div>
+
+
+
+           
+            <div class=" col-lg-12">
+              
+            <h1 class="page-header"><strong>Visión  </strong> </h1> 
+            </div>
+            <div class=" col-lg-10">
+            <hr>
+            </ul>
+                <p>  <h3 >Mediante las publicaciones de boletines por el Sistema Chasqui
+                         la población en general tomara conciencia de los sentimientos de las niñas y niños 
+                        a nivel nacional.
+                    </h3></p>
+                <hr>
+               
+                    
                     
                 </ul>
-                <p>.</p>
+                <p></p>
             </div>
-            <div class="col-md-4">
                <!-- <img class="img-responsive img-circle" src="imagenes/nino.png" width="250" height="250"  alt="">-->
             </div>
         </div>

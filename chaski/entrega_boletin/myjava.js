@@ -12,7 +12,7 @@ $(function(){
 	});	
 	$('#bs-prod').on('keyup',function(){
 		var dato = $('#bs-prod').val();
-		var url = 'editor/busca_editor.php';
+		var url = 'entrega_boletin/busca_tarea.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -25,7 +25,7 @@ $(function(){
 	});	
 });
 function agregarRegistro(){
-	var url = 'editor/agrega_editor.php';
+	var url = 'entrega_boletin/agrega_tarea.php';
 	$.ajax({
 		type:'POST',
 		url:url,
@@ -35,7 +35,6 @@ function agregarRegistro(){
 			$('#formulario')[0].reset();
 			$('#mensaje').addClass('bien').html('Registro completado con exito').show(200).delay(2500).hide(200);
 			$('#agrega-registros').html(registro);
-			$('#pro').val('Registro');
 			return false;
 			}else{
 			$('#mensaje').addClass('bien').html('Edicion completada con exito').show(200).delay(2500).hide(200);
@@ -47,7 +46,7 @@ function agregarRegistro(){
 	return false;
 }
 function eliminarRegistro(id){
-	var url = 'editor/elimina_editor.php';
+	var url = 'entrega_boletin/elimina_tarea.php';
 	var pregunta = confirm('¿Esta seguro de eliminar este Registro?');
 	if(pregunta==true){
 		$.ajax({
@@ -66,7 +65,7 @@ function eliminarRegistro(id){
 }
 function editarRegistro(id){
 	$('#formulario')[0].reset();
-	var url = 'editor/edita_editor.php';
+	var url = 'entrega_boletin/edita_tarea.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -78,12 +77,13 @@ function editarRegistro(id){
 				$('#pro').val('Edicion');
 				$('#id-registro').val(id);
 				$('#nombre').val(datos[0]);
-				$('#apellido').val(datos[1]);
-				$('#cedula').val(datos[2]);
-				$('#correo').val(datos[3]);
-				$('#celular').val(datos[4]);
-				$('#telefono').val(datos[5]);
-				$('#direccion').val(datos[6]);
+				$('#docente').val(datos[1]);
+				$('#asignatura').val(datos[2]);
+				$('#grupo').val(datos[3]);
+				$('#turno').val(datos[4]);
+				$('#horario').val(datos[5]);
+				$('#estado').val(datos[6]);
+				$('#numero').val(datos[7]);
 				$('#registra-datos').modal({
 					show:true,
 					backdrop:'static'
@@ -95,7 +95,7 @@ function editarRegistro(id){
 }
 
 function pagination(partida){
-	var url = 'editor/paginar_editor.php';
+	var url = 'entrega_boletin/paginar_tarea.php';
 	$.ajax({
 		type:'POST',
 		url:url,
